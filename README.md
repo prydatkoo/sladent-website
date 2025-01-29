@@ -1,6 +1,6 @@
 # Sladent - Modern Dentistry Website
 
-![Sladent Preview](logo.png) <!-- Add a preview image later -->
+![Sladent Preview](https://sladent.netlify.app/) <!-- Add a preview image later -->
 
 A responsive website for Sladent Dentistry Clinic, featuring services, appointment booking, doctor profiles, and patient education.
 
