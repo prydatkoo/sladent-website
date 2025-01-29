@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="images/icon.ico" type="image/x-icon"/>
+  <title>Про нашу команду – Sladent</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo-area">
+        <a href="index.html" class="logo-link">
+          <img src="images/logo-removebg-preview.png" alt="Sladent Логотип" class="sladent-logo"/>
+        </a>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="about.html" class="active">Про нашу команду</a></li>
+        <li><a href="photos.html">Фотографії</a></li>
+        <li><a href="contact.html">Контакти</a></li>
+        <li><a href="reviews.html">Відгуки</a></li>
+        <li><a href="location.html">Локація</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <section class="team-section">
+    <h2>Наша команда</h2>
+    <p>Професійні та турботливі спеціалісти, які дбають про здоров’я вашої усмішки.</p>
+
+    <div class="team-gallery">
+      <div class="team-photo">
+        <img src="images/surgery4.jpg" alt="Ярослав Придатко" onclick="openModal(this.src)">
+        <p><strong>Ярослав Придатко</strong><br/>Головний стоматолог</p>
+      </div>
+      <div class="team-photo">
+        <img src="images/surgery1.jpg" alt="Юрій Придатко" onclick="openModal(this.src)">
+        <p><strong>Юрій Придатко</strong><br/>Стоматолог</p>
+      </div>
+      <div class="team-photo">
+        <img src="images/surgery8.jpg" alt="Світлана Придатко" onclick="openModal(this.src)">
+        <p><strong>Світлана Придатко</strong><br/>Стоматолог</p>
+      </div>
+      <!-- Додайте інші члени команди тут -->
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sladent. Всі права захищені.</p>
+  </footer>
+
+  <div id="photoModal" class="photo-modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="photo-modal-content" id="modalImg">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

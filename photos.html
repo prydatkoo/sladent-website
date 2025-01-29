@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="images/icon.ico" type="image/x-icon"/>
+  <title>Фотографії – Sladent</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo-area">
+        <a href="index.html" class="logo-link">
+          <img src="images/logo-removebg-preview.png" alt="Sladent Логотип" class="sladent-logo"/>
+        </a>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="about.html">Про нашу команду</a></li>
+        <li><a href="photos.html" class="active">Фотографії</a></li>
+        <li><a href="contact.html">Контакти</a></li>
+        <li><a href="reviews.html">Відгуки</a></li>
+        <li><a href="location.html">Локація</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <section class="team-section">
+    <h2>Наша фотогалерея</h2>
+    <p>Подивіться наше обладнання, клініку та процеси.</p>
+
+    <div class="team-gallery">
+      <div class="team-photo">
+        <img src="./images/surgery1.jpg" alt="Фото 1" onclick="openModal(this.src)">
+      </div>
+      <div class="team-photo">
+        <img src="./images/surgery2.jpg" alt="Фото 2" onclick="openModal(this.src)">
+      </div>
+      <div class="team-photo">
+        <img src="./images/surgery3.jpg" alt="Фото 3" onclick="openModal(this.src)">
+      </div>
+      <div class="team-photo">
+        <img src="./images/surgery4.jpg" alt="Фото 4" onclick="openModal(this.src)">
+      </div>
+      <div class="team-photo">
+        <img src="./images/surgery5.jpg" alt="Фото 5" onclick="openModal(this.src)">
+      </div>
+      <div class="team-photo">
+        <img src="./images/surgery6.jpg" alt="Фото 6" onclick="openModal(this.src)">
+      </div>
+      <div class="team-photo">
+        <img src="./images/surgery7.jpg" alt="Фото 7" onclick="openModal(this.src)">
+      </div>
+      <div class="team-photo">
+        <img src="./images/surgery8.jpg" alt="Фото 10" onclick="openModal(this.src)">
+      </div>
+      <div class="team-photo">
+        <img src="./images/photo1.jpg" alt="Фото 8" onclick="openModal(this.src)">
+      </div>
+      <div class="team-photo">
+        <img src="./images/logo.png" alt="Фото 9" onclick="openModal(this.src)">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sladent. Всі права захищені.</p>
+  </footer>
+
+  <div id="photoModal" class="photo-modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="photo-modal-content" id="modalImg">
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
