@@ -1,33 +1,39 @@
 # Sladent - Modern Dentistry Website
 
-[Website Link](https://sladent.netlify.app/)
+[![View Live Site](https://img.shields.io/badge/View-Live%20Site-blue?style=for-the-badge&logo=netlify)](https://sladent.netlify.app/)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-green?style=for-the-badge&logo=github)](https://github.com/prydatkoo/sladent-website)
 
-A responsive website for Sladent Dentistry Clinic, featuring services, appointment booking, doctor profiles, and patient education.
+A responsive website for Sladent Dentistry Clinic, featuring services, appointment booking, doctor profiles, and more. This project was developed using simple web development techniques and technologies.
+
+## Table of Contents
+
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Features
 
-- 🦷 **Services Overview**: Detailed dental services pages (Cleanings, Implants, Orthodontics, etc.)
-- 📅 **Online Booking**: Integrated appointment scheduling system
-- 👨⚕️ **Meet the Team**: Dentist profiles with qualifications and specialties
-- 📍 **Clinic Location**: Interactive map with clinic address and contact details
-- 📝 **Patient Forms**: Downloadable new patient paperwork
-- 🔒 **Secure Portal**: Patient login for records and billing (optional)
-- 📱 **Mobile-First**: Fully responsive design for all devices
-- ♿ **Accessibility**: WCAG 2.1 compliant interface
-- 📈 **SEO Optimized**: Metadata and structured data for better search visibility
+- **Services Overview**: Detailed descriptions of dental services (Cleanings, Implants, Orthodontics, etc.).
+- **Appointment Booking**: Integrated appointment scheduling system.
+- **Doctor Profiles**: Information about the clinic's dental professionals.
+- **Testimonials**: Reviews and feedback from satisfied patients.
+- **Contact Form**: Easy way for visitors to get in touch.
+- **Google Maps Integration**: Location and directions to the clinic.
+- **Accessibility**: WCAG 2.1 compliant ensuring accessibility for all users.
 
 ## Technologies Used
 
-- **Frontend**: HTML5, CSS3 (Sass), JavaScript (ES6+)
-- **Framework**: [Astro](https://astro.build/) (Static Site Generator)
-- **Styling**: Tailwind CSS + DaisyUI Components
-- **Forms**: Netlify Forms + Formspree integration
-- **Hosting**: Netlify (Continuous Deployment from GitHub)
-- **Tools**: NPM, Git, ESLint, Prettier
+- **HTML5**: Structure and content of the website.
+- **CSS3**: Styling and layout design.
+- **JavaScript**: Interactive elements and form validation.
+- **Bootstrap**: Responsive design framework.
+- **Google Maps API**: Location and directions integration.
 
 ## Installation
 
-1. **Clone Repository**
+1. **Clone Repository**:
    ```bash
    git clone https://github.com/prydatkoo/sladent-website.git
-   cd sladent-website
