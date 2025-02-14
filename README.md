@@ -17,7 +17,6 @@ A responsive website for Sladent Dentistry Clinic, featuring services, appointme
 ## Features
 
 - **Services Overview**: Detailed descriptions of dental services (Cleanings, Implants, Orthodontics, etc.).
-- **Appointment Booking**: Integrated appointment scheduling system.
 - **Doctor Profiles**: Information about the clinic's dental professionals.
 - **Testimonials**: Reviews and feedback from satisfied patients.
 - **Contact Form**: Easy way for visitors to get in touch.
@@ -29,7 +28,6 @@ A responsive website for Sladent Dentistry Clinic, featuring services, appointme
 - **HTML5**: Structure and content of the website.
 - **CSS3**: Styling and layout design.
 - **JavaScript**: Interactive elements and form validation.
-- **Bootstrap**: Responsive design framework.
 - **Google Maps API**: Location and directions integration.
 
 ## Installation
