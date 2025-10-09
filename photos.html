@@ -2,80 +2,94 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <meta name="description" content="Перегляньте фотогалерею клініки Sladent - наше обладнання, приміщення та робочі процеси."/>
+  <meta name="keywords" content="фото Sladent, стоматологічна клініка, обладнання"/>
+  
+  <!-- Favicon -->
   <link rel="icon" href="images/icon.ico" type="image/x-icon"/>
+  
   <title>Фотографії – Sladent</title>
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <header>
-    <nav class="navbar">
+  <!-- Navigation Header -->
+  <header role="banner">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
       <div class="logo-area">
-        <a href="index.html" class="logo-link">
+        <a href="index.html" class="logo-link" aria-label="Sladent - Повернутися на головну">
           <img src="images/logo-removebg-preview.png" alt="Sladent Логотип" class="sladent-logo"/>
         </a>
       </div>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Головна</a></li>
-        <li><a href="about.html">Про нашу команду</a></li>
-        <li><a href="photos.html" class="active">Фотографії</a></li>
-        <li><a href="contact.html">Контакти</a></li>
-        <li><a href="reviews.html">Відгуки</a></li>
-        <li><a href="location.html">Локація</a></li>
+        <li><a href="index.html"><span>Головна</span></a></li>
+        <li><a href="about.html"><span>Про нашу команду</span></a></li>
+        <li><a href="photos.html" class="active" aria-current="page"><span>Фотографії</span></a></li>
+        <li><a href="contact.html"><span>Контакти</span></a></li>
+        <li><a href="reviews.html"><span>Відгуки</span></a></li>
+        <li><a href="location.html"><span>Локація</span></a></li>
       </ul>
-      <div class="hamburger" id="hamburger">
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
     </nav>
   </header>
 
-  <section class="team-section">
-    <h2>Наша фотогалерея</h2>
+  <!-- Photo Gallery Section -->
+  <section class="team-section fade-in" role="region" aria-labelledby="gallery-heading">
+    <h2 id="gallery-heading">Наша фотогалерея</h2>
     <p>Подивіться наше обладнання, клініку та процеси.</p>
 
     <div class="team-gallery">
-      <div class="team-photo">
-        <img src="./images/surgery1.jpg" alt="Фото 1" onclick="openModal(this.src)">
-      </div>
-      <div class="team-photo">
-        <img src="./images/surgery2.jpg" alt="Фото 2" onclick="openModal(this.src)">
-      </div>
-      <div class="team-photo">
-        <img src="./images/surgery3.jpg" alt="Фото 3" onclick="openModal(this.src)">
-      </div>
-      <div class="team-photo">
-        <img src="./images/surgery4.jpg" alt="Фото 4" onclick="openModal(this.src)">
-      </div>
-      <div class="team-photo">
-        <img src="./images/surgery5.jpg" alt="Фото 5" onclick="openModal(this.src)">
-      </div>
-      <div class="team-photo">
-        <img src="./images/surgery6.jpg" alt="Фото 6" onclick="openModal(this.src)">
-      </div>
-      <div class="team-photo">
-        <img src="./images/surgery7.jpg" alt="Фото 7" onclick="openModal(this.src)">
-      </div>
-      <div class="team-photo">
-        <img src="./images/surgery8.jpg" alt="Фото 10" onclick="openModal(this.src)">
-      </div>
-      <div class="team-photo">
-        <img src="./images/photo1.jpg" alt="Фото 8" onclick="openModal(this.src)">
-      </div>
-      <div class="team-photo">
-        <img src="./images/logo.png" alt="Фото 9" onclick="openModal(this.src)">
-      </div>
+      <figure class="team-photo scale-in">
+        <img src="./images/surgery1.jpg" alt="Сучасне стоматологічне обладнання" onclick="openModal(this.src)" loading="lazy" tabindex="0">
+      </figure>
+      <figure class="team-photo scale-in">
+        <img src="./images/surgery2.jpg" alt="Стоматологічні інструменти" onclick="openModal(this.src)" loading="lazy" tabindex="0">
+      </figure>
+      <figure class="team-photo scale-in">
+        <img src="./images/surgery3.jpg" alt="Медичне обладнання" onclick="openModal(this.src)" loading="lazy" tabindex="0">
+      </figure>
+      <figure class="team-photo scale-in">
+        <img src="./images/surgery4.jpg" alt="Професійне робоче місце" onclick="openModal(this.src)" loading="lazy" tabindex="0">
+      </figure>
+      <figure class="team-photo scale-in">
+        <img src="./images/surgery5.jpg" alt="Стоматологічний кабінет" onclick="openModal(this.src)" loading="lazy" tabindex="0">
+      </figure>
+      <figure class="team-photo scale-in">
+        <img src="./images/surgery6.jpg" alt="Клініка Sladent зсередини" onclick="openModal(this.src)" loading="lazy" tabindex="0">
+      </figure>
+      <figure class="team-photo scale-in">
+        <img src="./images/surgery7.jpg" alt="Стерильне обладнання" onclick="openModal(this.src)" loading="lazy" tabindex="0">
+      </figure>
+      <figure class="team-photo scale-in">
+        <img src="./images/surgery8.jpg" alt="Робочий простір" onclick="openModal(this.src)" loading="lazy" tabindex="0">
+      </figure>
+      <figure class="team-photo scale-in">
+        <img src="./images/photo1.jpg" alt="Офіс Sladent" onclick="openModal(this.src)" loading="lazy" tabindex="0">
+      </figure>
+      <figure class="team-photo scale-in">
+        <img src="./images/logo.png" alt="Логотип Sladent" onclick="openModal(this.src)" loading="lazy" tabindex="0">
+      </figure>
     </div>
   </section>
 
-  <footer>
+  <!-- Footer -->
+  <footer role="contentinfo">
     <p>&copy; 2025 Sladent. Всі права захищені.</p>
   </footer>
 
-  <div id="photoModal" class="photo-modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img class="photo-modal-content" id="modalImg">
+  <!-- Photo Modal -->
+  <div id="photoModal" class="photo-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <span class="close" onclick="closeModal()" role="button" aria-label="Close modal" tabindex="0">&times;</span>
+    <img class="photo-modal-content" id="modalImg" alt="">
   </div>
   
   <script src="script.js"></script>

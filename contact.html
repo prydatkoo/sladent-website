@@ -2,41 +2,54 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <meta name="description" content="Зв'яжіться з Sladent - запишіться на прийом або поставте запитання. Ми завжди раді вам допомогти!"/>
+  <meta name="keywords" content="контакти Sladent, записатися, стоматолог Тернопіль"/>
+  
+  <!-- Favicon -->
   <link rel="icon" href="images/icon.ico" type="image/x-icon"/>
+  
   <title>Контакти – Sladent</title>
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <header>
-    <nav class="navbar">
+  <!-- Navigation Header -->
+  <header role="banner">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
       <div class="logo-area">
-        <a href="index.html" class="logo-link">
+        <a href="index.html" class="logo-link" aria-label="Sladent - Повернутися на головну">
           <img src="images/logo-removebg-preview.png" alt="Sladent Логотип" class="sladent-logo"/>
         </a>
       </div>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Головна</a></li>
-        <li><a href="about.html">Про нашу команду</a></li>
-        <li><a href="photos.html">Фотографії</a></li>
-        <li><a href="contact.html" class="active">Контакти</a></li>
-        <li><a href="reviews.html">Відгуки</a></li>
-        <li><a href="location.html">Локація</a></li>
+        <li><a href="index.html"><span>Головна</span></a></li>
+        <li><a href="about.html"><span>Про нашу команду</span></a></li>
+        <li><a href="photos.html"><span>Фотографії</span></a></li>
+        <li><a href="contact.html" class="active" aria-current="page"><span>Контакти</span></a></li>
+        <li><a href="reviews.html"><span>Відгуки</span></a></li>
+        <li><a href="location.html"><span>Локація</span></a></li>
       </ul>
-      <div class="hamburger" id="hamburger">
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
     </nav>
   </header>
 
-  <div class="contact-section">
+  <!-- Contact Section -->
+  <div class="contact-section fade-in" role="region" aria-labelledby="contact-heading">
     <script src="https://static.elfsight.com/platform/platform.js" async></script>
     <div class="elfsight-app-18d024a3-e0f4-4038-9c6b-86ec1a5df6bb" data-elfsight-app-lazy></div>
   </div>
 
-  <footer>
+  <!-- Footer -->
+  <footer role="contentinfo">
     <p>&copy; 2025 Sladent. Всі права захищені.</p>
   </footer>
 

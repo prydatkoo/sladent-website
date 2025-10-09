@@ -2,46 +2,60 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <meta name="description" content="Знайдіть нас - Sladent розташована на просп. Злуки 8, Тернопіль. Зручне розташування у центрі міста."/>
+  <meta name="keywords" content="локація Sladent, адреса, Тернопіль, просп. Злуки 8"/>
+  
+  <!-- Favicon -->
   <link rel="icon" href="images/icon.ico" type="image/x-icon"/>
+  
   <title>Локація – Sladent</title>
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <header>
-    <nav class="navbar">
+  <!-- Navigation Header -->
+  <header role="banner">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
       <div class="logo-area">
-        <a href="index.html" class="logo-link">
+        <a href="index.html" class="logo-link" aria-label="Sladent - Повернутися на головну">
           <img src="images/logo-removebg-preview.png" alt="Sladent Логотип" class="sladent-logo"/>
         </a>
       </div>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Головна</a></li>
-        <li><a href="about.html">Про нашу команду</a></li>
-        <li><a href="photos.html">Фотографії</a></li>
-        <li><a href="contact.html">Контакти</a></li>
-        <li><a href="reviews.html">Відгуки</a></li>
-        <li><a href="location.html" class="active">Локація</a></li>
+        <li><a href="index.html"><span>Головна</span></a></li>
+        <li><a href="about.html"><span>Про нашу команду</span></a></li>
+        <li><a href="photos.html"><span>Фотографії</span></a></li>
+        <li><a href="contact.html"><span>Контакти</span></a></li>
+        <li><a href="reviews.html"><span>Відгуки</span></a></li>
+        <li><a href="location.html" class="active" aria-current="page"><span>Локація</span></a></li>
       </ul>
-      <div class="hamburger" id="hamburger">
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
     </nav>
   </header>
 
-  <section class="location-section">
-    <h2>Ми тут</h2>
-    <p>просп. Злуки 8, м. Тернопіль, Тернопільський район, Тернопільська область</p>
+  <!-- Location Section -->
+  <section class="location-section fade-in" role="region" aria-labelledby="location-heading">
+    <h2 id="location-heading">Ми тут</h2>
+    <address>
+      <p>просп. Злуки 8, м. Тернопіль, Тернопільський район, Тернопільська область</p>
+    </address>
     <div class="map-container">
-      <!-- Google Map iframe -->
       <script src="https://static.elfsight.com/platform/platform.js" async></script>
       <div class="elfsight-app-2773469b-1aa8-405e-9ece-9a821c367f02" data-elfsight-app-lazy></div>
     </div>
   </section>
 
-  <footer>
+  <!-- Footer -->
+  <footer role="contentinfo">
     <p>&copy; 2025 Sladent. Всі права захищені.</p>
   </footer>
 
