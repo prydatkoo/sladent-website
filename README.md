@@ -194,6 +194,7 @@ Edit the CSS custom properties in `style.css`:
 - **Cumulative Layout Shift**: < 0.1
 - **Optimized Animations**: 60fps smooth transitions
 - **Fast Mobile Menu**: < 300ms slide animations
+- **Auto-Deploy**: Triggered deployment to Netlify
 
 ---
 
