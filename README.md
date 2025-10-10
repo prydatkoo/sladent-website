@@ -126,7 +126,7 @@ The site is static HTML/CSS/JS and can be deployed to:
 **Sladent Dentistry Clinic**
 - 📧 Email: sladent8@gmail.com
 - 📍 Address: просп. Злуки 8, м. Тернопіль, Тернопільська область
-- 🌐 Website: [Your domain]
+- 🌐 Website: [https://sladent.netlify.app/](https://sladent.netlify.app/)
 
 ## License
 
