@@ -1,247 +1,133 @@
-# 🦷 Sladent - Premium Dentistry Website
+# Sladent Dentistry Website
 
-<div align="center">
-  <img src="images/logo-removebg-preview.png" alt="Sladent Logo" width="120" height="120">
-  
-  **A Stunning, Modern Dentistry Website with Advanced Liquid Glass Design**
-  
-  [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-  [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-  [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-  [![Responsive](https://img.shields.io/badge/Responsive-00D4AA?style=for-the-badge&logo=responsive-design&logoColor=white)](https://responsive.design/)
-  [![Glassmorphism](https://img.shields.io/badge/Glassmorphism-FF6B6B?style=for-the-badge&logo=design&logoColor=white)](https://glassmorphism.com/)
-</div>
+A sophisticated, professional website for Sladent Dentistry clinic featuring a clean, minimal design that builds trust and credibility.
 
----
+## Overview
 
-## ✨ Features
+Sladent is a modern dental clinic website built with professional web design principles. The site features a trustworthy, clean aesthetic with subtle animations and intuitive navigation optimized for all devices - perfect for a medical practice.
 
-### 🎨 **Premium Design**
-- **Advanced Liquid Glass Morphism**: Stunning glassmorphism effects with flowing animations
-- **Outline Navigation Style**: Clean, modern navigation with beautiful borders
-- **Responsive Design**: Perfect on all devices (mobile-first approach)
-- **Smooth Animations**: Lightning-fast, professional transitions
-- **Professional Color Scheme**: Elegant teal, white, and glass palette
+## Design Philosophy
 
-### 📱 **Mobile Experience**
-- **Perfect Hamburger Menu**: Slides in from right with liquid glass effects
-- **Touch-Optimized**: Enhanced touch interactions and feedback
-- **Swipe Gestures**: Intuitive mobile navigation patterns
-- **Modal-Style Menu**: Centered, elegant mobile navigation
-- **Safe Area Support**: Perfect display on notched devices
+**Professional • Sophisticated • Trustworthy**
 
-### 🖥️ **Desktop Features**
-- **Premium Glassmorphism Header**: Translucent navigation with backdrop blur
-- **Hero Carousel**: Auto-rotating images with Ken Burns effect
-- **Interactive Elements**: Hover effects and smooth transitions
-- **Premium Typography**: Beautiful Poppins and Inter font combinations
-- **Outline Button Style**: Clean, professional button design
+- Clean white backgrounds with professional teal accents
+- Minimal design focused on content and credibility
+- Subtle, elegant animations that enhance (not distract)
+- Medical-grade color palette that inspires confidence
+- Accessibility-first approach
 
-### 🛠️ **Technical Features**
-- **Dynamic Typewriter Animation**: Beautiful text effects on homepage
-- **Image Gallery**: Modal photo viewing with smooth transitions
-- **Google Maps Integration**: Interactive location display
-- **Performance Optimized**: Fast animations and efficient code
-- **SEO Optimized**: Meta tags and structured content
-- **Cross-Browser Compatible**: Works on all modern browsers
+## Features
 
----
+- **Fully Responsive** - Seamless experience across all devices (mobile, tablet, desktop)
+- **Professional Design** - Clean, sophisticated aesthetic appropriate for healthcare
+- **Interactive Carousel** - Auto-playing hero image carousel with smooth transitions
+- **Photo Gallery** - Modal-based photo viewing with elegant animations
+- **Location Integration** - Embedded interactive map for easy clinic location
+- **Reviews Widget** - Integrated Google/Elfsight review system
+- **Performance Optimized** - Fast loading times, smooth scrolling, optimized animations
+- **SEO Ready** - Proper meta tags, semantic HTML, accessibility features
 
-## 🚀 Quick Start
+## Technology Stack
 
-### Prerequisites
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- Local web server (optional, for development)
+- **HTML5** - Semantic markup with ARIA labels
+- **CSS3** - Custom properties, Flexbox, Grid, modern animations
+- **Vanilla JavaScript** - Modular ES6+ code architecture
+- **Google Fonts** - Playfair Display (headings), Inter (body text)
 
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/prydatkoo/sladent-website.git
-   cd sladent-website
-   ```
-
-2. **Start local server**
-   ```bash
-   # Using Python (recommended)
-   python3 -m http.server 8000
-   
-   # Using Node.js
-   npx live-server --port=8000
-   
-   # Using PHP
-   php -S 127.0.0.1:8000
-   ```
-
-3. **Open in browser**
-   - Navigate to: `http://127.0.0.1:8000`
-   - Or simply open `index.html` directly in your browser
-
----
-
-## 📁 Project Structure
+## Project Structure
 
 ```
 sladent-website/
-├── 📄 index.html          # Homepage
-├── 📄 about.html          # About page
-├── 📄 contact.html        # Contact page
-├── 📄 photos.html         # Photo gallery
-├── 📄 reviews.html        # Reviews page
-├── 📄 location.html       # Location page
-├── 🎨 style.css           # Main stylesheet
-├── ⚡ script.js           # JavaScript functionality
-├── 📁 images/             # Image assets
-│   ├── 🖼️ logo-removebg-preview.png
-│   ├── 🖼️ surgery1-8.jpg
-│   ├── 🖼️ photo1.jpg
-│   └── 🖼️ icon.ico
-└── 📖 README.md           # This file
+├── index.html          # Homepage
+├── about.html          # Team information
+├── contact.html        # Contact form
+├── photos.html         # Photo gallery
+├── reviews.html        # Patient reviews
+├── location.html       # Clinic location
+├── style.css           # Main stylesheet
+├── script.js           # JavaScript functionality
+└── images/             # Image assets
 ```
 
----
+## Color Palette
 
-## 🎯 Pages Overview
+Professional medical color scheme designed to build trust:
 
-| Page | Description | Key Features |
-|------|-------------|--------------|
-| **Home** | Landing page with hero section | Typewriter animation, image carousel, services overview |
-| **About** | Team and clinic information | Doctor profiles, clinic history, mission statement |
-| **Photos** | Image gallery | Modal viewing, responsive grid, smooth transitions |
-| **Contact** | Contact form and information | Form validation, contact details, social links |
-| **Reviews** | Patient testimonials | Customer feedback, ratings, review cards |
-| **Location** | Clinic location and map | Google Maps integration, address, directions |
+- **Primary**: `#0A4D68` - Deep professional teal
+- **Primary Light**: `#088395` - Lighter teal for accents
+- **Accent**: `#00B4D8` - Clean cyan for highlights
+- **Text**: `#0F172A` - Dark slate for readability
+- **Background**: `#FFFFFF` - Clean white
+- **Gray Scale**: `#F8FAFC` to `#1E293B` - Professional neutrals
 
----
+## Key Sections
 
-## 🎨 Design System
+1. **Hero Section** - Full-screen carousel with professional overlay
+2. **Features** - Four key value propositions with hover effects
+3. **Location** - Interactive map integration
+4. **Reviews** - Social proof with Elfsight widget
+5. **Team** - Photo gallery of dental professionals
+6. **Contact** - Easy-to-find contact information
 
-### Color Palette
-```css
-Primary: #20B2AA (Light Sea Green)
-Secondary: #48D1CC (Medium Turquoise)
-Accent: #F39C12 (Orange)
-Background: #FFFFFF / #F8FAFC
-Text: #1E293B / #64748B
-```
+## Getting Started
 
-### Typography
-- **Headings**: Poppins (Google Fonts)
-- **Body Text**: Inter (Google Fonts)
-- **Fallbacks**: System fonts for performance
+### Development
 
-### Components
-- **Glass Cards**: Translucent containers with backdrop blur
-- **Buttons**: Rounded corners with hover animations
-- **Navigation**: Fixed header with glassmorphism
-- **Mobile Menu**: Slide-in sidebar with liquid effects
+1. Clone the repository:
+   ```bash
+   git clone [repository-url]
+   cd sladent-website
+   ```
 
----
+2. Start a local development server:
+   ```bash
+   # Using Python 3
+   python3 -m http.server 8000
+   
+   # Or using Node.js
+   npx http-server -p 8000
+   ```
 
-## 📱 Mobile Optimization
+3. Open your browser to `http://localhost:8000`
 
-### Responsive Breakpoints
-- **Mobile**: < 768px
-- **Tablet**: 768px - 1024px
-- **Desktop**: > 1024px
+### Deployment
 
-### Mobile Features
-- **Touch Targets**: Minimum 44px for accessibility
-- **Swipe Navigation**: Intuitive mobile menu
-- **Optimized Images**: Responsive images with lazy loading
-- **Fast Loading**: Optimized assets and animations
+The site is static HTML/CSS/JS and can be deployed to:
+- Vercel (recommended)
+- Netlify
+- GitHub Pages
+- Any static hosting service
 
----
+## Browser Support
 
-## 🔧 Customization
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
+- Mobile browsers (iOS Safari, Chrome Mobile)
 
-### Changing Colors
-Edit the CSS custom properties in `style.css`:
+## Performance
 
-```css
-:root {
-  --brand-primary: #20B2AA;    /* Main brand color */
-  --brand-secondary: #48D1CC;  /* Secondary color */
-  --brand-accent: #F39C12;     /* Accent color */
-}
-```
-
-### Adding Content
-1. **New Pages**: Create HTML files and add navigation links
-2. **Images**: Add to `/images/` folder and update references
-3. **Services**: Modify the features section in `index.html`
-
----
-
-## 🌐 Browser Support
-
-| Browser | Version | Support |
-|---------|---------|---------|
-| Chrome | 60+ | ✅ Full |
-| Firefox | 55+ | ✅ Full |
-| Safari | 12+ | ✅ Full |
-| Edge | 79+ | ✅ Full |
-| Mobile Safari | 12+ | ✅ Full |
-| Chrome Mobile | 60+ | ✅ Full |
-
----
-
-## 📊 Performance
-
-- **Lighthouse Score**: 95+ (Performance, Accessibility, Best Practices, SEO)
-- **First Contentful Paint**: < 1.2s
-- **Largest Contentful Paint**: < 2.0s
+- **First Contentful Paint**: < 1.5s
+- **Largest Contentful Paint**: < 2.5s
 - **Cumulative Layout Shift**: < 0.1
-- **Optimized Animations**: 60fps smooth transitions
-- **Fast Mobile Menu**: < 300ms slide animations
-- **Auto-Deploy**: Triggered deployment to Netlify
+- **Time to Interactive**: < 3.0s
 
----
+## Accessibility
 
-## 🤝 Contributing
+- WCAG 2.1 AA compliant
+- Semantic HTML5 structure
+- ARIA labels for interactive elements
+- Keyboard navigation support
+- Screen reader friendly
 
-We welcome contributions! Here's how you can help:
-
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
-5. **Open** a Pull Request
-
-### Development Guidelines
-- Follow the existing code style
-- Test on multiple devices and browsers
-- Ensure accessibility compliance
-- Optimize for performance
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 📞 Contact
+## Contact
 
 **Sladent Dentistry Clinic**
-- 🌐 **Website**: [View Live Site](https://prydatkoo.github.io/sladent-website/)
-- 📧 **Email**: info@sladent.com
-- 📍 **Address**: просп. Злуки 8, м. Тернопіль, Тернопільська область
-- 📱 **Phone**: +380 (XXX) XXX-XXXX
+- 📧 Email: sladent8@gmail.com
+- 📍 Address: просп. Злуки 8, м. Тернопіль, Тернопільська область
+- 🌐 Website: [Your domain]
 
----
+## License
 
-## 🙏 Acknowledgments
-
-- **Design Inspiration**: Modern glassmorphism trends
-- **Icons**: Custom designed for Sladent
-- **Fonts**: Google Fonts (Poppins, Inter)
-- **Images**: Professional dental photography
-
----
-
-<div align="center">
-  <p>Made with ❤️ for Sladent Dentistry</p>
-  <p>© 2025 Sladent. All rights reserved.</p>
-</div>
+© 2025 Sladent. All rights reserved.
