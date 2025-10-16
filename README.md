@@ -1,6 +1,6 @@
 # Sladent Dentistry Website
 
-A sophisticated, professional website for Sladent Dentistry clinic featuring a clean, minimal design that builds trust and credibility.
+A modern, professional website for Sladent Dentistry clinic featuring a clean, minimal design that builds trust and credibility. Built with responsive HTML5, CSS3, and vanilla JavaScript for optimal performance and accessibility.
 
 ## Overview
 
