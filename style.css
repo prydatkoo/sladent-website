@@ -2261,16 +2261,16 @@ section {
     flex: 1;
   }
   
-  /* Better body padding */
+  /* Remove body padding - header is sticky now */
   body {
-    padding-top: 60px;
+    padding-top: 0;
   }
   
-  /* Hero section - improved sizing */
+  /* Hero section - full screen on mobile */
   .hero-section {
-    min-height: 90vh;
-    margin-top: -60px;
-    padding-top: 0;
+    min-height: 100vh;
+    margin-top: 0;
+    padding-top: 60px; /* Account for header */
   }
   
   .hero-content {
@@ -2425,16 +2425,16 @@ section {
     font-size: 0.9375rem;
   }
   
-  /* Body padding for small mobile */
+  /* Remove body padding for small mobile */
   body {
-    padding-top: 65px;
+    padding-top: 0;
   }
   
-  /* Hero section - optimized */
+  /* Hero section - full screen */
   .hero-section {
     min-height: 100vh;
-    margin-top: -65px;
-    padding-top: 0;
+    margin-top: 0;
+    padding-top: 60px; /* Account for sticky header */
   }
   
   .hero-content {
