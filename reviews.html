@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <meta name="description" content="Читайте відгуки наших клієнтів про Sladent - досвід, якість обслуговування та професіоналізм."/>
-  <meta name="keywords" content="відгуки Sladent, відгуки клієнтів, стоматологія Тернопіль"/>
+  <meta name="description" content="Відгуки пацієнтів Sladent — Стоматологія Родини Придатко. Реальний досвід, професіоналізм лікарів, якість обслуговування. Тернопіль."/>
+  <meta name="keywords" content="відгуки Sladent, відгуки стоматологія Тернопіль, Придатко відгуки, стоматолог Тернопіль рекомендації, якість стоматологічних послуг"/>
   
   <!-- Favicon -->
   <link rel="icon" href="images/icon.ico" type="image/x-icon"/>
   
-  <title>Відгуки – Sladent</title>
+  <title>Відгуки пацієнтів – Sladent — Стоматологія Родини Придатко</title>
   
   <!-- Preconnect to Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,12 +28,14 @@
       </div>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html"><span>Головна</span></a></li>
-        <li><a href="about.html"><span>Про нашу команду</span></a></li>
-        <li><a href="photos.html"><span>Фотографії</span></a></li>
-        <li><a href="contact.html"><span>Контакти</span></a></li>
+        <li><a href="about.html"><span>Про нас</span></a></li>
+        <li><a href="services.html"><span>Послуги</span></a></li>
+        <li><a href="team.html"><span>Команда</span></a></li>
         <li><a href="reviews.html" class="active" aria-current="page"><span>Відгуки</span></a></li>
-        <li><a href="location.html"><span>Локація</span></a></li>
+        <li><a href="about.html#faq"><span>FAQ</span></a></li>
+        <li><a href="contact.html"><span>Контакти</span></a></li>
       </ul>
+      <button class="cta-btn" onclick="openBookingWidget()" aria-label="Записатися на прийом до стоматолога">Записатися на прийом</button>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
         <span></span>
@@ -42,17 +44,117 @@
     </nav>
   </header>
 
-  <!-- Reviews Section -->
-  <section class="reviews-section fade-in" role="region" aria-labelledby="reviews-heading">
-    <h2 id="reviews-heading">Відгуки наших клієнтів</h2>
-    <script src="https://static.elfsight.com/platform/platform.js" async></script>
-    <div class="elfsight-app-948240cf-e926-4c1e-82aa-ef7c5c3e42bb" data-elfsight-app-lazy></div>
+  <!-- Reviews Hero Section -->
+  <section class="reviews-hero-section fade-in" role="region" aria-labelledby="reviews-hero-heading">
+    <div class="reviews-hero-badge">ВІДГУКИ ПАЦІЄНТІВ</div>
+    <div class="reviews-hero-content">
+      <h1 id="reviews-hero-heading">Що кажуть наші пацієнти</h1>
+      <p class="hero-subtitle">
+        Реальні історії від реальних людей. Ми пишаємося довірою наших пацієнтів і щиро дякуємо за кожен відгук.
+      </p>
+    </div>
+  </section>
+
+  <!-- Trust Stats Section -->
+  <section class="reviews-stats-section">
+    <div class="stats-container">
+      <div class="stat-item">
+        <div class="stat-icon">⭐</div>
+        <div class="stat-number">4.7/5</div>
+        <div class="stat-label">Середня оцінка</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">💬</div>
+        <div class="stat-number">Google Reviews</div>
+        <div class="stat-label">Перевірені відгуки</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">👥</div>
+        <div class="stat-number">Родинна</div>
+        <div class="stat-label">Стоматологія</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">🏆</div>
+        <div class="stat-number">15+ років</div>
+        <div class="stat-label">Досвіду роботи</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- All Reviews Section (Real Google Reviews Widget) -->
+  <section class="all-reviews-section">
+    <div class="all-reviews-container">
+      <h2>Відгуки наших пацієнтів</h2>
+      <p class="section-subtitle">Реальні відгуки з Google</p>
+      
+      <!-- Elfsight Google Reviews Widget -->
+      <script src="https://static.elfsight.com/platform/platform.js" async></script>
+      <div class="elfsight-app-948240cf-e926-4c1e-82aa-ef7c5c3e42bb" data-elfsight-app-lazy></div>
+    </div>
+  </section>
+
+  <!-- Reviews CTA Section -->
+  <section class="reviews-cta-section">
+    <div class="reviews-cta-content">
+      <h2>Станьте частиною нашої історії успіху</h2>
+      <p>Запишіться на прийом і відчуйте професійний підхід до вашого здоров'я</p>
+      <button class="btn btn-primary btn-large" onclick="openBookingWidget()">Записатися на прийом</button>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer role="contentinfo">
-    <p>&copy; 2025 Sladent. Всі права захищені.</p>
+    <div class="footer-container">
+      <!-- Footer Brand -->
+      <div class="footer-brand">
+        <img src="images/logo-removebg-preview.png" alt="Sladent Логотип" class="footer-logo"/>
+        <p class="footer-tagline">Sladent — Стоматологія Родини Придатко</p>
+        <p class="footer-description">
+          Ваша посмішка — наша місія. Сучасна стоматологія з турботою та професіоналізмом.
+        </p>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Навігація</h4>
+          <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="about.html">Про нас</a></li>
+            <li><a href="services.html">Послуги</a></li>
+            <li><a href="team.html">Команда</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Інформація</h4>
+          <ul>
+            <li><a href="reviews.html">Відгуки</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+            <li><a href="#" onclick="openBookingWidget(); return false;">Записатися на прийом</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Контакти</h4>
+          <ul>
+            <li>📍 просп. Злуки 8, м. Тернопіль</li>
+            <li>📞 <a href="tel:+380352528595">+38 (0352) 52-85-95</a></li>
+            <li>📧 <a href="mailto:info@sladent.com.ua">info@sladent.com.ua</a></li>
+            <li>🕒 Пн-Пт: 9:00-19:00, Сб: 9:00-15:00</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Sladent — Стоматологія Родини Придатко. Всі права захищені.</p>
+    </div>
   </footer>
+
+  <!-- Booking handled by Calendly popup - NO DATABASE, NO BACKEND -->
+  <!-- All booking data goes directly to Calendly's secure platform -->
+  <!-- To configure: Replace 'sladent-clinic/appointment' in script.js with your actual Calendly link -->
 
   <script src="script.js"></script>
 </body>

@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <meta name="description" content="Запишіться на прийом до Sladent - Стоматологія Родини Придатко. Зручний онлайн запис."/>
+  
+  <link rel="icon" href="images/icon.ico" type="image/x-icon"/>
+  
+  <title>Записатися на прийом – Sladent</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .booking-container {
+      max-width: 800px;
+      margin: 6rem auto 4rem;
+      padding: 2rem 1.5rem;
+    }
+    
+    .booking-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .booking-header h1 {
+      margin-bottom: 1rem;
+    }
+    
+    .progress-bar {
+      display: flex;
+      justify-content: space-between;
+      margin: 3rem auto 4rem;
+      max-width: 600px;
+      position: relative;
+    }
+    
+    .progress-bar::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background-color: var(--gray-200);
+      z-index: 0;
+    }
+    
+    .progress-step {
+      position: relative;
+      flex: 1;
+      text-align: center;
+      z-index: 1;
+    }
+    
+    .progress-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--gray-200);
+      color: var(--gray-500);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      margin: 0 auto 0.5rem;
+      transition: all var(--transition-base);
+    }
+    
+    .progress-step.active .progress-circle {
+      background-color: var(--accent);
+      color: var(--white);
+      box-shadow: 0 0 0 4px rgba(0, 180, 216, 0.2);
+    }
+    
+    .progress-step.completed .progress-circle {
+      background-color: var(--primary);
+      color: var(--white);
+    }
+    
+    .progress-label {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+    
+    .progress-step.active .progress-label {
+      color: var(--primary);
+      font-weight: 600;
+    }
+    
+    .booking-step {
+      display: none;
+      animation: fadeInUp 0.4s ease-out;
+    }
+    
+    .booking-step.active {
+      display: block;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .service-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .service-option {
+      background-color: var(--white);
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all var(--transition-base);
+    }
+    
+    .service-option:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .service-option.selected {
+      border-color: var(--accent);
+      background-color: rgba(0, 180, 216, 0.05);
+    }
+    
+    .service-option-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    
+    .service-option h3 {
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+    
+    .service-option p {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+    
+    .booking-form {
+      background-color: var(--white);
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--gray-200);
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+      font-size: 0.9375rem;
+    }
+    
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      border: 2px solid var(--gray-300);
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      transition: all var(--transition-fast);
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.1);
+    }
+    
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    
+    .booking-actions {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    
+    .confirmation-card {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: var(--white);
+      padding: 3rem 2rem;
+      border-radius: var(--radius-xl);
+      text-align: center;
+    }
+    
+    .confirmation-card h2 {
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+    
+    .confirmation-details {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: var(--radius-md);
+      margin: 2rem 0;
+      text-align: left;
+    }
+    
+    .confirmation-detail {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .confirmation-detail:last-child {
+      border-bottom: none;
+    }
+    
+    .confirmation-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    
+    @media (max-width: 768px) {
+      .booking-container {
+        margin: 5rem auto 2rem;
+        padding: 1rem;
+      }
+      
+      .service-options {
+        grid-template-columns: 1fr;
+      }
+      
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      
+      .booking-actions {
+        flex-direction: column-reverse;
+      }
+      
+      .progress-label {
+        font-size: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Header -->
+  <header role="banner">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="logo-area">
+        <a href="index.html" class="logo-link" aria-label="Sladent - Повернутися на головну">
+          <img src="images/logo-removebg-preview.png" alt="Sladent Логотип" class="sladent-logo"/>
+        </a>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"><span>Головна</span></a></li>
+        <li><a href="about.html"><span>Про нас</span></a></li>
+        <li><a href="services.html"><span>Послуги</span></a></li>
+        <li><a href="team.html"><span>Команда</span></a></li>
+        <li><a href="reviews.html"><span>Відгуки</span></a></li>
+        <li><a href="about.html#faq"><span>FAQ</span></a></li>
+        <li><a href="contact.html"><span>Контакти</span></a></li>
+      </ul>
+      <a href="booking.html" class="btn-book-nav active" aria-label="Записатися на прийом">Записатися на прийом</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Booking Container -->
+  <div class="booking-container">
+    <div class="booking-header">
+      <h1>Записатися на прийом</h1>
+      <p>Ваша найздоровіша усмішка починається тут</p>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+      <div class="progress-step active" id="step1Progress">
+        <div class="progress-circle">1</div>
+        <div class="progress-label">Оберіть послугу</div>
+      </div>
+      <div class="progress-step" id="step2Progress">
+        <div class="progress-circle">2</div>
+        <div class="progress-label">Виберіть час</div>
+      </div>
+      <div class="progress-step" id="step3Progress">
+        <div class="progress-circle">3</div>
+        <div class="progress-label">Ваші дані</div>
+      </div>
+    </div>
+
+    <!-- Step 1: Choose Service -->
+    <div class="booking-step active" id="step1">
+      <h2 style="text-align: center; margin-bottom: 2rem;">Який тип візиту вам потрібен?</h2>
+      <div class="service-options">
+        <div class="service-option" data-service="consultation">
+          <span class="service-option-icon">👋</span>
+          <h3>Перша консультація</h3>
+          <p>Для нових пацієнтів</p>
+        </div>
+        <div class="service-option" data-service="checkup">
+          <span class="service-option-icon">✅</span>
+          <h3>Огляд та чистка</h3>
+          <p>Регулярний профілактичний огляд</p>
+        </div>
+        <div class="service-option" data-service="implant">
+          <span class="service-option-icon">🦷</span>
+          <h3>Консультація з імплантації</h3>
+          <p>Спеціалізована консультація</p>
+        </div>
+        <div class="service-option" data-service="emergency">
+          <span class="service-option-icon">🚨</span>
+          <h3>Екстрений візит</h3>
+          <p>Термінова допомога</p>
+        </div>
+      </div>
+      <div class="booking-actions">
+        <a href="index.html" class="btn btn-outline">Назад на головну</a>
+        <button class="btn btn-primary" onclick="goToStep(2)" id="step1Next" disabled>Далі</button>
+      </div>
+    </div>
+
+    <!-- Step 2: Choose Time -->
+    <div class="booking-step" id="step2">
+      <h2 style="text-align: center; margin-bottom: 2rem;">Виберіть зручний час</h2>
+      <div class="booking-form">
+        <div class="form-group">
+          <label for="appointmentDate">Дата візиту</label>
+          <input type="date" id="appointmentDate" min="" required>
+        </div>
+        <div class="form-group">
+          <label for="appointmentTime">Час</label>
+          <select id="appointmentTime" required>
+            <option value="">Оберіть час</option>
+            <option value="09:00">09:00</option>
+            <option value="09:30">09:30</option>
+            <option value="10:00">10:00</option>
+            <option value="10:30">10:30</option>
+            <option value="11:00">11:00</option>
+            <option value="11:30">11:30</option>
+            <option value="12:00">12:00</option>
+            <option value="13:00">13:00</option>
+            <option value="13:30">13:30</option>
+            <option value="14:00">14:00</option>
+            <option value="14:30">14:30</option>
+            <option value="15:00">15:00</option>
+            <option value="15:30">15:30</option>
+            <option value="16:00">16:00</option>
+            <option value="16:30">16:30</option>
+            <option value="17:00">17:00</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="preferredDoctor">Бажаний лікар (опціонально)</label>
+          <select id="preferredDoctor">
+            <option value="">Будь-який доступний лікар</option>
+            <option value="doctor1">Доктор Ярослав Придатко</option>
+            <option value="doctor2">Доктор Юрій Придатко</option>
+            <option value="doctor3">Доктор Світлана Придатко</option>
+          </select>
+        </div>
+      </div>
+      <div class="booking-actions">
+        <button class="btn btn-outline" onclick="goToStep(1)">Назад</button>
+        <button class="btn btn-primary" onclick="goToStep(3)" id="step2Next">Далі</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Your Details -->
+    <div class="booking-step" id="step3">
+      <h2 style="text-align: center; margin-bottom: 2rem;">Лише кілька деталей для підтвердження</h2>
+      <div class="booking-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">Ім'я *</label>
+            <input type="text" id="firstName" required>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Прізвище *</label>
+            <input type="text" id="lastName" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="phone">Телефон *</label>
+          <input type="tel" id="phone" placeholder="+380" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="notes">Додаткова інформація (опціонально)</label>
+          <textarea id="notes" rows="4" placeholder="Розкажіть нам про ваші потреби або питання..."></textarea>
+        </div>
+        <div class="form-group">
+          <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+            <input type="checkbox" id="agreePolicy" required>
+            <span style="font-weight: normal;">Я погоджуюсь з політикою скасування</span>
+          </label>
+        </div>
+      </div>
+      <div class="booking-actions">
+        <button class="btn btn-outline" onclick="goToStep(2)">Назад</button>
+        <button class="btn btn-primary" onclick="confirmBooking()" id="step3Confirm">Підтвердити запис</button>
+      </div>
+    </div>
+
+    <!-- Step 4: Confirmation -->
+    <div class="booking-step" id="step4">
+      <div class="confirmation-card">
+        <h2>Дякуємо! Ваш запис підтверджено ✓</h2>
+        <p>Ми надіслали підтвердження на вашу електронну пошту</p>
+        
+        <div class="confirmation-details">
+          <div class="confirmation-detail">
+            <strong>Послуга:</strong>
+            <span id="confirmService">-</span>
+          </div>
+          <div class="confirmation-detail">
+            <strong>Дата:</strong>
+            <span id="confirmDate">-</span>
+          </div>
+          <div class="confirmation-detail">
+            <strong>Час:</strong>
+            <span id="confirmTime">-</span>
+          </div>
+          <div class="confirmation-detail">
+            <strong>Лікар:</strong>
+            <span id="confirmDoctor">-</span>
+          </div>
+          <div class="confirmation-detail">
+            <strong>Пацієнт:</strong>
+            <span id="confirmName">-</span>
+          </div>
+        </div>
+        
+        <div class="confirmation-actions">
+          <a href="contact.html" class="btn btn-secondary">Отримати напрямок</a>
+          <a href="index.html" class="btn btn-outline" style="background-color: rgba(255,255,255,0.2); border-color: white; color: white;">Повернутись на головну</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-section">
+        <img src="images/logo-removebg-preview.png" alt="Sladent" class="footer-logo">
+        <h3>Sladent<br><span class="footer-subtitle">Стоматологія Родини Придатко</span></h3>
+        <p>Сучасна стоматологія в Тернополі. Професійна команда, новітні технології, комфортна атмосфера. Ваша усмішка — наша місія.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Контакти</h3>
+        <p>📍 просп. Злуки 8<br>м. Тернопіль, Тернопільська обл.</p>
+        <p>📞 <a href="tel:+380123456789">+380 123 456 789</a></p>
+        <p>✉️ <a href="mailto:info@sladent.ua">info@sladent.ua</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Графік роботи</h3>
+        <p>Понеділок - П'ятниця:<br><strong>9:00 - 18:00</strong></p>
+        <p>Субота:<br><strong>9:00 - 15:00</strong></p>
+        <p>Неділя:<br><strong>Вихідний</strong></p>
+      </div>
+      <div class="footer-section">
+        <h3>Швидкі посилання</h3>
+        <ul class="footer-links">
+          <li><a href="services.html">Послуги</a></li>
+          <li><a href="team.html">Команда</a></li>
+          <li><a href="reviews.html">Відгуки</a></li>
+          <li><a href="contact.html">Контакти</a></li>
+          <li><a href="booking.html" class="footer-link-highlight">📅 Записатися</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Sladent — Стоматологія Родини Придатко. Всі права захищені.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Booking form logic
+    let bookingData = {
+      service: '',
+      date: '',
+      time: '',
+      doctor: '',
+      firstName: '',
+      lastName: '',
+      phone: '',
+      email: ''
+    };
+
+    // Set minimum date to tomorrow
+    const dateInput = document.getElementById('appointmentDate');
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    dateInput.min = tomorrow.toISOString().split('T')[0];
+
+    // Service selection
+    document.querySelectorAll('.service-option').forEach(option => {
+      option.addEventListener('click', function() {
+        document.querySelectorAll('.service-option').forEach(o => o.classList.remove('selected'));
+        this.classList.add('selected');
+        bookingData.service = this.dataset.service;
+        document.getElementById('step1Next').disabled = false;
+      });
+    });
+
+    // Navigation functions
+    function goToStep(stepNumber) {
+      // Hide all steps
+      document.querySelectorAll('.booking-step').forEach(step => step.classList.remove('active'));
+      document.querySelectorAll('.progress-step').forEach(step => {
+        step.classList.remove('active');
+        step.classList.remove('completed');
+      });
+      
+      // Show current step
+      document.getElementById('step' + stepNumber).classList.add('active');
+      document.getElementById('step' + stepNumber + 'Progress').classList.add('active');
+      
+      // Mark completed steps
+      for (let i = 1; i < stepNumber; i++) {
+        document.getElementById('step' + i + 'Progress').classList.add('completed');
+      }
+      
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function confirmBooking() {
+      // Get all data
+      bookingData.date = document.getElementById('appointmentDate').value;
+      bookingData.time = document.getElementById('appointmentTime').value;
+      bookingData.doctor = document.getElementById('preferredDoctor').value;
+      bookingData.firstName = document.getElementById('firstName').value;
+      bookingData.lastName = document.getElementById('lastName').value;
+      bookingData.phone = document.getElementById('phone').value;
+      bookingData.email = document.getElementById('email').value;
+      
+      // Validate
+      if (!bookingData.firstName || !bookingData.lastName || !bookingData.phone || !bookingData.email) {
+        alert('Будь ласка, заповніть всі обов\'язкові поля');
+        return;
+      }
+      
+      if (!document.getElementById('agreePolicy').checked) {
+        alert('Будь ласка, погодьтесь з політикою скасування');
+        return;
+      }
+      
+      // Map service names
+      const serviceNames = {
+        'consultation': 'Перша консультація',
+        'checkup': 'Огляд та чистка',
+        'implant': 'Консультація з імплантації',
+        'emergency': 'Екстрений візит'
+      };
+      
+      const doctorNames = {
+        'doctor1': 'Доктор Ярослав Придатко',
+        'doctor2': 'Доктор Юрій Придатко',
+        'doctor3': 'Доктор Світлана Придатко',
+        '': 'Будь-який доступний лікар'
+      };
+      
+      // Fill confirmation
+      document.getElementById('confirmService').textContent = serviceNames[bookingData.service];
+      document.getElementById('confirmDate').textContent = new Date(bookingData.date).toLocaleDateString('uk-UA', { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+      });
+      document.getElementById('confirmTime').textContent = bookingData.time;
+      document.getElementById('confirmDoctor').textContent = doctorNames[bookingData.doctor];
+      document.getElementById('confirmName').textContent = `${bookingData.firstName} ${bookingData.lastName}`;
+      
+      // Show confirmation
+      goToStep(4);
+    }
+  </script>
+</body>
+</html>

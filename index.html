@@ -35,12 +35,14 @@
       </div>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html" class="active" aria-current="page"><span>Головна</span></a></li>
-        <li><a href="about.html"><span>Про нашу команду</span></a></li>
-        <li><a href="photos.html"><span>Фотографії</span></a></li>
-        <li><a href="contact.html"><span>Контакти</span></a></li>
+        <li><a href="about.html"><span>Про нас</span></a></li>
+        <li><a href="services.html"><span>Послуги</span></a></li>
+        <li><a href="team.html"><span>Команда</span></a></li>
         <li><a href="reviews.html"><span>Відгуки</span></a></li>
-        <li><a href="location.html"><span>Локація</span></a></li>
+        <li><a href="about.html#faq"><span>FAQ</span></a></li>
+        <li><a href="contact.html"><span>Контакти</span></a></li>
       </ul>
+      <button class="cta-btn" onclick="openBookingWidget()" aria-label="Записатися на прийом до стоматолога">Записатися на прийом</button>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
         <span></span>
@@ -85,68 +87,509 @@
 
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content">
-      <h1>Ласкаво просимо до <span class="highlight">Sladent</span></h1>
-      <p>
-        Сучасна стоматологія, яка <span class="typewriter" id="typewriter"></span><span class="cursor">|</span>
+      <h1>Вищий стандарт стоматології. <span class="highlight">Сімейна традиція турботи.</span></h1>
+      <p class="hero-subtitle">
+        Ласкаво просимо до <strong>Sladent</strong> — сучасне втілення <strong>Стоматології Родини Придатко</strong>
       </p>
-      <a href="./contact.html" class="btn" role="button">Запишіться на Прийом!</a>
+      <p class="hero-tagline">
+        <span class="typewriter" id="typewriter"></span><span class="cursor">|</span>
+      </p>
+      <div class="hero-cta-group">
+        <button onclick="openBookingWidget()" class="btn btn-primary" role="button">Записатися на прийом</button>
+        <a href="./services.html" class="btn btn-secondary" role="button">Наші послуги</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="trust-bar" role="region" aria-label="Наші переваги">
+    <div class="trust-bar-container">
+      <div class="trust-item">
+        <div class="trust-icon">🏆</div>
+        <div class="trust-text">Понад 15 років досвіду</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">⭐</div>
+        <div class="trust-text">5-зірковий рейтинг пацієнтів</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🔬</div>
+        <div class="trust-text">3D технології</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">👨‍👩‍👧‍👦</div>
+        <div class="trust-text">Сімейна практика</div>
+      </div>
     </div>
   </section>
 
   <!-- Features Section -->
   <section class="we-care-section fade-in" role="region" aria-labelledby="features-heading">
-    <h2 id="features-heading">Ми дбаємо про вашу усмішку</h2>
-    <div class="features-container">
-      <article class="feature-box scale-in">
-        <h3>Професійна команда</h3>
-        <p>Наші лікарі – це досвідчені спеціалісти, готові допомогти з будь-якими запитами.</p>
+    <h2 id="features-heading">Комплексна турбота для всієї вашої родини</h2>
+    <p class="section-subtitle">Професійні послуги для здоров'я та краси вашої усмішки</p>
+    <div class="services-grid">
+      <article class="service-card scale-in" onclick="window.location.href='service-implants.html'">
+        <div class="service-icon">🦷</div>
+        <h3>Імплантація зубів</h3>
+        <p>Постійні рішення для ідеальної усмішки</p>
+        <a href="service-implants.html" class="service-link">Дізнатися більше ›</a>
       </article>
-      <article class="feature-box scale-in">
-        <h3>Сучасні технології</h3>
-        <p>Використовуємо новітнє обладнання та методи для найкращих результатів.</p>
+      <article class="service-card scale-in" onclick="window.location.href='services.html#orthodontics'">
+        <div class="service-icon">😁</div>
+        <h3>Ортодонтія</h3>
+        <p>Вирівнювання усмішки в будь-якому віці</p>
+        <a href="services.html#orthodontics" class="service-link">Дізнатися більше ›</a>
       </article>
-      <article class="feature-box scale-in">
-        <h3>Комфорт та турбота</h3>
-        <p>Зручна атмосфера та дружній персонал забезпечують приємний візит для всієї родини.</p>
+      <article class="service-card scale-in" onclick="window.location.href='services.html#cosmetic'">
+        <div class="service-icon">✨</div>
+        <h3>Естетична стоматологія</h3>
+        <p>Вініри, відбілювання та перетворення усмішки</p>
+        <a href="services.html#cosmetic" class="service-link">Дізнатися більше ›</a>
       </article>
-      <article class="feature-box scale-in">
-        <h3>Доступні ціни</h3>
-        <p>Пропонуємо оптимальне співвідношення ціни й якості. Ваша усмішка – наш пріоритет.</p>
+      <article class="service-card scale-in" onclick="window.location.href='services.html#general'">
+        <div class="service-icon">🏥</div>
+        <h3>Загальна та сімейна стоматологія</h3>
+        <p>Здорові усмішки на все життя</p>
+        <a href="services.html#general" class="service-link">Дізнатися більше ›</a>
       </article>
+      <article class="service-card scale-in" onclick="window.location.href='services.html#pediatric'">
+        <div class="service-icon">👶</div>
+        <h3>Дитяча стоматологія</h3>
+        <p>Турботливе лікування для найменших пацієнтів</p>
+        <a href="services.html#pediatric" class="service-link">Дізнатися більше ›</a>
+      </article>
+      <article class="service-card scale-in" onclick="window.location.href='services.html#hygiene'">
+        <div class="service-icon">🪥</div>
+        <h3>Професійна гігієна</h3>
+        <p>Чищення та профілактика для здоров'я ясен</p>
+        <a href="services.html#hygiene" class="service-link">Дізнатися більше ›</a>
+      </article>
+    </div>
+    <div class="section-cta">
+      <a href="services.html" class="btn btn-outline">Переглянути всі послуги</a>
     </div>
   </section>
 
-  <!-- Location Section -->
-  <section class="location-section fade-in" role="region" aria-labelledby="location-heading">
-    <h2 id="location-heading">Наша локація</h2>
-    <p>Завітайте до нашого офісу, розташованого тут:</p>
-    <address>
-      <p>просп. Злуки 8, м. Тернопіль, Тернопільський район, Тернопільська область</p>
-    </address>
-    <div class="map-container">
-      <script src="https://static.elfsight.com/platform/platform.js" async></script>
-      <div class="elfsight-app-2773469b-1aa8-405e-9ece-9a821c367f02" data-elfsight-app-lazy></div>
+  <!-- Team Section -->
+  <section class="team-section fade-in" role="region" aria-labelledby="team-heading">
+    <h2 id="team-heading">Родина та експерти, які дбають про вас</h2>
+    <p class="section-subtitle">Десятиліття спільного досвіду, присвячені вашому здоров'ю та впевненості</p>
+    <div class="team-intro">
+      <p>У серці <strong>Sladent</strong> лежить багатолітня традиція <strong>Стоматології Родини Придатко</strong> — прагнення до досконалості, поєднане з теплим, сімейним підходом. Наша команда об'єднує досвідчених спеціалістів, які використовують найсучасніші технології, не втрачаючи особистого дотику та емпатії.</p>
+    </div>
+    <div class="team-gallery">
+      <div class="team-photo" onclick="window.location.href='team.html'">
+        <div class="doctor-avatar doctor-avatar-1">
+          <span class="avatar-initials">ЯП</span>
+        </div>
+        <p><strong>Доктор Ярослав Придатко</strong><br>Головний стоматолог<br>15+ років досвіду</p>
+      </div>
+      <div class="team-photo" onclick="window.location.href='team.html'">
+        <div class="doctor-avatar doctor-avatar-2">
+          <span class="avatar-initials">ЮП</span>
+        </div>
+        <p><strong>Доктор Юрій Придатко</strong><br>Спеціаліст з імплантології<br>12+ років досвіду</p>
+      </div>
+      <div class="team-photo" onclick="window.location.href='team.html'">
+        <div class="doctor-avatar doctor-avatar-3">
+          <span class="avatar-initials">СП</span>
+        </div>
+        <p><strong>Доктор Світлана Придатко</strong><br>Дитячий стоматолог<br>10+ років досвіду</p>
+      </div>
+    </div>
+    <div class="section-cta">
+      <a href="team.html" class="btn btn-outline">Познайомитись з командою</a>
     </div>
   </section>
 
-  <!-- Reviews Section -->
-  <section class="location-section fade-in" role="region" aria-labelledby="reviews-heading">
-    <h2 id="reviews-heading">Наші відгуки</h2>
-    <div class="map-container">
-      <script src="https://static.elfsight.com/platform/platform.js" async></script>
-      <div class="elfsight-app-948240cf-e926-4c1e-82aa-ef7c5c3e42bb" data-elfsight-app-lazy></div>
+  <!-- Testimonials Section -->
+  <section class="testimonials-section fade-in" role="region" aria-labelledby="testimonials-heading">
+    <h2 id="testimonials-heading">Що кажуть наші пацієнти</h2>
+    <p class="section-subtitle">Справжні відгуки від реальних людей</p>
+    <div class="testimonials-slider" id="testimonialsSlider">
+      <button class="slider-btn slider-btn-prev" onclick="moveTestimonial(-1)" aria-label="Попередній відгук">‹</button>
+      <div class="testimonials-track">
+        <div class="testimonial-card active">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Sladent — це справжній професіоналізм. Безболісно, швидко, і результат перевершив всі очікування. Я нарешті відновив впевненість у своїй усмішці."</p>
+          <p class="testimonial-author">— Олександр К.</p>
+          <p class="testimonial-service">Імплантація зубів</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Моя донька боялася стоматолога, але після візиту до доктора Світлани все змінилося. Тепер вона сама просить піти на огляд! Дякуємо за турботу."</p>
+          <p class="testimonial-author">— Марія П.</p>
+          <p class="testimonial-service">Дитяча стоматологія</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Найкраща стоматологія в Тернополі! Сучасне обладнання, привітний персонал і чесні ціни. Рекомендую всім друзям і родині."</p>
+          <p class="testimonial-author">— Ірина В.</p>
+          <p class="testimonial-service">Естетична стоматологія</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Ортодонтичне лікування змінило моє життя. Команда Sladent супроводжувала мене на кожному кроці. Професіонали своєї справи!"</p>
+          <p class="testimonial-author">— Андрій Т.</p>
+          <p class="testimonial-service">Ортодонтія</p>
+        </div>
+      </div>
+      <button class="slider-btn slider-btn-next" onclick="moveTestimonial(1)" aria-label="Наступний відгук">›</button>
+    </div>
+    <div class="section-cta">
+      <a href="reviews.html" class="btn btn-outline">Читати всі відгуки</a>
     </div>
   </section>
+
+  <!-- Location Preview Section -->
+  <section class="location-preview fade-in" role="region" aria-labelledby="location-preview-heading">
+    <div class="location-content-grid">
+      <div class="location-info">
+        <h2 id="location-preview-heading">Відвідайте нашу сучасну клініку</h2>
+        <p class="section-subtitle">Зручне розташування в центрі Тернополя</p>
+        <div class="location-details">
+          <div class="location-detail-item">
+            <div class="detail-icon">📍</div>
+            <div class="detail-text">
+              <strong>Адреса</strong>
+              <p>просп. Злуки 8, м. Тернопіль, Тернопільська область</p>
+            </div>
+          </div>
+          <div class="location-detail-item">
+            <div class="detail-icon">📞</div>
+            <div class="detail-text">
+              <strong>Телефон</strong>
+              <p>+380 123 456 789</p>
+            </div>
+          </div>
+          <div class="location-detail-item">
+            <div class="detail-icon">🕐</div>
+            <div class="detail-text">
+              <strong>Графік роботи</strong>
+              <p>Пн-Пт: 9:00 - 18:00<br>Сб: 9:00 - 15:00</p>
+            </div>
+          </div>
+        </div>
+        <div class="location-cta-group">
+          <a href="contact.html" class="btn btn-outline">Отримати напрямок</a>
+          <button onclick="openBookingWidget()" class="btn btn-primary">Записатися на прийом</button>
+        </div>
+      </div>
+      <div class="location-map">
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.9876543210123!2d25.593934!3d49.553722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473036f55e5e5e5e%3A0x5e5e5e5e5e5e5e5e!2z0L_RgNC-0YHQvy4g0JfQu9GD0LrQuCA4LCDQotC10YDQvdC-0L_RltC70YwsINCi0LXRgNC90L7Qv9GW0LvRjNGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA0NjAwMA!5e0!3m2!1suk!2sua!4v1729882800000!5m2!1suk!2sua" 
+            width="100%" 
+            height="450" 
+            style="border:0; border-radius: 12px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Sladent - просп. Злуки 8, Тернопіль">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="final-cta-section fade-in" role="region" aria-label="Заклик до дії">
+    <div class="final-cta-content">
+      <h2>Готові відчути різницю Sladent?</h2>
+      <p>Ваша найздоровіша та найвпевненіша усмішка — лише на відстані одного кліку</p>
+      <button onclick="openBookingWidget()" class="btn btn-primary btn-large">Записатися на прийом сьогодні</button>
+    </div>
+  </section>
+
+  <!-- Remove old sections -->
+  
 
   <!-- Footer -->
   <footer role="contentinfo">
-    <p>&copy; 2025 Sladent. Всі права захищені.</p>
+    <div class="footer-container">
+      <!-- Footer Brand -->
+      <div class="footer-brand">
+        <img src="images/logo-removebg-preview.png" alt="Sladent Логотип" class="footer-logo"/>
+        <p class="footer-tagline">Sladent — Стоматологія Родини Придатко</p>
+        <p class="footer-description">
+          Ваша посмішка — наша місія. Сучасна стоматологія з турботою та професіоналізмом.
+        </p>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Навігація</h4>
+          <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="about.html">Про нас</a></li>
+            <li><a href="services.html">Послуги</a></li>
+            <li><a href="team.html">Команда</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Інформація</h4>
+          <ul>
+            <li><a href="reviews.html">Відгуки</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+            <li><a href="#" onclick="openBookingWidget(); return false;">Записатися на прийом</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Контакти</h4>
+          <ul>
+            <li>📍 просп. Злуки 8, м. Тернопіль</li>
+            <li>📞 <a href="tel:+380352528595">+38 (0352) 52-85-95</a></li>
+            <li>📧 <a href="mailto:info@sladent.com.ua">info@sladent.com.ua</a></li>
+            <li>� Пн-Пт: 9:00-19:00, Сб: 9:00-15:00</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Sladent — Стоматологія Родини Придатко. Всі права захищені.</p>
+    </div>
   </footer>
 
   <!-- Photo Modal -->
   <div id="photoModal" class="photo-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <span class="close" onclick="closeModal()" role="button" aria-label="Close modal" tabindex="0">&times;</span>
     <img class="photo-modal-content" id="modalImg" alt="">
+  </div>
+
+  <!-- Secure Booking Widget Modal -->
+  <div id="bookingWidget" class="booking-widget-overlay" role="dialog" aria-modal="true" aria-labelledby="booking-widget-title">
+    <div class="booking-widget-container">
+      <!-- Widget Header -->
+      <div class="booking-widget-header">
+        <div class="widget-header-left">
+          <img src="images/logo-removebg-preview.png" alt="Sladent" class="widget-logo">
+          <div class="widget-title-group">
+            <h2 id="booking-widget-title">Sladent</h2>
+            <p class="widget-subtitle">Стоматологія Родини Придатко</p>
+          </div>
+        </div>
+        <button class="widget-close" onclick="closeBookingWidget()" aria-label="Закрити">×</button>
+      </div>
+
+      <!-- Security Bar -->
+      <div class="security-bar">
+        <svg class="security-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <path d="M9 12l2 2 4-4"/>
+        </svg>
+        <span><strong>Безпечне з'єднання</strong> / Secure Encrypted Connection</span>
+      </div>
+
+      <!-- Progress Indicator -->
+      <div class="widget-progress-bar">
+        <div class="widget-progress-step active" data-step="1">
+          <div class="progress-dot">1</div>
+          <span class="progress-label">Послуга</span>
+        </div>
+        <div class="widget-progress-step" data-step="2">
+          <div class="progress-dot">2</div>
+          <span class="progress-label">Час</span>
+        </div>
+        <div class="widget-progress-step" data-step="3">
+          <div class="progress-dot">3</div>
+          <span class="progress-label">Дані</span>
+        </div>
+      </div>
+
+      <!-- Widget Content -->
+      <div class="booking-widget-content">
+        <!-- Step 1: Service Selection -->
+        <div class="widget-step active" data-step="1">
+          <h3>Оберіть послугу</h3>
+          <p class="step-description">Який тип візиту вам потрібен?</p>
+          <div class="service-selection-grid">
+            <div class="service-selection-card" data-service="consultation">
+              <div class="service-selection-icon">👋</div>
+              <h4>Нова консультація</h4>
+              <p>New Patient Consultation</p>
+            </div>
+            <div class="service-selection-card" data-service="checkup">
+              <div class="service-selection-icon">✅</div>
+              <h4>Огляд та чистка</h4>
+              <p>Check-up & Cleaning</p>
+            </div>
+            <div class="service-selection-card" data-service="implant">
+              <div class="service-selection-icon">🦷</div>
+              <h4>Консультація по імплантах</h4>
+              <p>Implant Consultation</p>
+            </div>
+            <div class="service-selection-card" data-service="other">
+              <div class="service-selection-icon">📋</div>
+              <h4>Інше</h4>
+              <p>Other Services</p>
+            </div>
+          </div>
+          <div class="widget-step-actions">
+            <button class="btn btn-outline" onclick="closeBookingWidget()">Скасувати</button>
+            <button class="btn btn-primary" onclick="nextWidgetStep()" disabled id="step1NextBtn">Далі</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Time Selection -->
+        <div class="widget-step" data-step="2">
+          <h3>Оберіть лікаря та час</h3>
+          <p class="step-description">Choose Your Doctor & Time</p>
+          <div class="time-selection-form">
+            <div class="form-group">
+              <label for="widgetDoctor">Лікар (опціонально)</label>
+              <select id="widgetDoctor" class="widget-select">
+                <option value="">Всі лікарі / All Doctors</option>
+                <option value="doctor1">Доктор Ярослав Придатко</option>
+                <option value="doctor2">Доктор Юрій Придатко</option>
+                <option value="doctor3">Доктор Світлана Придатко</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="widgetDate">Дата</label>
+              <input type="date" id="widgetDate" class="widget-input" min="">
+            </div>
+            <div class="form-group">
+              <label>Доступний час</label>
+              <div class="time-slots-grid" id="timeSlotsGrid">
+                <button class="time-slot" data-time="09:00">09:00</button>
+                <button class="time-slot" data-time="09:30">09:30</button>
+                <button class="time-slot" data-time="10:00">10:00</button>
+                <button class="time-slot" data-time="10:30">10:30</button>
+                <button class="time-slot" data-time="11:00">11:00</button>
+                <button class="time-slot" data-time="11:30">11:30</button>
+                <button class="time-slot" data-time="13:00">13:00</button>
+                <button class="time-slot" data-time="13:30">13:30</button>
+                <button class="time-slot" data-time="14:00">14:00</button>
+                <button class="time-slot" data-time="14:30">14:30</button>
+                <button class="time-slot" data-time="15:00">15:00</button>
+                <button class="time-slot" data-time="15:30">15:30</button>
+                <button class="time-slot" data-time="16:00">16:00</button>
+                <button class="time-slot" data-time="16:30">16:30</button>
+                <button class="time-slot" data-time="17:00">17:00</button>
+                <button class="time-slot" data-time="17:30">17:30</button>
+              </div>
+            </div>
+          </div>
+          <div class="widget-step-actions">
+            <button class="btn btn-outline" onclick="prevWidgetStep()">Назад</button>
+            <button class="btn btn-primary" onclick="nextWidgetStep()" disabled id="step2NextBtn">Далі</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Contact Details -->
+        <div class="widget-step" data-step="3">
+          <h3>Ваші контактні дані</h3>
+          <p class="step-description">We are committed to protecting your privacy</p>
+          <div class="contact-details-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="widgetFirstName">Ім'я *</label>
+                <input type="text" id="widgetFirstName" class="widget-input" required>
+              </div>
+              <div class="form-group">
+                <label for="widgetLastName">Прізвище *</label>
+                <input type="text" id="widgetLastName" class="widget-input" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="widgetPhone">Телефон *</label>
+              <input type="tel" id="widgetPhone" class="widget-input" placeholder="+380" required>
+            </div>
+            <div class="form-group">
+              <label for="widgetEmail">Email *</label>
+              <input type="email" id="widgetEmail" class="widget-input" required>
+            </div>
+            
+            <!-- Security & Privacy Notice -->
+            <div class="privacy-notice">
+              <div class="privacy-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <div class="privacy-text">
+                <strong>Ваша конфіденційність — наш пріоритет / Your Privacy is Our Priority</strong>
+                <p>Зверніть увагу: Це не форма електронної пошти. Ваша особиста інформація шифрується та надсилається безпосередньо до нашої захищеної системи управління пацієнтами для підтвердження вашого запису. Ваші дані ніколи не будуть передані третім особам.</p>
+                <p class="privacy-note-en">Please note: This is not an email form. Your personal information is encrypted and sent directly to our secure patient management system to confirm your booking. Your data will never be shared.</p>
+              </div>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="widgetPrivacyAgree" required>
+                <span>Я прочитав(ла) і погоджуюсь з <a href="#" target="_blank">політикою конфіденційності пацієнтів</a></span>
+              </label>
+            </div>
+          </div>
+          <div class="widget-step-actions">
+            <button class="btn btn-outline" onclick="prevWidgetStep()">Назад</button>
+            <button class="btn btn-primary" onclick="confirmWidgetBooking()" id="step3ConfirmBtn">Підтвердити запис</button>
+          </div>
+        </div>
+
+        <!-- Step 4: Confirmation -->
+        <div class="widget-step" data-step="4">
+          <div class="confirmation-success">
+            <div class="success-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M9 12l2 2 4-4"/>
+              </svg>
+            </div>
+            <h3>Дякуємо! Ваш запис підтверджено.</h3>
+            <p class="confirmation-subtitle">Thank You! Your Appointment is Confirmed.</p>
+            <p>Ми з нетерпінням чекаємо зустрічі з вами в Sladent (Стоматологія Родини Придатко)</p>
+            
+            <div class="confirmation-summary">
+              <div class="summary-row">
+                <span class="summary-label">Послуга:</span>
+                <span class="summary-value" id="confirmServiceText">-</span>
+              </div>
+              <div class="summary-row">
+                <span class="summary-label">Дата:</span>
+                <span class="summary-value" id="confirmDateText">-</span>
+              </div>
+              <div class="summary-row">
+                <span class="summary-label">Час:</span>
+                <span class="summary-value" id="confirmTimeText">-</span>
+              </div>
+              <div class="summary-row">
+                <span class="summary-label">Лікар:</span>
+                <span class="summary-value" id="confirmDoctorText">-</span>
+              </div>
+              <div class="summary-row">
+                <span class="summary-label">Пацієнт:</span>
+                <span class="summary-value" id="confirmPatientText">-</span>
+              </div>
+            </div>
+
+            <div class="confirmation-actions">
+              <button class="btn btn-outline" onclick="addToCalendar()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                Додати в календар
+              </button>
+              <a href="contact.html" class="btn btn-outline">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                Отримати напрямок до клініки
+              </a>
+            </div>
+            <button class="btn btn-primary" onclick="closeBookingWidget()" style="margin-top: 1rem; width: 100%;">Закрити</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>

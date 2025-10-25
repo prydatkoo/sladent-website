@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <meta name="description" content="Зв'яжіться з Sladent - запишіться на прийом або поставте запитання. Ми завжди раді вам допомогти!"/>
-  <meta name="keywords" content="контакти Sladent, записатися, стоматолог Тернопіль"/>
+  <meta name="description" content="Контакти Sladent — Стоматологія Родини Придатко. Адреса, телефон, години роботи, паркування, як нас знайти. Тернопіль, просп. Злуки 8."/>
+  <meta name="keywords" content="контакти Sladent, стоматологія Тернопіль контакти, Придатко адреса, просп. Злуки 8, паркування стоматологія, як дістатися"/>
   
   <!-- Favicon -->
   <link rel="icon" href="images/icon.ico" type="image/x-icon"/>
   
-  <title>Контакти – Sladent</title>
+  <title>Контакти – Sladent — Стоматологія Родини Придатко</title>
   
   <!-- Preconnect to Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,12 +28,14 @@
       </div>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html"><span>Головна</span></a></li>
-        <li><a href="about.html"><span>Про нашу команду</span></a></li>
-        <li><a href="photos.html"><span>Фотографії</span></a></li>
-        <li><a href="contact.html" class="active" aria-current="page"><span>Контакти</span></a></li>
+        <li><a href="about.html"><span>Про нас</span></a></li>
+        <li><a href="services.html"><span>Послуги</span></a></li>
+        <li><a href="team.html"><span>Команда</span></a></li>
         <li><a href="reviews.html"><span>Відгуки</span></a></li>
-        <li><a href="location.html"><span>Локація</span></a></li>
+        <li><a href="about.html#faq"><span>FAQ</span></a></li>
+        <li><a href="contact.html" class="active" aria-current="page"><span>Контакти</span></a></li>
       </ul>
+      <button class="cta-btn" onclick="openBookingWidget()" aria-label="Записатися на прийом до стоматолога">Записатися на прийом</button>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
         <span></span>
@@ -42,16 +44,249 @@
     </nav>
   </header>
 
-  <!-- Contact Section -->
-  <div class="contact-section fade-in" role="region" aria-labelledby="contact-heading">
-    <script src="https://static.elfsight.com/platform/platform.js" async></script>
-    <div class="elfsight-app-18d024a3-e0f4-4038-9c6b-86ec1a5df6bb" data-elfsight-app-lazy></div>
-  </div>
+  <!-- Contact Hero Section -->
+  <section class="contact-hero-section fade-in" role="region" aria-labelledby="contact-hero-heading">
+    <div class="contact-hero-badge">КОНТАКТИ</div>
+    <div class="contact-hero-content">
+      <h1 id="contact-hero-heading">Зв'яжіться з нами</h1>
+      <p class="hero-subtitle">
+        Ми завжди раді відповісти на ваші запитання та допомогти вам записатися на прийом
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Info Section -->
+  <section class="contact-info-section">
+    <div class="contact-info-container">
+      <!-- Contact Cards Grid -->
+      <div class="contact-cards-grid">
+        <!-- Phone Card -->
+        <div class="contact-card">
+          <div class="contact-card-icon">📞</div>
+          <h3>Телефон</h3>
+          <p class="contact-card-value"><a href="tel:+380352528595">+38 (0352) 52-85-95</a></p>
+          <p class="contact-card-description">Пн-Пт: 9:00-19:00<br>Сб: 9:00-15:00<br>Нд: Вихідний</p>
+        </div>
+
+        <!-- Email Card -->
+        <div class="contact-card">
+          <div class="contact-card-icon">📧</div>
+          <h3>Email</h3>
+          <p class="contact-card-value"><a href="mailto:info@sladent.com.ua">info@sladent.com.ua</a></p>
+          <p class="contact-card-description">Відповідаємо протягом 24 годин</p>
+        </div>
+
+        <!-- Address Card -->
+        <div class="contact-card">
+          <div class="contact-card-icon">📍</div>
+          <h3>Адреса</h3>
+          <p class="contact-card-value">просп. Злуки 8</p>
+          <p class="contact-card-description">м. Тернопіль, 46000</p>
+        </div>
+
+        <!-- Working Hours Card -->
+        <div class="contact-card">
+          <div class="contact-card-icon">🕒</div>
+          <h3>Години роботи</h3>
+          <p class="contact-card-value">Понеділок - П'ятниця</p>
+          <p class="contact-card-description">9:00 - 19:00 (без перерв)<br>Субота: 9:00 - 15:00</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="map-section">
+    <div class="map-container">
+      <h2>Де нас знайти</h2>
+      <div class="map-wrapper">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.9876543210123!2d25.593934!3d49.553722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473036f55e5e5e5e%3A0x5e5e5e5e5e5e5e5e!2z0L_RgNC-0YHQvy4g0JfQu9GD0LrQuCA4LCDQotC10YDQvdC-0L_RltC70YwsINCi0LXRgNC90L7Qv9GW0LvRjNGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA0NjAwMA!5e0!3m2!1suk!2sua!4v1729882800000!5m2!1suk!2sua" 
+          width="100%" 
+          height="500" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Sladent - просп. Злуки 8, Тернопіль">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Directions Section -->
+  <section class="directions-section">
+    <div class="directions-container">
+      <h2>Як до нас дістатися</h2>
+      
+      <div class="directions-grid">
+        <!-- By Car -->
+        <div class="direction-card">
+          <div class="direction-icon">🚗</div>
+          <h3>На автомобілі</h3>
+          <ul class="direction-list">
+            <li><strong>З центру міста:</strong> рухайтесь просп. Злуки на схід ~2 км, клініка з правого боку</li>
+            <li><strong>З Львівського шосе:</strong> виїзд на просп. Злуки, далі ~1.5 км до клініки</li>
+            <li><strong>Орієнтири:</strong> поруч з торговим центром "Подоляни", напроти АЗС</li>
+          </ul>
+        </div>
+
+        <!-- Parking -->
+        <div class="direction-card">
+          <div class="direction-icon">🅿️</div>
+          <h3>Паркування</h3>
+          <ul class="direction-list">
+            <li><strong>Безкоштовний паркінг</strong> біля клініки (15 місць)</li>
+            <li><strong>Вулична парковка</strong> на просп. Злуки</li>
+            <li><strong>Паркінг ТЦ "Подоляни"</strong> (100 м від клініки)</li>
+            <li>Паркувальні місця для людей з обмеженими можливостями</li>
+          </ul>
+        </div>
+
+        <!-- Public Transport -->
+        <div class="direction-card">
+          <div class="direction-icon">🚌</div>
+          <h3>Громадський транспорт</h3>
+          <ul class="direction-list">
+            <li><strong>Тролейбуси:</strong> №1, №5, №8 — зупинка "Просп. Злуки"</li>
+            <li><strong>Маршрутки:</strong> №3, №12, №20, №36 — зупинка "Просп. Злуки"</li>
+            <li><strong>Від зупинки:</strong> 2 хвилини пішки до клініки</li>
+          </ul>
+        </div>
+
+        <!-- Walking -->
+        <div class="direction-card">
+          <div class="direction-icon">🚶</div>
+          <h3>Пішки</h3>
+          <ul class="direction-list">
+            <li><strong>Від Театральної площі:</strong> ~15 хвилин (1.2 км) просп. Злуки</li>
+            <li><strong>Від ТРЦ "Подоляни":</strong> 2 хвилини (100 м)</li>
+            <li><strong>Від залізничного вокзалу:</strong> ~25 хвилин (2 км)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Accessibility Note -->
+      <div class="accessibility-note">
+        <div class="accessibility-icon">♿</div>
+        <div class="accessibility-content">
+          <h4>Доступність для всіх</h4>
+          <p>
+            Наша клініка обладнана пандусом та має зручний вхід для людей з обмеженими можливостями. 
+            Ми піклуємося про комфорт кожного пацієнта.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section (External Widget) -->
+  <section class="contact-form-section" id="booking-form">
+    <div class="contact-form-container">
+      <h2>Напишіть нам</h2>
+      <p class="section-subtitle">Маєте запитання? Залиште повідомлення, і ми зв'яжемося з вами найближчим часом</p>
+      
+      <!-- Elfsight Contact Form Widget -->
+      <script src="https://static.elfsight.com/platform/platform.js" async></script>
+      <div class="elfsight-app-18d024a3-e0f4-4038-9c6b-86ec1a5df6bb" data-elfsight-app-lazy></div>
+    </div>
+  </section>
+
+  <!-- Contact CTA Section -->
+  <section class="contact-cta-section">
+    <div class="contact-cta-content">
+      <h2>Готові записатися на прийом?</h2>
+      <p>Оберіть зручний час і дату — ми подбаємо про вашу посмішку</p>
+      <button class="btn btn-primary btn-large" onclick="openBookingWidget()">Записатися на прийом</button>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer role="contentinfo">
-    <p>&copy; 2025 Sladent. Всі права захищені.</p>
+    <div class="footer-container">
+      <!-- Footer Brand -->
+      <div class="footer-brand">
+        <img src="images/logo-removebg-preview.png" alt="Sladent Логотип" class="footer-logo"/>
+        <p class="footer-tagline">Sladent — Стоматологія Родини Придатко</p>
+        <p class="footer-description">
+          Ваша посмішка — наша місія. Сучасна стоматологія з турботою та професіоналізмом.
+        </p>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Навігація</h4>
+          <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="about.html">Про нас</a></li>
+            <li><a href="services.html">Послуги</a></li>
+            <li><a href="team.html">Команда</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Інформація</h4>
+          <ul>
+            <li><a href="reviews.html">Відгуки</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+            <li><a href="#" onclick="openBookingWidget(); return false;">Записатися на прийом</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Контакти</h4>
+          <ul>
+            <li>📍 просп. Злуки 8, м. Тернопіль</li>
+            <li>📞 <a href="tel:+380352528595">+38 (0352) 52-85-95</a></li>
+            <li>📧 <a href="mailto:info@sladent.com.ua">info@sladent.com.ua</a></li>
+            <li>🕒 Пн-Пт: 9:00-19:00, Сб: 9:00-15:00</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Sladent — Стоматологія Родини Придатко. Всі права захищені.</p>
+    </div>
   </footer>
+
+  <!-- Booking handled by contact form - NO DATABASE, NO BACKEND -->
+  <!-- All contact form data goes to Elfsight widget -->
+
+  <script>
+    // Check if user came from a service page and display the selected service
+    document.addEventListener('DOMContentLoaded', function() {
+      const selectedService = sessionStorage.getItem('selectedService');
+      
+      if (selectedService) {
+        // Create a notice above the form
+        const formSection = document.querySelector('.contact-form-section .contact-form-container');
+        const serviceNotice = document.createElement('div');
+        serviceNotice.style.cssText = 'background: rgba(255, 255, 255, 0.98); color: #0A4D68; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; text-align: center; box-shadow: 0 4px 20px rgba(10, 77, 104, 0.15); border: 2px solid #088395;';
+        serviceNotice.innerHTML = `
+          <p style="margin: 0; font-size: 1.1rem; font-weight: 600; color: #0A4D68;">
+            <span style="font-size: 1.5rem; vertical-align: middle;">✅</span> Вас цікавить: <strong style="font-size: 1.25rem; color: #088395;">${selectedService}</strong>
+          </p>
+          <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: #475569;">
+            Будь ласка, вкажіть це у повідомленні нижче
+          </p>
+        `;
+        
+        if (formSection && formSection.querySelector('h2')) {
+          formSection.querySelector('h2').after(serviceNotice);
+        }
+        
+        // Clear the session storage after showing
+        sessionStorage.removeItem('selectedService');
+        
+        // Scroll to the form
+        setTimeout(() => {
+          document.getElementById('booking-form').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 300);
+      }
+    });
+  </script>
 
   <script src="script.js"></script>
 </body>

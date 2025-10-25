@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <meta name="description" content="Повний спектр стоматологічних послуг від Sladent - Стоматологія Родини Придатко. Від профілактики до складних процедур. Імплантація, ортодонтія, естетична стоматологія."/>
+  <meta name="keywords" content="стоматологічні послуги Тернопіль, імплантація зубів, ортодонтія, вініри, дитячий стоматолог"/>
+  
+  <link rel="icon" href="images/icon.ico" type="image/x-icon"/>
+  
+  <title>Наші послуги – Sladent | Стоматологія Родини Придатко</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Navigation Header -->
+  <header role="banner">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="logo-area">
+        <a href="index.html" class="logo-link" aria-label="Sladent - Повернутися на головну">
+          <img src="images/logo-removebg-preview.png" alt="Sladent Логотип" class="sladent-logo"/>
+        </a>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"><span>Головна</span></a></li>
+        <li><a href="about.html"><span>Про нас</span></a></li>
+        <li><a href="services.html" class="active" aria-current="page"><span>Послуги</span></a></li>
+        <li><a href="team.html"><span>Команда</span></a></li>
+        <li><a href="reviews.html"><span>Відгуки</span></a></li>
+        <li><a href="about.html#faq"><span>FAQ</span></a></li>
+        <li><a href="contact.html"><span>Контакти</span></a></li>
+      </ul>
+      <button class="cta-btn" onclick="openBookingWidget()" aria-label="Записатися на прийом до стоматолога">Записатися на прийом</button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Services Hero Section -->
+  <section class="services-hero-section fade-in" role="banner">
+    <div class="services-hero-content">
+      <div class="services-hero-badge">Наші послуги</div>
+      <h1>Комплексна стоматологічна допомога для всієї родини</h1>
+      <p class="hero-subtitle">Від профілактичного догляду до складних реставрацій — ми надаємо повний спектр послуг з використанням найсучасніших технологій</p>
+    </div>
+  </section>
+
+  <!-- Services Introduction -->
+  <section class="services-intro-section fade-in">
+    <div class="services-intro-container">
+      <h2>Чому варто обрати Sladent для вашого стоматологічного лікування?</h2>
+      <div class="services-intro-grid">
+        <div class="intro-benefit">
+          <div class="intro-benefit-icon">🎯</div>
+          <h4>Персоналізований підхід</h4>
+          <p>Кожен план лікування розробляється індивідуально з урахуванням ваших унікальних потреб</p>
+        </div>
+        <div class="intro-benefit">
+          <div class="intro-benefit-icon">🔬</div>
+          <h4>Сучасні технології</h4>
+          <p>3D-сканування, цифрове планування, лазерні технології для точних результатів</p>
+        </div>
+        <div class="intro-benefit">
+          <div class="intro-benefit-icon">👨‍⚕️</div>
+          <h4>Досвідчені спеціалісти</h4>
+          <p>Кожен лікар має міжнародну кваліфікацію та постійно підвищує свої навички</p>
+        </div>
+        <div class="intro-benefit">
+          <div class="intro-benefit-icon">💎</div>
+          <h4>Преміум матеріали</h4>
+          <p>Використовуємо лише сертифіковані матеріали провідних світових виробників</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Services Grid -->
+  <section class="main-services-section fade-in">
+    <h2>Основні напрямки лікування</h2>
+    <p class="section-subtitle">Професійні рішення для здоров'я та краси вашої усмішки</p>
+    
+    <div class="main-services-grid">
+      
+      <!-- Service 1: Dental Implants -->
+      <article class="main-service-card scale-in" id="implants">
+        <div class="service-card-header">
+          <div class="service-card-icon">🦷</div>
+          <div class="service-card-badge">Топ послуга</div>
+        </div>
+        <h3>Імплантація зубів</h3>
+        <p class="service-card-subtitle">Permanent Solutions for Missing Teeth</p>
+        <p class="service-card-description">Повне відновлення функції та естетики за допомогою дентальних імплантів — найнадійнішого рішення для заміни втрачених зубів. Використовуємо імплантаційні системи преміум-класу (Nobel Biocare, Straumann) з пожиттньою гарантією.</p>
+        
+        <div class="service-card-features">
+          <h4>Що включає:</h4>
+          <ul>
+            <li><strong>3D-планування</strong> — комп'ютерне моделювання до міліметра</li>
+            <li><strong>Одиночні імпланти</strong> — для заміни одного зуба</li>
+            <li><strong>Множинна імплантація</strong> — відновлення кількох зубів</li>
+            <li><strong>Повне протезування</strong> — All-on-4, All-on-6</li>
+            <li><strong>Кісткова пластика</strong> — при недостатньому об'ємі кістки</li>
+            <li><strong>Синус-ліфтинг</strong> — підняття дна гайморової пазухи</li>
+          </ul>
+        </div>
+        
+        <div class="service-card-benefits">
+          <div class="benefit-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span>98% успішність</span>
+          </div>
+          <div class="benefit-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span>Пожиттня гарантія</span>
+          </div>
+          <div class="benefit-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span>Безболісно</span>
+          </div>
+        </div>
+        
+        <button onclick="openBookingWidget('Імплантація зубів')" class="btn btn-primary btn-service-card">Записатися на консультацію</button>
+      </article>
+
+      <!-- Service 2: Orthodontics -->
+      <article class="main-service-card scale-in" id="orthodontics">
+        <div class="service-card-header">
+          <div class="service-card-icon">😁</div>
+        </div>
+        <h3>Ортодонтія</h3>
+        <p class="service-card-subtitle">Straightening Smiles at Any Age</p>
+        <p class="service-card-description">Виправлення прикусу та вирівнювання зубів для здорової та красивої усмішки. Працюємо з пацієнтами всіх віків — від дітей до дорослих.</p>
+        
+        <div class="service-card-features">
+          <h4>Що включає:</h4>
+          <ul>
+            <li><strong>Брекет-системи</strong> — металеві, керамічні, сапфірові</li>
+            <li><strong>Прозорі елайнери</strong> — невидиме лікування (Invisalign)</li>
+            <li><strong>Дитяча ортодонтія</strong> — раннє втручання від 6 років</li>
+            <li><strong>Лінгвальні брекети</strong> — встановлення з внутрішньої сторони</li>
+            <li><strong>Ретенційні апарати</strong> — закріплення результату</li>
+          </ul>
+        </div>
+        
+        <div class="service-card-benefits">
+          <div class="benefit-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span>6-18 місяців</span>
+          </div>
+          <div class="benefit-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span>Невидимі варіанти</span>
+          </div>
+        </div>
+        
+        <button onclick="openBookingWidget('Ортодонтія')" class="btn btn-outline btn-service-card">Консультація ортодонта</button>
+      </article>
+
+      <!-- Service 3: Cosmetic Dentistry -->
+      <article class="main-service-card scale-in" id="cosmetic">
+        <div class="service-card-header">
+          <div class="service-card-icon">✨</div>
+          <div class="service-card-badge">Популярне</div>
+        </div>
+        <h3>Естетична стоматологія</h3>
+        <p class="service-card-subtitle">Transform Your Smile</p>
+        <p class="service-card-description">Професійне перетворення усмішки за допомогою сучасних косметичних процедур. Створюємо голлівудські усмішки з урахуванням індивідуальних особливостей обличчя.</p>
+        
+        <div class="service-card-features">
+          <h4>Що включає:</h4>
+          <ul>
+            <li><strong>Вініри</strong> — тонкі керамічні накладки</li>
+            <li><strong>Люмініри</strong> — ультратонкі вініри без обточування</li>
+            <li><strong>Професійне відбілювання</strong> — ZOOM4, лазерне</li>
+            <li><strong>Художня реставрація</strong> — відновлення форми та кольору</li>
+            <li><strong>Дизайн усмішки</strong> — комплексне перетворення</li>
+            <li><strong>Контурна пластика ясен</strong> — корекція лінії усмішки</li>
+          </ul>
+        </div>
+        
+        <div class="service-card-benefits">
+          <div class="benefit-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span>Природний вигляд</span>
+          </div>
+          <div class="benefit-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span>Довічна служба</span>
+          </div>
+        </div>
+        
+        <button onclick="openBookingWidget('Естетична стоматологія')" class="btn btn-primary btn-service-card">Створити мою усмішку</button>
+      </article>
+
+      <!-- Service 4: General Dentistry -->
+      <article class="main-service-card scale-in" id="general">
+        <div class="service-card-header">
+          <div class="service-card-icon">🏥</div>
+        </div>
+        <h3>Загальна та сімейна стоматологія</h3>
+        <p class="service-card-subtitle">Comprehensive Family Care</p>
+        <p class="service-card-description">Комплексний догляд за зубами для пацієнтів всіх віків. Акцент на профілактику та збереження природних зубів.</p>
+        
+        <div class="service-card-features">
+          <h4>Що включає:</h4>
+          <ul>
+            <li><strong>Регулярні огляди</strong> — профілактичні check-up кожні 6 місяців</li>
+            <li><strong>Лікування карієсу</strong> — на всіх стадіях</li>
+            <li><strong>Пломбування</strong> — фотополімерні матеріали</li>
+            <li><strong>Лікування кореневих каналів</strong> — ендодонтія</li>
+            <li><strong>Видалення зубів</strong> — атравматичне</li>
+            <li><strong>Лікування пульпіту</strong> — збереження зуба</li>
+          </ul>
+        </div>
+        
+        <div class="service-card-benefits">
+          <div class="benefit-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span>Для всієї родини</span>
+          </div>
+          <div class="benefit-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span>Безболісно</span>
+          </div>
+        </div>
+        
+        <button onclick="openBookingWidget('Загальна стоматологія')" class="btn btn-outline btn-service-card">Запланувати огляд</button>
+      </article>
+
+      <!-- Service 5: Pediatric Dentistry -->
+      <article class="main-service-card scale-in" id="pediatric">
+        <div class="service-card-header">
+          <div class="service-card-icon">👶</div>
+        </div>
+        <h3>Дитяча стоматологія</h3>
+        <p class="service-card-subtitle">Gentle Care for Little Smiles</p>
+        <p class="service-card-description">Спеціалізована, турботлива допомога для дітей у дружній і комфортній атмосфері. Формуємо позитивне ставлення до стоматолога на все життя.</p>
+        
+        <div class="service-card-features">
+          <h4>Що включає:</h4>
+          <ul>
+            <li><strong>Перший візит</strong> — знайомство з лікарем (від 1 року)</li>
+            <li><strong>Профілактика карієсу</strong> — фторування, герметизація</li>
+            <li><strong>Лікування молочних зубів</strong> — без страху</li>
+            <li><strong>Герметизація фісур</strong> — захист від карієсу</li>
+            <li><strong>М'яке лікування</strong> — седація при необхідності</li>
+            <li><strong>Навчання гігієні</strong> — ігрова форма</li>
+          </ul>
+        </div>
+        
+        <div class="service-card-benefits">
+          <div class="benefit-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span>Без страху</span>
+          </div>
+          <div class="benefit-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span>Ігрова форма</span>
+          </div>
+        </div>
+        
+        <button onclick="openBookingWidget('Дитяча стоматологія')" class="btn btn-outline btn-service-card">Записати дитину</button>
+      </article>
+
+      <!-- Service 6: Hygiene -->
+      <article class="main-service-card scale-in" id="hygiene">
+        <div class="service-card-header">
+          <div class="service-card-icon">🪥</div>
+        </div>
+        <h3>Професійна гігієна</h3>
+        <p class="service-card-subtitle">Prevention is the Best Medicine</p>
+        <p class="service-card-description">Регулярне професійне чищення — основа здоров'я зубів і ясен. Рекомендуємо кожні 6 місяців.</p>
+        
+        <div class="service-card-features">
+          <h4>Що включає:</h4>
+          <ul>
+            <li><strong>Ультразвукове чищення</strong> — видалення зубного каменю</li>
+            <li><strong>Air Flow</strong> — видалення нальоту та пігментації</li>
+            <li><strong>Полірування зубів</strong> — гладка поверхня</li>
+            <li><strong>Фторування</strong> — зміцнення емалі</li>
+            <li><strong>Лікування ясен</strong> — пародонтологія</li>
+          </ul>
+        </div>
+        
+        <div class="service-card-benefits">
+          <div class="benefit-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span>45-60 хвилин</span>
+          </div>
+          <div class="benefit-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span>Профілактика</span>
+          </div>
+        </div>
+        
+        <button onclick="openBookingWidget('Гігієна та профілактика')" class="btn btn-outline btn-service-card">Записатися на чистку</button>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Additional Services -->
+  <section class="additional-services-section fade-in">
+    <h2>Додаткові послуги</h2>
+    <div class="additional-services-grid">
+      
+      <div class="additional-service-card scale-in">
+        <div class="additional-service-icon">🚨</div>
+        <h4>Невідкладна допомога</h4>
+        <p>Швидка допомога при зубному болю, травмах, абсцесах. Приймаємо без попереднього запису.</p>
+        <a href="contact.html" class="service-link">Зв'язатися негайно →</a>
+      </div>
+      
+      <div class="additional-service-card scale-in">
+        <div class="additional-service-icon">🦴</div>
+        <h4>Протезування</h4>
+        <p>Коронки, мости, знімні протези. Відновлення функції та естетики.</p>
+        <button onclick="openBookingWidget('Протезування')" class="service-link">Дізнатися більше →</button>
+      </div>
+      
+      <div class="additional-service-card scale-in">
+        <div class="additional-service-icon">🩺</div>
+        <h4>Пародонтологія</h4>
+        <p>Лікування захворювань ясен, пародонтиту, підтримуюча терапія.</p>
+        <button onclick="openBookingWidget('Пародонтологія')" class="service-link">Записатися →</button>
+      </div>
+      
+      <div class="additional-service-card scale-in">
+        <div class="additional-service-icon">🦷</div>
+        <h4>Хірургія</h4>
+        <p>Видалення зубів мудрості, кісткова пластика, резекція верхівки кореня.</p>
+        <button onclick="openBookingWidget('Хірургічна стоматологія')" class="service-link">Консультація →</button>
+      </div>
+      
+      <div class="additional-service-card scale-in">
+        <div class="additional-service-icon">💤</div>
+        <h4>Седація</h4>
+        <p>Лікування під седацією для пацієнтів з підвищеною тривожністю.</p>
+        <button onclick="openBookingWidget('Лікування під седацією')" class="service-link">Дізнатися →</button>
+      </div>
+      
+      <div class="additional-service-card scale-in">
+        <div class="additional-service-icon">📸</div>
+        <h4>Діагностика</h4>
+        <p>3D-томографія, панорамні знімки, інтраоральне сканування.</p>
+        <button onclick="openBookingWidget('Діагностика')" class="service-link">Записатися →</button>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Technology Section -->
+  <section class="technology-section fade-in">
+    <h2>Сучасні технології для вашого комфорту</h2>
+    <p class="section-subtitle">Інвестуємо в майбутнє вашої усмішки</p>
+    
+    <div class="technology-grid">
+      <div class="technology-card">
+        <div class="technology-icon">🔬</div>
+        <h4>3D-сканування та планування</h4>
+        <p>Комп'ютерна томографія (CBCT) для точної діагностики та планування складних процедур. Повна 3D-візуалізація структури кісток та тканин.</p>
+      </div>
+      
+      <div class="technology-card">
+        <div class="technology-icon">💻</div>
+        <h4>Цифрова стоматологія</h4>
+        <p>CAD/CAM технології для виготовлення коронок, вінірів та протезів за один візит. Ідеальна посадка та естетика.</p>
+      </div>
+      
+      <div class="technology-card">
+        <div class="technology-icon">⚡</div>
+        <h4>Лазерні технології</h4>
+        <p>Діодні лазери для м'якого лікування ясен, стерилізації каналів та відбілювання. Менш інвазивно, швидше загоєння.</p>
+      </div>
+      
+      <div class="technology-card">
+        <div class="technology-icon">💉</div>
+        <h4>Безболісна анестезія</h4>
+        <p>Комп'ютеризовані системи введення анестезії (The Wand) для абсолютно безболісних ін'єкцій.</p>
+      </div>
+      
+      <div class="technology-card">
+        <div class="technology-icon">🎨</div>
+        <h4>Цифровий дизайн усмішки</h4>
+        <p>Віртуальне моделювання майбутньої усмішки перед початком лікування. Бачите результат заздалегідь.</p>
+      </div>
+      
+      <div class="technology-card">
+        <div class="technology-icon">🛡️</div>
+        <h4>Європейська стерилізація</h4>
+        <p>Багаторівнева система стерилізації інструментів відповідно до найвищих європейських стандартів безпеки.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Philosophy -->
+  <section class="pricing-philosophy-section fade-in">
+    <div class="pricing-content">
+      <h2>Прозора ціноваполітика</h2>
+      <p class="pricing-subtitle">Ніяких прихованих витрат. Ніяких сюрпризів.</p>
+      
+      <div class="pricing-principles">
+        <div class="pricing-principle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+          <div>
+            <h4>Безкоштовна консультація</h4>
+            <p>Перша зустріч — це знайомство. Ми оцінюємо стан, обговорюємо варіанти та складаємо план без зобов'язань.</p>
+          </div>
+        </div>
+        
+        <div class="pricing-principle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+          <div>
+            <h4>Детальний кошторис</h4>
+            <p>До початку лікування ви отримуєте повний план з вказанням кожної процедури та її вартості. Ніяких додаткових платежів.</p>
+          </div>
+        </div>
+        
+        <div class="pricing-principle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+          <div>
+            <h4>Гнучка оплата</h4>
+            <p>Індивідуальні плани лікування для кожного пацієнта. Якісне лікування має бути доступним.</p>
+          </div>
+        </div>
+        
+        <div class="pricing-principle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+          <div>
+            <h4>Гарантія якості</h4>
+            <p>Надаємо письмові гарантії на всі види робіт. Якщо щось піде не так — ми виправимо безкоштовно.</p>
+          </div>
+        </div>
+      </div>
+      
+      <button onclick="openBookingWidget()" class="btn btn-primary btn-large">Отримати консультацію та кошторис</button>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="services-final-cta fade-in">
+    <h2>Готові розпочати свій шлях до здорової усмішки?</h2>
+    <p>Наша команда експертів тут, щоб надати вам найкращу стоматологічну допомогу</p>
+    <div class="cta-buttons">
+      <button onclick="openBookingWidget()" class="btn btn-primary btn-large">Записатися на прийом</button>
+      <a href="team.html" class="btn btn-outline btn-large">Познайомитися з командою</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="footer-container">
+      <!-- Footer Brand -->
+      <div class="footer-brand">
+        <img src="images/logo-removebg-preview.png" alt="Sladent Логотип" class="footer-logo"/>
+        <p class="footer-tagline">Sladent — Стоматологія Родини Придатко</p>
+        <p class="footer-description">
+          Ваша посмішка — наша місія. Сучасна стоматологія з турботою та професіоналізмом.
+        </p>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Навігація</h4>
+          <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="about.html">Про нас</a></li>
+            <li><a href="services.html">Послуги</a></li>
+            <li><a href="team.html">Команда</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Інформація</h4>
+          <ul>
+            <li><a href="reviews.html">Відгуки</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+            <li><a href="#" onclick="openBookingWidget(); return false;">Записатися на прийом</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Контакти</h4>
+          <ul>
+            <li>📍 просп. Злуки 8, м. Тернопіль</li>
+            <li>📞 <a href="tel:+380352528595">+38 (0352) 52-85-95</a></li>
+            <li>📧 <a href="mailto:info@sladent.com.ua">info@sladent.com.ua</a></li>
+            <li>� Пн-Пт: 9:00-19:00, Сб: 9:00-15:00</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Sladent — Стоматологія Родини Придатко. Всі права захищені.</p>
+    </div>
+  </footer>
+
+  <!-- Booking Widget Modal -->
+  <div id="bookingWidget" class="booking-widget-overlay" role="dialog" aria-modal="true" aria-labelledby="booking-widget-title">
+    <div class="booking-widget-container">
+      <div class="booking-widget-header">
+        <div class="widget-header-left">
+          <img src="images/logo-removebg-preview.png" alt="Sladent" class="widget-logo">
+          <div class="widget-title-group">
+            <h2 id="booking-widget-title">Sladent</h2>
+            <p class="widget-subtitle">Стоматологія Родини Придатко</p>
+          </div>
+        </div>
+        <button class="widget-close" onclick="closeBookingWidget()" aria-label="Закрити">×</button>
+      </div>
+      <div class="security-bar">
+        <svg class="security-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <path d="M9 12l2 2 4-4"/>
+        </svg>
+        <span><strong>Безпечне з'єднання</strong> / Secure Encrypted Connection</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -329,7 +329,9 @@ const TypewriterModule = (() => {
     'поєднує професіоналізм і турботу',
     'використовує новітні технології',
     'гарантує комфорт і безпеку',
-    'створює здорові усмішки'
+    'створює здорові усмішки',
+    'надає комплексні послуги',
+    'працює з любов\'ю до пацієнтів'
   ];
   let phraseIndex = 0;
   let letterIndex = 0;
@@ -518,6 +520,451 @@ window.closeModal = () => {
   ModalModule.close();
 };
 
+window.openDoctorModal = (doctorId) => {
+  // Placeholder for doctor modal functionality
+  console.log('Opening doctor modal:', doctorId);
+  // TODO: Implement doctor modal with detailed bio
+};
+
+window.moveTestimonial = (direction) => {
+  TestimonialSliderModule.move(direction);
+};
+
+// Booking Widget Global Functions - REDIRECT TO CONTACT PAGE
+window.openBookingWidget = (serviceName = '') => {
+  // Redirect to contact page where patients can fill out the form
+  // If service name provided, store it in sessionStorage to pre-fill form
+  if (serviceName) {
+    sessionStorage.setItem('selectedService', serviceName);
+  }
+  window.location.href = 'contact.html#booking-form';
+  return false;
+};
+
+window.closeBookingWidget = () => {
+  // Not needed - using contact page
+  return false;
+};
+
+// Legacy functions for compatibility
+window.nextWidgetStep = () => {
+  console.log('Using contact page form');
+};
+
+window.prevWidgetStep = () => {
+  console.log('Using contact page form');
+};
+
+window.confirmWidgetBooking = () => {
+  console.log('Using contact page form');
+};
+
+window.addToCalendar = () => {
+  console.log('Using contact page form');
+};
+
+// =========================================================================
+// TESTIMONIAL SLIDER MODULE
+// =========================================================================
+const TestimonialSliderModule = (() => {
+  let currentSlide = 0;
+  let slides = [];
+  
+  const init = () => {
+    slides = document.querySelectorAll('.testimonial-card');
+    if (slides.length === 0) return;
+    
+    showSlide(0);
+    setupAutoPlay();
+  };
+  
+  const showSlide = (index) => {
+    slides.forEach(slide => slide.classList.remove('active'));
+    currentSlide = (index + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+  };
+  
+  const move = (direction) => {
+    showSlide(currentSlide + direction);
+  };
+  
+  const setupAutoPlay = () => {
+    setInterval(() => {
+      move(1);
+    }, 7000);
+  };
+  
+  return { init, move };
+})();
+
+// =========================================================================
+// BOOKING WIDGET MODULE (DEPRECATED - Using Calendly instead)
+// =========================================================================
+// IMPORTANT: All booking functionality is now handled by Calendly
+// This ensures NO DATABASE, NO BACKEND, completely secure third-party booking
+// The BookingWidgetModule below is kept for reference but NOT USED
+// =========================================================================
+/*
+const BookingWidgetModule = (() => {
+  let currentStep = 1;
+  let bookingData = {
+    service: '',
+    doctor: '',
+    date: '',
+    time: '',
+    firstName: '',
+    lastName: '',
+    phone: '',
+    email: ''
+  };
+  
+  let widget, overlay;
+  
+  const init = () => {
+    widget = document.getElementById('bookingWidget');
+    overlay = widget;
+    
+    if (!widget) return;
+    
+    setupServiceSelection();
+    setupTimeSelection();
+    setupDateInput();
+    setupFormValidation();
+    setupEscapeKey();
+  };
+  
+  const open = () => {
+    if (!widget) return;
+    
+    // Reset to step 1
+    currentStep = 1;
+    updateStepDisplay();
+    
+    // Show widget
+    widget.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    
+    // Set minimum date to tomorrow
+    const dateInput = document.getElementById('widgetDate');
+    if (dateInput) {
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      dateInput.min = tomorrow.toISOString().split('T')[0];
+    }
+  };
+  
+  const close = () => {
+    if (!widget) return;
+    
+    widget.classList.remove('active');
+    document.body.style.overflow = '';
+    
+    // Reset form after animation
+    setTimeout(() => {
+      resetWidget();
+    }, 300);
+  };
+  
+  const resetWidget = () => {
+    currentStep = 1;
+    bookingData = {
+      service: '',
+      doctor: '',
+      date: '',
+      time: '',
+      firstName: '',
+      lastName: '',
+      phone: '',
+      email: ''
+    };
+    
+    // Clear selections
+    document.querySelectorAll('.service-selection-card').forEach(card => {
+      card.classList.remove('selected');
+    });
+    document.querySelectorAll('.time-slot').forEach(slot => {
+      slot.classList.remove('selected');
+    });
+    
+    // Clear form inputs
+    const inputs = widget.querySelectorAll('input, select, textarea');
+    inputs.forEach(input => {
+      if (input.type === 'checkbox') {
+        input.checked = false;
+      } else {
+        input.value = '';
+      }
+    });
+    
+    updateStepDisplay();
+  };
+  
+  const setupServiceSelection = () => {
+    const serviceCards = document.querySelectorAll('.service-selection-card');
+    const nextBtn = document.getElementById('step1NextBtn');
+    
+    serviceCards.forEach(card => {
+      card.addEventListener('click', function() {
+        serviceCards.forEach(c => c.classList.remove('selected'));
+        this.classList.add('selected');
+        bookingData.service = this.dataset.service;
+        
+        if (nextBtn) nextBtn.disabled = false;
+      });
+    });
+  };
+  
+  const setupTimeSelection = () => {
+    const timeSlots = document.querySelectorAll('.time-slot');
+    const nextBtn = document.getElementById('step2NextBtn');
+    
+    timeSlots.forEach(slot => {
+      slot.addEventListener('click', function() {
+        if (this.disabled) return;
+        
+        timeSlots.forEach(s => s.classList.remove('selected'));
+        this.classList.add('selected');
+        bookingData.time = this.dataset.time;
+        
+        validateStep2();
+      });
+    });
+    
+    // Date change listener
+    const dateInput = document.getElementById('widgetDate');
+    if (dateInput) {
+      dateInput.addEventListener('change', function() {
+        bookingData.date = this.value;
+        validateStep2();
+      });
+    }
+    
+    // Doctor selection
+    const doctorSelect = document.getElementById('widgetDoctor');
+    if (doctorSelect) {
+      doctorSelect.addEventListener('change', function() {
+        bookingData.doctor = this.value;
+      });
+    }
+  };
+  
+  const validateStep2 = () => {
+    const nextBtn = document.getElementById('step2NextBtn');
+    if (nextBtn) {
+      nextBtn.disabled = !(bookingData.date && bookingData.time);
+    }
+  };
+  
+  const setupDateInput = () => {
+    const dateInput = document.getElementById('widgetDate');
+    if (!dateInput) return;
+    
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    dateInput.min = tomorrow.toISOString().split('T')[0];
+  };
+  
+  const setupFormValidation = () => {
+    const inputs = [
+      'widgetFirstName',
+      'widgetLastName',
+      'widgetPhone',
+      'widgetEmail'
+    ];
+    
+    inputs.forEach(inputId => {
+      const input = document.getElementById(inputId);
+      if (input) {
+        input.addEventListener('input', validateStep3);
+      }
+    });
+    
+    const checkbox = document.getElementById('widgetPrivacyAgree');
+    if (checkbox) {
+      checkbox.addEventListener('change', validateStep3);
+    }
+  };
+  
+  const validateStep3 = () => {
+    const firstName = document.getElementById('widgetFirstName')?.value.trim();
+    const lastName = document.getElementById('widgetLastName')?.value.trim();
+    const phone = document.getElementById('widgetPhone')?.value.trim();
+    const email = document.getElementById('widgetEmail')?.value.trim();
+    const privacyAgree = document.getElementById('widgetPrivacyAgree')?.checked;
+    
+    const confirmBtn = document.getElementById('step3ConfirmBtn');
+    if (confirmBtn) {
+      const isValid = firstName && lastName && phone && email && privacyAgree;
+      confirmBtn.disabled = !isValid;
+    }
+  };
+  
+  const setupEscapeKey = () => {
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && widget && widget.classList.contains('active')) {
+        close();
+      }
+    });
+    
+    // Close on overlay click
+    if (overlay) {
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+          close();
+        }
+      });
+    }
+  };
+  
+  const nextStep = () => {
+    if (currentStep < 3) {
+      currentStep++;
+      updateStepDisplay();
+      widget.querySelector('.booking-widget-content').scrollTop = 0;
+    }
+  };
+  
+  const prevStep = () => {
+    if (currentStep > 1) {
+      currentStep--;
+      updateStepDisplay();
+      widget.querySelector('.booking-widget-content').scrollTop = 0;
+    }
+  };
+  
+  const updateStepDisplay = () => {
+    // Update progress indicators
+    document.querySelectorAll('.widget-progress-step').forEach((step, index) => {
+      step.classList.remove('active', 'completed');
+      if (index + 1 === currentStep) {
+        step.classList.add('active');
+      } else if (index + 1 < currentStep) {
+        step.classList.add('completed');
+      }
+    });
+    
+    // Update step content
+    document.querySelectorAll('.widget-step').forEach((step, index) => {
+      step.classList.remove('active');
+      if (index + 1 === currentStep) {
+        step.classList.add('active');
+      }
+    });
+  };
+  
+  const confirmBooking = () => {
+    // Collect all data
+    bookingData.firstName = document.getElementById('widgetFirstName')?.value.trim();
+    bookingData.lastName = document.getElementById('widgetLastName')?.value.trim();
+    bookingData.phone = document.getElementById('widgetPhone')?.value.trim();
+    bookingData.email = document.getElementById('widgetEmail')?.value.trim();
+    
+    // Validate
+    if (!bookingData.firstName || !bookingData.lastName || !bookingData.phone || !bookingData.email) {
+      alert('Будь ласка, заповніть всі обов\'язкові поля');
+      return;
+    }
+    
+    if (!document.getElementById('widgetPrivacyAgree')?.checked) {
+      alert('Будь ласка, погодьтесь з політикою конфіденційності');
+      return;
+    }
+    
+    // Show confirmation
+    displayConfirmation();
+    currentStep = 4;
+    updateStepDisplay();
+    
+    // Here you would normally send data to server
+    console.log('Booking confirmed:', bookingData);
+    
+    // Simulate sending data to secure PMS
+    // In production, this would be an encrypted API call
+    simulateSecureSubmission();
+  };
+  
+  const displayConfirmation = () => {
+    const serviceNames = {
+      'consultation': 'Нова консультація / New Patient Consultation',
+      'checkup': 'Огляд та чистка / Check-up & Cleaning',
+      'implant': 'Консультація по імплантах / Implant Consultation',
+      'other': 'Інше / Other Services'
+    };
+    
+    const doctorNames = {
+      'doctor1': 'Доктор Ярослав Придатко',
+      'doctor2': 'Доктор Юрій Придатко',
+      'doctor3': 'Доктор Світлана Придатко',
+      '': 'Будь-який доступний лікар'
+    };
+    
+    // Format date
+    const date = new Date(bookingData.date);
+    const formattedDate = date.toLocaleDateString('uk-UA', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric',
+      weekday: 'long'
+    });
+    
+    // Update confirmation display
+    document.getElementById('confirmServiceText').textContent = serviceNames[bookingData.service];
+    document.getElementById('confirmDateText').textContent = formattedDate;
+    document.getElementById('confirmTimeText').textContent = bookingData.time;
+    document.getElementById('confirmDoctorText').textContent = doctorNames[bookingData.doctor];
+    document.getElementById('confirmPatientText').textContent = `${bookingData.firstName} ${bookingData.lastName}`;
+  };
+  
+  const simulateSecureSubmission = () => {
+    // This simulates a secure, encrypted submission to a Patient Management System
+    // In production, this would use HTTPS POST to a secure API endpoint
+    console.log('🔒 Secure encrypted submission to PMS...');
+    console.log('✅ Data encrypted using TLS/SSL');
+    console.log('📧 Confirmation email queued');
+    console.log('📅 Appointment added to clinic calendar');
+  };
+  
+  const addToCalendar = () => {
+    // Generate Google Calendar link
+    const serviceNames = {
+      'consultation': 'Нова консультація',
+      'checkup': 'Огляд та чистка',
+      'implant': 'Консультація по імплантах',
+      'other': 'Інше'
+    };
+    
+    const title = `${serviceNames[bookingData.service]} - Sladent`;
+    const location = 'просп. Злуки 8, м. Тернопіль';
+    const details = `Візит до стоматології Sladent (Стоматологія Родини Придатко)`;
+    
+    // Create date-time for calendar
+    const [year, month, day] = bookingData.date.split('-');
+    const [hour, minute] = bookingData.time.split(':');
+    const startDate = new Date(year, month - 1, day, hour, minute);
+    const endDate = new Date(startDate.getTime() + 60 * 60 * 1000); // +1 hour
+    
+    const formatDate = (date) => {
+      return date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+    };
+    
+    const googleCalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${formatDate(startDate)}/${formatDate(endDate)}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(location)}`;
+    
+    window.open(googleCalUrl, '_blank');
+  };
+  
+  return {
+    init,
+    open,
+    close,
+    nextStep,
+    prevStep,
+    confirmBooking,
+    addToCalendar
+  };
+})();
+*/
+// END OF DEPRECATED BOOKING MODULE
+
 // =========================================================================
 // INITIALIZATION
 // =========================================================================
@@ -534,6 +981,8 @@ const App = (() => {
       AccessibilityModule.init();
       ImageOptimizationModule.init();
       ScrollEffectsModule.init();
+      TestimonialSliderModule.init();
+      // BookingWidgetModule.init(); // REMOVED - Using Calendly instead
     });
 
     // Window Load
@@ -554,6 +1003,22 @@ const App = (() => {
 
   return { init };
 })();
+
+// FAQ Toggle Function
+window.toggleFAQ = function(button) {
+  const faqItem = button.parentElement;
+  const isActive = faqItem.classList.contains('active');
+  
+  // Close all FAQ items
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.classList.remove('active');
+  });
+  
+  // Toggle current item
+  if (!isActive) {
+    faqItem.classList.add('active');
+  }
+};
 
 // Start the application
 App.init();
