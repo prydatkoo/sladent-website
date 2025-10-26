@@ -94,6 +94,7 @@ const NavigationModule = (() => {
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', handleLinkClick);
     });
+    navLinks.addEventListener('click', handleContainerClick);
     document.addEventListener('click', handleOutsideClick);
     document.addEventListener('keydown', handleKeydown);
     window.addEventListener('resize', handleResize);
@@ -162,8 +163,14 @@ const NavigationModule = (() => {
   const handleOutsideClick = (e) => {
     if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
       if (navLinks.classList.contains('show')) {
-        closeMenu();
+        closeMenu({ restoreFocus: true });
       }
+    }
+  };
+
+  const handleContainerClick = (e) => {
+    if (e.target === navLinks && navLinks.classList.contains('show')) {
+      closeMenu({ restoreFocus: true });
     }
   };
 
