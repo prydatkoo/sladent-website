@@ -86,6 +86,7 @@ const NavigationModule = (() => {
 
     setupEventListeners();
     setActiveLink();
+    handleResize();
   };
 
   const setupEventListeners = () => {
@@ -94,6 +95,8 @@ const NavigationModule = (() => {
       link.addEventListener('click', handleLinkClick);
     });
     document.addEventListener('click', handleOutsideClick);
+    document.addEventListener('keydown', handleKeydown);
+    window.addEventListener('resize', handleResize);
     setupSwipeGestures();
   };
 
@@ -104,7 +107,7 @@ const NavigationModule = (() => {
     const isOpen = navLinks.classList.contains('show');
     
     if (isOpen) {
-      closeMenu();
+      closeMenu({ restoreFocus: true });
     } else {
       openMenu();
     }
@@ -114,14 +117,36 @@ const NavigationModule = (() => {
     navLinks.classList.add('show');
     hamburger.classList.add('active');
     hamburger.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
+    hamburger.setAttribute('aria-label', 'Закрити меню');
+    if (window.innerWidth <= 768) {
+      navLinks.setAttribute('aria-hidden', 'false');
+    }
+    document.body.classList.add('nav-open');
+
+    if (document.activeElement === hamburger) {
+      const firstLink = navLinks.querySelector('a');
+      if (firstLink) {
+        firstLink.focus();
+      }
+    }
   };
 
-  const closeMenu = () => {
+  const closeMenu = ({ restoreFocus = false } = {}) => {
     navLinks.classList.remove('show');
     hamburger.classList.remove('active');
     hamburger.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
+    hamburger.setAttribute('aria-label', 'Відкрити меню');
+
+    if (window.innerWidth <= 768) {
+      navLinks.setAttribute('aria-hidden', 'true');
+    } else {
+      navLinks.removeAttribute('aria-hidden');
+    }
+    document.body.classList.remove('nav-open');
+
+    if (restoreFocus) {
+      hamburger.focus();
+    }
   };
 
   const handleLinkClick = (e) => {
@@ -166,6 +191,28 @@ const NavigationModule = (() => {
     navLinks.addEventListener('touchend', () => {
       isDragging = false;
     }, { passive: true });
+  };
+
+  const handleKeydown = (e) => {
+    if ((e.key === 'Escape' || e.key === 'Esc') && navLinks.classList.contains('show')) {
+      closeMenu({ restoreFocus: true });
+    }
+  };
+
+  const handleResize = () => {
+    if (!navLinks || !hamburger) return;
+
+    if (window.innerWidth > 768) {
+      navLinks.classList.remove('show');
+      navLinks.removeAttribute('aria-hidden');
+      hamburger.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-label', 'Відкрити меню');
+      document.body.classList.remove('nav-open');
+    } else if (!navLinks.classList.contains('show')) {
+      navLinks.setAttribute('aria-hidden', 'true');
+      hamburger.setAttribute('aria-label', 'Відкрити меню');
+    }
   };
 
   const setActiveLink = () => {
