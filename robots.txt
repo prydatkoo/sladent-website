@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sladent.netlify.app/sitemap.xml
+Sitemap: https://sladent.com/sitemap.xml
