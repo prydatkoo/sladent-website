@@ -73,7 +73,7 @@ Modern, professional website for Sladent dental clinic in Ternopil, Ukraine.
   - Replace in `contact.html` (line ~99)
 
 - [ ] **Verify contact information**
-  - Phone: +38 (0352) 52-85-95
+  - Phone: +380 (97) 935 1535
   - Email: info@sladent.com.ua
   - Address: просп. Злуки 8, м. Тернопіль, 46000
   - Hours: Пн-Пт: 9:00-19:00, Сб: 9:00-15:00
@@ -150,7 +150,7 @@ git push origin main
 
 - **Clinic**: Sladent — Стоматологія Родини Придатко
 - **Address**: просп. Злуки 8, м. Тернопіль, 46000
-- **Phone**: +38 (0352) 52-85-95
+- **Phone**: +380 (97) 935 1535
 - **Email**: info@sladent.com.ua
 - **Hours**: Пн-Пт: 9:00-19:00, Сб: 9:00-15:00
 
