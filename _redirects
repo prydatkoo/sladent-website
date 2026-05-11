@@ -1,0 +1,4 @@
+# Force the Netlify subdomain to 301-redirect to the canonical custom domain.
+# Without this, Google may keep indexing sladent.netlify.app alongside sladent.com.
+https://sladent.netlify.app/*    https://sladent.com/:splat    301!
+http://sladent.netlify.app/*     https://sladent.com/:splat    301!
