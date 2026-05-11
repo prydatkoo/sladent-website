@@ -3,27 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <meta name="description" content="Познайомтесь з професійною командою Sladent - досвідчені стоматологи родини Придатко, які дбають про здоров'я вашої усмішки."/>
-  <meta name="keywords" content="команда Sladent, стоматологи Тернопіль, лікарі Придатко"/>
-  
-  <!-- Favicon -->
+
+  <title>Команда — Sladent · Стоматологія Родини Придатко · Тернопіль</title>
+  <meta name="description" content="Команда Sladent: доктор Ярослав Григорович Придатко, Юрій Придатко, Світлана Карлівна Придатко. Досвід понад 15 років."/>
+  <meta name="keywords" content="стоматологія Тернопіль, Sladent, Стоматологія Родини Придатко, стоматолог Тернопіль, імплантація, ортодонтія, дитячий стоматолог, просп. Злуки 8"/>
+  <meta name="author" content="Sladent"/>
+  <meta name="theme-color" content="#0A2540"/>
+  <link rel="canonical" href="https://sladent.netlify.app/team.html"/>
+
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="uk_UA"/>
+  <meta property="og:site_name" content="Sladent"/>
+  <meta property="og:title" content="Команда — Sladent · Стоматологія Родини Придатко"/>
+  <meta property="og:description" content="Команда Sladent: доктор Ярослав Григорович Придатко, Юрій Придатко, Світлана Карлівна Придатко. Досвід понад 15 років."/>
+  <meta property="og:image" content="https://sladent.netlify.app/images/surgery4.jpg"/>
+  <meta property="og:url" content="https://sladent.netlify.app/team.html"/>
+
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Команда — Sladent"/>
+  <meta name="twitter:description" content="Команда Sladent: доктор Ярослав Григорович Придатко, Юрій Придатко, Світлана Карлівна Придатко. Досвід понад 15 років."/>
+  <meta name="twitter:image" content="https://sladent.netlify.app/images/surgery4.jpg"/>
+
   <link rel="icon" href="images/icon.ico" type="image/x-icon"/>
-  
-  <title>Наша команда – Sladent | Стоматологія Родини Придатко</title>
-  
-  <!-- Preconnect to Google Fonts -->
+  <link rel="apple-touch-icon" href="images/logo-removebg-preview.png"/>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  
   
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <!-- Navigation Header -->
   <header role="banner">
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <nav class="navbar" aria-label="Головна навігація">
       <div class="logo-area">
-        <a href="index.html" class="logo-link" aria-label="Sladent - Повернутися на головну">
-          <img src="images/logo-removebg-preview.png" alt="Sladent Логотип" class="sladent-logo"/>
+        <a href="index.html" class="logo-link" aria-label="Sladent — на головну">
+          <img src="images/logo-removebg-preview.png" alt="" class="sladent-logo"/>
+          <span>Sladent</span>
         </a>
       </div>
       <ul class="nav-links" id="navLinks">
@@ -32,14 +49,15 @@
         <li><a href="services.html"><span>Послуги</span></a></li>
         <li><a href="team.html" class="active" aria-current="page"><span>Команда</span></a></li>
         <li><a href="reviews.html"><span>Відгуки</span></a></li>
-        <li><a href="about.html#faq"><span>FAQ</span></a></li>
         <li><a href="contact.html"><span>Контакти</span></a></li>
+        <li class="nav-links__phone">
+          <span class="nav-links__phone-label">Зателефонуйте</span>
+          <a class="nav-links__phone-num" href="tel:+380979351535">+380 (97) 935 1535</a>
+        </li>
       </ul>
-      <button class="cta-btn" onclick="openBookingWidget()" aria-label="Записатися на прийом до стоматолога">Записатися на прийом</button>
-  <button class="hamburger" id="hamburger" aria-label="Відкрити меню" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="cta-btn" onclick="openBookingWidget()" aria-label="Записатися на прийом">Записатися</button>
+      <button class="hamburger" id="hamburger" aria-label="Відкрити меню" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
     </nav>
   </header>
@@ -47,8 +65,8 @@
   <!-- Team Hero Section -->
   <section class="team-hero-section fade-in" role="banner">
     <div class="team-hero-content">
-      <div class="team-hero-badge">Наша команда</div>
-      <h1>Експерти, яким довіряють тисячі родин</h1>
+      <p class="team-hero-badge">03 — Наша команда</p>
+      <h1>Експерти, яким <em>довіряють.</em></h1>
       <p class="hero-subtitle">Кожен з наших лікарів — не просто спеціаліст. Це професіонал з багаторічним досвідом, постійним навчанням і щирою любов'ю до своєї справи.</p>
     </div>
   </section>
@@ -69,7 +87,7 @@
       <!-- Doctor 1: Yaroslav Prydatko -->
       <article class="doctor-profile scale-in">
         <div class="doctor-profile-image">
-          <img src="images/surgery4.jpg" alt="Доктор Ярослав Придатко" loading="lazy">
+          <img src="images/dr-yaroslav.jpg" alt="Доктор Ярослав Григорович Придатко — головний стоматолог Sladent" loading="lazy" width="800" height="1000">
           <div class="doctor-badge">Головний стоматолог</div>
         </div>
         <div class="doctor-profile-content">
@@ -110,7 +128,7 @@
       <!-- Doctor 2: Yuriy Prydatko -->
       <article class="doctor-profile scale-in">
         <div class="doctor-profile-image">
-          <img src="images/surgery1.jpg" alt="Доктор Юрій Придатко" loading="lazy">
+          <img src="images/dr-yurii.jpg" alt="Доктор Юрій Придатко — хірург-імплантолог Sladent" loading="lazy" width="800" height="1000">
           <div class="doctor-badge">Спеціаліст з імплантології</div>
         </div>
         <div class="doctor-profile-content">
@@ -151,7 +169,7 @@
       <!-- Doctor 3: Svitlana Prydatko -->
       <article class="doctor-profile scale-in">
         <div class="doctor-profile-image">
-          <img src="images/surgery8.jpg" alt="Доктор Світлана Придатко" loading="lazy">
+          <img src="images/dr-svitlana.jpg" alt="Лікар-стоматолог Світлана Карлівна Придатко — дитячий стоматолог Sladent" loading="lazy" width="800" height="1000">
           <div class="doctor-badge">Дитячий стоматолог</div>
         </div>
         <div class="doctor-profile-content">
@@ -198,22 +216,22 @@
       <h2>Наша філософія роботи</h2>
       <div class="philosophy-grid">
         <div class="philosophy-item">
-          <div class="philosophy-icon">🎯</div>
+          <span class="philosophy-icon">01 / Підхід</span>
           <h4>Індивідуальний підхід</h4>
           <p>Немає двох однакових пацієнтів. Ми розробляємо персоналізовані плани лікування, враховуючи ваші цілі, побажання та можливості.</p>
         </div>
         <div class="philosophy-item">
-          <div class="philosophy-icon">💬</div>
+          <span class="philosophy-icon">02 / Діалог</span>
           <h4>Відкрита комунікація</h4>
           <p>Ми пояснюємо кожен етап лікування простою мовою. Ваше розуміння та згода — наш пріоритет.</p>
         </div>
         <div class="philosophy-item">
-          <div class="philosophy-icon">🔬</div>
+          <span class="philosophy-icon">03 / Доказ</span>
           <h4>Доказова медицина</h4>
           <p>Всі наші методи базуються на науково доведених протоколах та найкращих міжнародних практиках.</p>
         </div>
         <div class="philosophy-item">
-          <div class="philosophy-icon">❤️</div>
+          <span class="philosophy-icon">04 / Емпатія</span>
           <h4>Емпатія та турбота</h4>
           <p>Ми розуміємо, що візит до стоматолога може викликати тривогу. Тому створюємо атмосферу довіри та спокою.</p>
         </div>
@@ -228,19 +246,16 @@
     <button onclick="openBookingWidget()" class="btn btn-primary btn-large">Записатися на прийом</button>
   </section>
 
-  <!-- Footer -->
   <footer role="contentinfo">
     <div class="footer-container">
-      <!-- Footer Brand -->
       <div class="footer-brand">
-        <img src="images/logo-removebg-preview.png" alt="Sladent Логотип" class="footer-logo"/>
-        <p class="footer-tagline">Sladent — Стоматологія Родини Придатко</p>
+        <p class="footer-tagline">Sladent · 2008</p>
+        <h2 class="footer-wordmark">Стоматологія<br>Родини <em>Придатко</em></h2>
         <p class="footer-description">
-          Ваша посмішка — наша місія. Сучасна стоматологія з турботою та професіоналізмом.
+          Ваша посмішка — наша місія. Сучасна стоматологія з турботою та професіоналізмом, у самому серці Тернополя.
         </p>
       </div>
 
-      <!-- Footer Links -->
       <div class="footer-links">
         <div class="footer-column">
           <h4>Навігація</h4>
@@ -249,59 +264,53 @@
             <li><a href="about.html">Про нас</a></li>
             <li><a href="services.html">Послуги</a></li>
             <li><a href="team.html">Команда</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-column">
-          <h4>Інформація</h4>
-          <ul>
             <li><a href="reviews.html">Відгуки</a></li>
             <li><a href="contact.html">Контакти</a></li>
-            <li><a href="#" onclick="openBookingWidget(); return false;">Записатися на прийом</a></li>
           </ul>
         </div>
 
         <div class="footer-column">
           <h4>Контакти</h4>
           <ul>
-            <li>📍 просп. Злуки 8, м. Тернопіль</li>
-            <li>📞 <a href="tel:+380979351535">+380 (97) 935 1535</a></li>
-            <li>📧 <a href="mailto:info@sladent.com.ua">info@sladent.com.ua</a></li>
-            <li>� Пн-Пт: 9:00-19:00, Сб: 9:00-15:00</li>
+            <li><a href="tel:+380979351535">+380 (97) 935 1535</a></li>
+            <li><a href="mailto:info@sladent.com.ua">info@sladent.com.ua</a></li>
+            <li>просп. Злуки, 8<br>м. Тернопіль, 46010</li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Графік</h4>
+          <ul>
+            <li>Пн – Пт &nbsp; 09:00 – 20:00</li>
+            <li>Субота &nbsp;&nbsp;&nbsp; 10:00 – 15:00</li>
+            <li>Неділя &nbsp;&nbsp;&nbsp; Вихідний</li>
           </ul>
         </div>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2025 Sladent — Стоматологія Родини Придатко. Всі права захищені.</p>
+      <p>© 2026 Sladent — Стоматологія Родини Придатко</p>
+      <p>Тернопіль · est. 2008</p>
     </div>
   </footer>
 
-  <!-- Booking Widget Modal -->
-  <div id="bookingWidget" class="booking-widget-overlay" role="dialog" aria-modal="true" aria-labelledby="booking-widget-title">
-    <div class="booking-widget-container">
-      <!-- [Full booking widget code from index.html - truncated for brevity but included in actual file] -->
-      <div class="booking-widget-header">
-        <div class="widget-header-left">
-          <img src="images/logo-removebg-preview.png" alt="Sladent" class="widget-logo">
-          <div class="widget-title-group">
-            <h2 id="booking-widget-title">Sladent</h2>
-            <p class="widget-subtitle">Стоматологія Родини Придатко</p>
-          </div>
-        </div>
-        <button class="widget-close" onclick="closeBookingWidget()" aria-label="Закрити">×</button>
-      </div>
-      <div class="security-bar">
-        <svg class="security-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          <path d="M9 12l2 2 4-4"/>
-        </svg>
-        <span><strong>Безпечне з'єднання</strong> / Secure Encrypted Connection</span>
-      </div>
-      <!-- [Rest of booking widget - same as index.html] -->
-    </div>
-  </div>
+  <!-- Sticky mobile action bar -->
+  <nav class="sticky-cta" aria-label="Швидкі дії">
+    <a href="tel:+380979351535" aria-label="Зателефонувати: +380 (97) 935 1535">
+      <svg class="sticky-cta__icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Подзвонити
+    </a>
+    <a href="contact.html#booking-form" class="is-primary" aria-label="Записатися на прийом онлайн">
+      <svg class="sticky-cta__icon" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="4" width="18" height="18" rx="2"/>
+        <path d="M16 2v4M8 2v4M3 10h18"/>
+      </svg>
+      Записатися
+    </a>
+  </nav>
 
   <script src="script.js"></script>
 </body>

@@ -3,25 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <meta name="description" content="Повний спектр стоматологічних послуг від Sladent - Стоматологія Родини Придатко. Від профілактики до складних процедур. Імплантація, ортодонтія, естетична стоматологія."/>
-  <meta name="keywords" content="стоматологічні послуги Тернопіль, імплантація зубів, ортодонтія, вініри, дитячий стоматолог"/>
-  
+
+  <title>Послуги — Sladent · Стоматологія Родини Придатко · Тернопіль</title>
+  <meta name="description" content="Послуги Sladent у Тернополі: імплантація зубів, ортодонтія, естетична стоматологія, дитяча стоматологія, протезування, гігієна."/>
+  <meta name="keywords" content="стоматологія Тернопіль, Sladent, Стоматологія Родини Придатко, стоматолог Тернопіль, імплантація, ортодонтія, дитячий стоматолог, просп. Злуки 8"/>
+  <meta name="author" content="Sladent"/>
+  <meta name="theme-color" content="#0A2540"/>
+  <link rel="canonical" href="https://sladent.netlify.app/services.html"/>
+
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="uk_UA"/>
+  <meta property="og:site_name" content="Sladent"/>
+  <meta property="og:title" content="Послуги — Sladent · Стоматологія Родини Придатко"/>
+  <meta property="og:description" content="Послуги Sladent у Тернополі: імплантація зубів, ортодонтія, естетична стоматологія, дитяча стоматологія, протезування, гігієна."/>
+  <meta property="og:image" content="https://sladent.netlify.app/images/surgery4.jpg"/>
+  <meta property="og:url" content="https://sladent.netlify.app/services.html"/>
+
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Послуги — Sladent"/>
+  <meta name="twitter:description" content="Послуги Sladent у Тернополі: імплантація зубів, ортодонтія, естетична стоматологія, дитяча стоматологія, протезування, гігієна."/>
+  <meta name="twitter:image" content="https://sladent.netlify.app/images/surgery4.jpg"/>
+
   <link rel="icon" href="images/icon.ico" type="image/x-icon"/>
-  
-  <title>Наші послуги – Sladent | Стоматологія Родини Придатко</title>
-  
+  <link rel="apple-touch-icon" href="images/logo-removebg-preview.png"/>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  
   
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <!-- Navigation Header -->
   <header role="banner">
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <nav class="navbar" aria-label="Головна навігація">
       <div class="logo-area">
-        <a href="index.html" class="logo-link" aria-label="Sladent - Повернутися на головну">
-          <img src="images/logo-removebg-preview.png" alt="Sladent Логотип" class="sladent-logo"/>
+        <a href="index.html" class="logo-link" aria-label="Sladent — на головну">
+          <img src="images/logo-removebg-preview.png" alt="" class="sladent-logo"/>
+          <span>Sladent</span>
         </a>
       </div>
       <ul class="nav-links" id="navLinks">
@@ -30,14 +49,15 @@
         <li><a href="services.html" class="active" aria-current="page"><span>Послуги</span></a></li>
         <li><a href="team.html"><span>Команда</span></a></li>
         <li><a href="reviews.html"><span>Відгуки</span></a></li>
-        <li><a href="about.html#faq"><span>FAQ</span></a></li>
         <li><a href="contact.html"><span>Контакти</span></a></li>
+        <li class="nav-links__phone">
+          <span class="nav-links__phone-label">Зателефонуйте</span>
+          <a class="nav-links__phone-num" href="tel:+380979351535">+380 (97) 935 1535</a>
+        </li>
       </ul>
-      <button class="cta-btn" onclick="openBookingWidget()" aria-label="Записатися на прийом до стоматолога">Записатися на прийом</button>
-  <button class="hamburger" id="hamburger" aria-label="Відкрити меню" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="cta-btn" onclick="openBookingWidget()" aria-label="Записатися на прийом">Записатися</button>
+      <button class="hamburger" id="hamburger" aria-label="Відкрити меню" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
     </nav>
   </header>
@@ -45,9 +65,9 @@
   <!-- Services Hero Section -->
   <section class="services-hero-section fade-in" role="banner">
     <div class="services-hero-content">
-      <div class="services-hero-badge">Наші послуги</div>
-      <h1>Комплексна стоматологічна допомога для всієї родини</h1>
-      <p class="hero-subtitle">Від профілактичного догляду до складних реставрацій — ми надаємо повний спектр послуг з використанням найсучасніших технологій</p>
+      <p class="services-hero-badge">02 — Наші послуги</p>
+      <h1>Комплексна допомога <em>для всієї родини.</em></h1>
+      <p class="hero-subtitle">Від профілактичного догляду до складних реставрацій — повний спектр послуг із використанням найсучасніших технологій.</p>
     </div>
   </section>
 
@@ -57,22 +77,22 @@
       <h2>Чому варто обрати Sladent для вашого стоматологічного лікування?</h2>
       <div class="services-intro-grid">
         <div class="intro-benefit">
-          <div class="intro-benefit-icon">🎯</div>
+          <span class="intro-benefit-icon">01 / Підхід</span>
           <h4>Персоналізований підхід</h4>
           <p>Кожен план лікування розробляється індивідуально з урахуванням ваших унікальних потреб</p>
         </div>
         <div class="intro-benefit">
-          <div class="intro-benefit-icon">🔬</div>
+          <span class="intro-benefit-icon">02 / Технології</span>
           <h4>Сучасні технології</h4>
           <p>3D-сканування, цифрове планування, лазерні технології для точних результатів</p>
         </div>
         <div class="intro-benefit">
-          <div class="intro-benefit-icon">👨‍⚕️</div>
+          <span class="intro-benefit-icon">03 / Експерти</span>
           <h4>Досвідчені спеціалісти</h4>
           <p>Кожен лікар має міжнародну кваліфікацію та постійно підвищує свої навички</p>
         </div>
         <div class="intro-benefit">
-          <div class="intro-benefit-icon">💎</div>
+          <span class="intro-benefit-icon">04 / Матеріали</span>
           <h4>Преміум матеріали</h4>
           <p>Використовуємо лише сертифіковані матеріали провідних світових виробників</p>
         </div>
@@ -90,7 +110,7 @@
       <!-- Service 1: Dental Implants -->
       <article class="main-service-card scale-in" id="implants">
         <div class="service-card-header">
-          <div class="service-card-icon">🦷</div>
+          <span class="service-card-icon">01 / Імплантологія</span>
           <div class="service-card-badge">Топ послуга</div>
         </div>
         <h3>Імплантація зубів</h3>
@@ -139,7 +159,7 @@
       <!-- Service 2: Orthodontics -->
       <article class="main-service-card scale-in" id="orthodontics">
         <div class="service-card-header">
-          <div class="service-card-icon">😁</div>
+          <span class="service-card-icon">02 / Ортодонтія</span>
         </div>
         <h3>Ортодонтія</h3>
         <p class="service-card-subtitle">Straightening Smiles at Any Age</p>
@@ -179,7 +199,7 @@
       <!-- Service 3: Cosmetic Dentistry -->
       <article class="main-service-card scale-in" id="cosmetic">
         <div class="service-card-header">
-          <div class="service-card-icon">✨</div>
+          <span class="service-card-icon">03 / Естетика</span>
           <div class="service-card-badge">Популярне</div>
         </div>
         <h3>Естетична стоматологія</h3>
@@ -221,7 +241,7 @@
       <!-- Service 4: General Dentistry -->
       <article class="main-service-card scale-in" id="general">
         <div class="service-card-header">
-          <div class="service-card-icon">🏥</div>
+          <span class="service-card-icon">04 / Терапія</span>
         </div>
         <h3>Загальна та сімейна стоматологія</h3>
         <p class="service-card-subtitle">Comprehensive Family Care</p>
@@ -262,7 +282,7 @@
       <!-- Service 5: Pediatric Dentistry -->
       <article class="main-service-card scale-in" id="pediatric">
         <div class="service-card-header">
-          <div class="service-card-icon">👶</div>
+          <span class="service-card-icon">05 / Дитяча</span>
         </div>
         <h3>Дитяча стоматологія</h3>
         <p class="service-card-subtitle">Gentle Care for Little Smiles</p>
@@ -303,7 +323,7 @@
       <!-- Service 6: Hygiene -->
       <article class="main-service-card scale-in" id="hygiene">
         <div class="service-card-header">
-          <div class="service-card-icon">🪥</div>
+          <span class="service-card-icon">06 / Гігієна</span>
         </div>
         <h3>Професійна гігієна</h3>
         <p class="service-card-subtitle">Prevention is the Best Medicine</p>
@@ -349,42 +369,42 @@
     <div class="additional-services-grid">
       
       <div class="additional-service-card scale-in">
-        <div class="additional-service-icon">🚨</div>
+        <span class="additional-service-icon">01 / Невідкладна</span>
         <h4>Невідкладна допомога</h4>
         <p>Швидка допомога при зубному болю, травмах, абсцесах. Приймаємо без попереднього запису.</p>
         <a href="contact.html" class="service-link">Зв'язатися негайно →</a>
       </div>
       
       <div class="additional-service-card scale-in">
-        <div class="additional-service-icon">🦴</div>
+        <span class="additional-service-icon">02 / Протезування</span>
         <h4>Протезування</h4>
         <p>Коронки, мости, знімні протези. Відновлення функції та естетики.</p>
         <button onclick="openBookingWidget('Протезування')" class="service-link">Дізнатися більше →</button>
       </div>
       
       <div class="additional-service-card scale-in">
-        <div class="additional-service-icon">🩺</div>
+        <span class="additional-service-icon">03 / Пародонтологія</span>
         <h4>Пародонтологія</h4>
         <p>Лікування захворювань ясен, пародонтиту, підтримуюча терапія.</p>
         <button onclick="openBookingWidget('Пародонтологія')" class="service-link">Записатися →</button>
       </div>
       
       <div class="additional-service-card scale-in">
-        <div class="additional-service-icon">🦷</div>
+        <span class="additional-service-icon">04 / Хірургія</span>
         <h4>Хірургія</h4>
         <p>Видалення зубів мудрості, кісткова пластика, резекція верхівки кореня.</p>
         <button onclick="openBookingWidget('Хірургічна стоматологія')" class="service-link">Консультація →</button>
       </div>
       
       <div class="additional-service-card scale-in">
-        <div class="additional-service-icon">💤</div>
+        <span class="additional-service-icon">05 / Седація</span>
         <h4>Седація</h4>
         <p>Лікування під седацією для пацієнтів з підвищеною тривожністю.</p>
         <button onclick="openBookingWidget('Лікування під седацією')" class="service-link">Дізнатися →</button>
       </div>
       
       <div class="additional-service-card scale-in">
-        <div class="additional-service-icon">📸</div>
+        <span class="additional-service-icon">06 / Діагностика</span>
         <h4>Діагностика</h4>
         <p>3D-томографія, панорамні знімки, інтраоральне сканування.</p>
         <button onclick="openBookingWidget('Діагностика')" class="service-link">Записатися →</button>
@@ -400,37 +420,37 @@
     
     <div class="technology-grid">
       <div class="technology-card">
-        <div class="technology-icon">🔬</div>
+        <span class="technology-icon">01 / 3D-Скан</span>
         <h4>3D-сканування та планування</h4>
         <p>Комп'ютерна томографія (CBCT) для точної діагностики та планування складних процедур. Повна 3D-візуалізація структури кісток та тканин.</p>
       </div>
       
       <div class="technology-card">
-        <div class="technology-icon">💻</div>
+        <span class="technology-icon">02 / Цифрова</span>
         <h4>Цифрова стоматологія</h4>
         <p>CAD/CAM технології для виготовлення коронок, вінірів та протезів за один візит. Ідеальна посадка та естетика.</p>
       </div>
       
       <div class="technology-card">
-        <div class="technology-icon">⚡</div>
+        <span class="technology-icon">03 / Лазер</span>
         <h4>Лазерні технології</h4>
         <p>Діодні лазери для м'якого лікування ясен, стерилізації каналів та відбілювання. Менш інвазивно, швидше загоєння.</p>
       </div>
       
       <div class="technology-card">
-        <div class="technology-icon">💉</div>
+        <span class="technology-icon">04 / Анестезія</span>
         <h4>Безболісна анестезія</h4>
         <p>Комп'ютеризовані системи введення анестезії (The Wand) для абсолютно безболісних ін'єкцій.</p>
       </div>
       
       <div class="technology-card">
-        <div class="technology-icon">🎨</div>
+        <span class="technology-icon">05 / Дизайн</span>
         <h4>Цифровий дизайн усмішки</h4>
         <p>Віртуальне моделювання майбутньої усмішки перед початком лікування. Бачите результат заздалегідь.</p>
       </div>
       
       <div class="technology-card">
-        <div class="technology-icon">🛡️</div>
+        <span class="technology-icon">06 / Стерил.</span>
         <h4>Європейська стерилізація</h4>
         <p>Багаторівнева система стерилізації інструментів відповідно до найвищих європейських стандартів безпеки.</p>
       </div>
@@ -503,19 +523,16 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer role="contentinfo">
     <div class="footer-container">
-      <!-- Footer Brand -->
       <div class="footer-brand">
-        <img src="images/logo-removebg-preview.png" alt="Sladent Логотип" class="footer-logo"/>
-        <p class="footer-tagline">Sladent — Стоматологія Родини Придатко</p>
+        <p class="footer-tagline">Sladent · 2008</p>
+        <h2 class="footer-wordmark">Стоматологія<br>Родини <em>Придатко</em></h2>
         <p class="footer-description">
-          Ваша посмішка — наша місія. Сучасна стоматологія з турботою та професіоналізмом.
+          Ваша посмішка — наша місія. Сучасна стоматологія з турботою та професіоналізмом, у самому серці Тернополя.
         </p>
       </div>
 
-      <!-- Footer Links -->
       <div class="footer-links">
         <div class="footer-column">
           <h4>Навігація</h4>
@@ -524,57 +541,53 @@
             <li><a href="about.html">Про нас</a></li>
             <li><a href="services.html">Послуги</a></li>
             <li><a href="team.html">Команда</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-column">
-          <h4>Інформація</h4>
-          <ul>
             <li><a href="reviews.html">Відгуки</a></li>
             <li><a href="contact.html">Контакти</a></li>
-            <li><a href="#" onclick="openBookingWidget(); return false;">Записатися на прийом</a></li>
           </ul>
         </div>
 
         <div class="footer-column">
           <h4>Контакти</h4>
           <ul>
-            <li>📍 просп. Злуки 8, м. Тернопіль</li>
-            <li>📞 <a href="tel:+380979351535">+380 (97) 935 1535</a></li>
-            <li>📧 <a href="mailto:info@sladent.com.ua">info@sladent.com.ua</a></li>
-            <li>� Пн-Пт: 9:00-19:00, Сб: 9:00-15:00</li>
+            <li><a href="tel:+380979351535">+380 (97) 935 1535</a></li>
+            <li><a href="mailto:info@sladent.com.ua">info@sladent.com.ua</a></li>
+            <li>просп. Злуки, 8<br>м. Тернопіль, 46010</li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Графік</h4>
+          <ul>
+            <li>Пн – Пт &nbsp; 09:00 – 20:00</li>
+            <li>Субота &nbsp;&nbsp;&nbsp; 10:00 – 15:00</li>
+            <li>Неділя &nbsp;&nbsp;&nbsp; Вихідний</li>
           </ul>
         </div>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2025 Sladent — Стоматологія Родини Придатко. Всі права захищені.</p>
+      <p>© 2026 Sladent — Стоматологія Родини Придатко</p>
+      <p>Тернопіль · est. 2008</p>
     </div>
   </footer>
 
-  <!-- Booking Widget Modal -->
-  <div id="bookingWidget" class="booking-widget-overlay" role="dialog" aria-modal="true" aria-labelledby="booking-widget-title">
-    <div class="booking-widget-container">
-      <div class="booking-widget-header">
-        <div class="widget-header-left">
-          <img src="images/logo-removebg-preview.png" alt="Sladent" class="widget-logo">
-          <div class="widget-title-group">
-            <h2 id="booking-widget-title">Sladent</h2>
-            <p class="widget-subtitle">Стоматологія Родини Придатко</p>
-          </div>
-        </div>
-        <button class="widget-close" onclick="closeBookingWidget()" aria-label="Закрити">×</button>
-      </div>
-      <div class="security-bar">
-        <svg class="security-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          <path d="M9 12l2 2 4-4"/>
-        </svg>
-        <span><strong>Безпечне з'єднання</strong> / Secure Encrypted Connection</span>
-      </div>
-    </div>
-  </div>
+  <!-- Sticky mobile action bar -->
+  <nav class="sticky-cta" aria-label="Швидкі дії">
+    <a href="tel:+380979351535" aria-label="Зателефонувати: +380 (97) 935 1535">
+      <svg class="sticky-cta__icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Подзвонити
+    </a>
+    <a href="contact.html#booking-form" class="is-primary" aria-label="Записатися на прийом онлайн">
+      <svg class="sticky-cta__icon" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="4" width="18" height="18" rx="2"/>
+        <path d="M16 2v4M8 2v4M3 10h18"/>
+      </svg>
+      Записатися
+    </a>
+  </nav>
 
   <script src="script.js"></script>
 </body>

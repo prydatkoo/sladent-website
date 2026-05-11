@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <meta name="description" content="Відгуки пацієнтів Sladent — Стоматологія Родини Придатко. Реальний досвід, професіоналізм лікарів, якість обслуговування. Тернопіль."/>
-  <meta name="keywords" content="відгуки Sladent, відгуки стоматологія Тернопіль, Придатко відгуки, стоматолог Тернопіль рекомендації, якість стоматологічних послуг"/>
-  
-  <!-- Favicon -->
+
+  <title>Відгуки — Sladent · Стоматологія Родини Придатко · Тернопіль</title>
+  <meta name="description" content="Відгуки пацієнтів Sladent — Стоматології Родини Придатко в Тернополі. Перевірені відгуки з Google, рейтинг 4.8/5."/>
+  <meta name="keywords" content="стоматологія Тернопіль, Sladent, Стоматологія Родини Придатко, стоматолог Тернопіль, імплантація, ортодонтія, дитячий стоматолог, просп. Злуки 8"/>
+  <meta name="author" content="Sladent"/>
+  <meta name="theme-color" content="#0A2540"/>
+  <link rel="canonical" href="https://sladent.netlify.app/reviews.html"/>
+
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="uk_UA"/>
+  <meta property="og:site_name" content="Sladent"/>
+  <meta property="og:title" content="Відгуки — Sladent · Стоматологія Родини Придатко"/>
+  <meta property="og:description" content="Відгуки пацієнтів Sladent — Стоматології Родини Придатко в Тернополі. Перевірені відгуки з Google, рейтинг 4.8/5."/>
+  <meta property="og:image" content="https://sladent.netlify.app/images/surgery4.jpg"/>
+  <meta property="og:url" content="https://sladent.netlify.app/reviews.html"/>
+
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Відгуки — Sladent"/>
+  <meta name="twitter:description" content="Відгуки пацієнтів Sladent — Стоматології Родини Придатко в Тернополі. Перевірені відгуки з Google, рейтинг 4.8/5."/>
+  <meta name="twitter:image" content="https://sladent.netlify.app/images/surgery4.jpg"/>
+
   <link rel="icon" href="images/icon.ico" type="image/x-icon"/>
-  
-  <title>Відгуки пацієнтів – Sladent — Стоматологія Родини Придатко</title>
-  
-  <!-- Preconnect to Google Fonts -->
+  <link rel="apple-touch-icon" href="images/logo-removebg-preview.png"/>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  
   
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <!-- Navigation Header -->
   <header role="banner">
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <nav class="navbar" aria-label="Головна навігація">
       <div class="logo-area">
-        <a href="index.html" class="logo-link" aria-label="Sladent - Повернутися на головну">
-          <img src="images/logo-removebg-preview.png" alt="Sladent Логотип" class="sladent-logo"/>
+        <a href="index.html" class="logo-link" aria-label="Sladent — на головну">
+          <img src="images/logo-removebg-preview.png" alt="" class="sladent-logo"/>
+          <span>Sladent</span>
         </a>
       </div>
       <ul class="nav-links" id="navLinks">
@@ -32,23 +49,23 @@
         <li><a href="services.html"><span>Послуги</span></a></li>
         <li><a href="team.html"><span>Команда</span></a></li>
         <li><a href="reviews.html" class="active" aria-current="page"><span>Відгуки</span></a></li>
-        <li><a href="about.html#faq"><span>FAQ</span></a></li>
         <li><a href="contact.html"><span>Контакти</span></a></li>
+        <li class="nav-links__phone">
+          <span class="nav-links__phone-label">Зателефонуйте</span>
+          <a class="nav-links__phone-num" href="tel:+380979351535">+380 (97) 935 1535</a>
+        </li>
       </ul>
-      <button class="cta-btn" onclick="openBookingWidget()" aria-label="Записатися на прийом до стоматолога">Записатися на прийом</button>
-  <button class="hamburger" id="hamburger" aria-label="Відкрити меню" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="cta-btn" onclick="openBookingWidget()" aria-label="Записатися на прийом">Записатися</button>
+      <button class="hamburger" id="hamburger" aria-label="Відкрити меню" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
     </nav>
   </header>
 
-  <!-- Reviews Hero Section -->
-  <section class="reviews-hero-section fade-in" role="region" aria-labelledby="reviews-hero-heading">
-    <div class="reviews-hero-badge">ВІДГУКИ ПАЦІЄНТІВ</div>
+  <section class="reviews-hero-section fade-in" aria-labelledby="reviews-hero-heading">
     <div class="reviews-hero-content">
-      <h1 id="reviews-hero-heading">Що кажуть наші пацієнти</h1>
+      <p class="reviews-hero-badge">04 — Відгуки</p>
+      <h1 id="reviews-hero-heading">Що кажуть <em>наші пацієнти.</em></h1>
       <p class="hero-subtitle">
         Реальні історії від реальних людей. Ми пишаємося довірою наших пацієнтів і щиро дякуємо за кожен відгук.
       </p>
@@ -59,24 +76,24 @@
   <section class="reviews-stats-section">
     <div class="stats-container">
       <div class="stat-item">
-        <div class="stat-icon">⭐</div>
-        <div class="stat-number">4.7/5</div>
-        <div class="stat-label">Середня оцінка</div>
+        <span class="stat-icon">01 / Рейтинг</span>
+        <div class="stat-number">4.8</div>
+        <div class="stat-label">З 5 зірок · Google</div>
       </div>
       <div class="stat-item">
-        <div class="stat-icon">💬</div>
-        <div class="stat-number">Google Reviews</div>
+        <span class="stat-icon">02 / Джерело</span>
+        <div class="stat-number">Google</div>
         <div class="stat-label">Перевірені відгуки</div>
       </div>
       <div class="stat-item">
-        <div class="stat-icon">👥</div>
-        <div class="stat-number">Родинна</div>
-        <div class="stat-label">Стоматологія</div>
+        <span class="stat-icon">03 / Підхід</span>
+        <div class="stat-number">Сім'я</div>
+        <div class="stat-label">Родинна практика</div>
       </div>
       <div class="stat-item">
-        <div class="stat-icon">🏆</div>
-        <div class="stat-number">15+ років</div>
-        <div class="stat-label">Досвіду роботи</div>
+        <span class="stat-icon">04 / Досвід</span>
+        <div class="stat-number">15+</div>
+        <div class="stat-label">Років практики</div>
       </div>
     </div>
   </section>
@@ -102,19 +119,16 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer role="contentinfo">
     <div class="footer-container">
-      <!-- Footer Brand -->
       <div class="footer-brand">
-        <img src="images/logo-removebg-preview.png" alt="Sladent Логотип" class="footer-logo"/>
-        <p class="footer-tagline">Sladent — Стоматологія Родини Придатко</p>
+        <p class="footer-tagline">Sladent · 2008</p>
+        <h2 class="footer-wordmark">Стоматологія<br>Родини <em>Придатко</em></h2>
         <p class="footer-description">
-          Ваша посмішка — наша місія. Сучасна стоматологія з турботою та професіоналізмом.
+          Ваша посмішка — наша місія. Сучасна стоматологія з турботою та професіоналізмом, у самому серці Тернополя.
         </p>
       </div>
 
-      <!-- Footer Links -->
       <div class="footer-links">
         <div class="footer-column">
           <h4>Навігація</h4>
@@ -123,38 +137,57 @@
             <li><a href="about.html">Про нас</a></li>
             <li><a href="services.html">Послуги</a></li>
             <li><a href="team.html">Команда</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-column">
-          <h4>Інформація</h4>
-          <ul>
             <li><a href="reviews.html">Відгуки</a></li>
             <li><a href="contact.html">Контакти</a></li>
-            <li><a href="#" onclick="openBookingWidget(); return false;">Записатися на прийом</a></li>
           </ul>
         </div>
 
         <div class="footer-column">
           <h4>Контакти</h4>
           <ul>
-            <li>📍 просп. Злуки 8, м. Тернопіль</li>
-            <li>📞 <a href="tel:+380979351535">+380 (97) 935 1535</a></li>
-            <li>📧 <a href="mailto:info@sladent.com.ua">info@sladent.com.ua</a></li>
-            <li>🕒 Пн-Пт: 9:00-19:00, Сб: 9:00-15:00</li>
+            <li><a href="tel:+380979351535">+380 (97) 935 1535</a></li>
+            <li><a href="mailto:info@sladent.com.ua">info@sladent.com.ua</a></li>
+            <li>просп. Злуки, 8<br>м. Тернопіль, 46010</li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Графік</h4>
+          <ul>
+            <li>Пн – Пт &nbsp; 09:00 – 20:00</li>
+            <li>Субота &nbsp;&nbsp;&nbsp; 10:00 – 15:00</li>
+            <li>Неділя &nbsp;&nbsp;&nbsp; Вихідний</li>
           </ul>
         </div>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2025 Sladent — Стоматологія Родини Придатко. Всі права захищені.</p>
+      <p>© 2026 Sladent — Стоматологія Родини Придатко</p>
+      <p>Тернопіль · est. 2008</p>
     </div>
   </footer>
 
   <!-- Booking handled by Calendly popup - NO DATABASE, NO BACKEND -->
   <!-- All booking data goes directly to Calendly's secure platform -->
   <!-- To configure: Replace 'sladent-clinic/appointment' in script.js with your actual Calendly link -->
+
+  <!-- Sticky mobile action bar -->
+  <nav class="sticky-cta" aria-label="Швидкі дії">
+    <a href="tel:+380979351535" aria-label="Зателефонувати: +380 (97) 935 1535">
+      <svg class="sticky-cta__icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Подзвонити
+    </a>
+    <a href="contact.html#booking-form" class="is-primary" aria-label="Записатися на прийом онлайн">
+      <svg class="sticky-cta__icon" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="4" width="18" height="18" rx="2"/>
+        <path d="M16 2v4M8 2v4M3 10h18"/>
+      </svg>
+      Записатися
+    </a>
+  </nav>
 
   <script src="script.js"></script>
 </body>

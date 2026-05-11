@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <meta name="description" content="Контакти Sladent — Стоматологія Родини Придатко. Адреса, телефон, години роботи, паркування, як нас знайти. Тернопіль, просп. Злуки 8."/>
-  <meta name="keywords" content="контакти Sladent, стоматологія Тернопіль контакти, Придатко адреса, просп. Злуки 8, паркування стоматологія, як дістатися"/>
-  
-  <!-- Favicon -->
+
+  <title>Контакти — Sladent · Стоматологія Родини Придатко · Тернопіль</title>
+  <meta name="description" content="Контакти Sladent: просп. Злуки, 8, м. Тернопіль. +380 (97) 935 1535. Пн–Пт 09:00–20:00, Сб 10:00–15:00."/>
+  <meta name="keywords" content="стоматологія Тернопіль, Sladent, Стоматологія Родини Придатко, стоматолог Тернопіль, імплантація, ортодонтія, дитячий стоматолог, просп. Злуки 8"/>
+  <meta name="author" content="Sladent"/>
+  <meta name="theme-color" content="#0A2540"/>
+  <link rel="canonical" href="https://sladent.netlify.app/contact.html"/>
+
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="uk_UA"/>
+  <meta property="og:site_name" content="Sladent"/>
+  <meta property="og:title" content="Контакти — Sladent · Стоматологія Родини Придатко"/>
+  <meta property="og:description" content="Контакти Sladent: просп. Злуки, 8, м. Тернопіль. +380 (97) 935 1535. Пн–Пт 09:00–20:00, Сб 10:00–15:00."/>
+  <meta property="og:image" content="https://sladent.netlify.app/images/surgery4.jpg"/>
+  <meta property="og:url" content="https://sladent.netlify.app/contact.html"/>
+
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Контакти — Sladent"/>
+  <meta name="twitter:description" content="Контакти Sladent: просп. Злуки, 8, м. Тернопіль. +380 (97) 935 1535. Пн–Пт 09:00–20:00, Сб 10:00–15:00."/>
+  <meta name="twitter:image" content="https://sladent.netlify.app/images/surgery4.jpg"/>
+
   <link rel="icon" href="images/icon.ico" type="image/x-icon"/>
-  
-  <title>Контакти – Sladent — Стоматологія Родини Придатко</title>
-  
-  <!-- Preconnect to Google Fonts -->
+  <link rel="apple-touch-icon" href="images/logo-removebg-preview.png"/>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  
   
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <!-- Navigation Header -->
   <header role="banner">
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <nav class="navbar" aria-label="Головна навігація">
       <div class="logo-area">
-        <a href="index.html" class="logo-link" aria-label="Sladent - Повернутися на головну">
-          <img src="images/logo-removebg-preview.png" alt="Sladent Логотип" class="sladent-logo"/>
+        <a href="index.html" class="logo-link" aria-label="Sladent — на головну">
+          <img src="images/logo-removebg-preview.png" alt="" class="sladent-logo"/>
+          <span>Sladent</span>
         </a>
       </div>
       <ul class="nav-links" id="navLinks">
@@ -32,25 +49,25 @@
         <li><a href="services.html"><span>Послуги</span></a></li>
         <li><a href="team.html"><span>Команда</span></a></li>
         <li><a href="reviews.html"><span>Відгуки</span></a></li>
-        <li><a href="about.html#faq"><span>FAQ</span></a></li>
         <li><a href="contact.html" class="active" aria-current="page"><span>Контакти</span></a></li>
+        <li class="nav-links__phone">
+          <span class="nav-links__phone-label">Зателефонуйте</span>
+          <a class="nav-links__phone-num" href="tel:+380979351535">+380 (97) 935 1535</a>
+        </li>
       </ul>
-      <button class="cta-btn" onclick="openBookingWidget()" aria-label="Записатися на прийом до стоматолога">Записатися на прийом</button>
-  <button class="hamburger" id="hamburger" aria-label="Відкрити меню" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="cta-btn" onclick="openBookingWidget()" aria-label="Записатися на прийом">Записатися</button>
+      <button class="hamburger" id="hamburger" aria-label="Відкрити меню" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
     </nav>
   </header>
 
-  <!-- Contact Hero Section -->
-  <section class="contact-hero-section fade-in" role="region" aria-labelledby="contact-hero-heading">
-    <div class="contact-hero-badge">КОНТАКТИ</div>
+  <section class="contact-hero-section fade-in" aria-labelledby="contact-hero-heading">
     <div class="contact-hero-content">
-      <h1 id="contact-hero-heading">Зв'яжіться з нами</h1>
+      <p class="contact-hero-badge">03 — Контакти</p>
+      <h1 id="contact-hero-heading">Зв'яжіться <em>з нами.</em></h1>
       <p class="hero-subtitle">
-        Ми завжди раді відповісти на ваші запитання та допомогти вам записатися на прийом
+        Ми завжди раді відповісти на ваші запитання та допомогти записатися на прийом — телефоном, поштою або особисто в клініці.
       </p>
     </div>
   </section>
@@ -58,38 +75,33 @@
   <!-- Contact Info Section -->
   <section class="contact-info-section">
     <div class="contact-info-container">
-      <!-- Contact Cards Grid -->
       <div class="contact-cards-grid">
-        <!-- Phone Card -->
         <div class="contact-card">
-          <div class="contact-card-icon">📞</div>
-          <h3>Телефон</h3>
+          <div class="contact-card-icon">01 / Телефон</div>
+          <h3>Зателефонуйте</h3>
           <p class="contact-card-value"><a href="tel:+380979351535">+380 (97) 935 1535</a></p>
-          <p class="contact-card-description">Пн-Пт: 9:00-19:00<br>Сб: 9:00-15:00<br>Нд: Вихідний</p>
+          <p class="contact-card-description">Запис на прийом і відповіді на запитання.</p>
         </div>
 
-        <!-- Email Card -->
         <div class="contact-card">
-          <div class="contact-card-icon">📧</div>
-          <h3>Email</h3>
+          <div class="contact-card-icon">02 / Email</div>
+          <h3>Напишіть нам</h3>
           <p class="contact-card-value"><a href="mailto:info@sladent.com.ua">info@sladent.com.ua</a></p>
-          <p class="contact-card-description">Відповідаємо протягом 24 годин</p>
+          <p class="contact-card-description">Відповідаємо протягом 24 годин.</p>
         </div>
 
-        <!-- Address Card -->
         <div class="contact-card">
-          <div class="contact-card-icon">📍</div>
-          <h3>Адреса</h3>
-          <p class="contact-card-value">просп. Злуки 8</p>
-          <p class="contact-card-description">м. Тернопіль, 46000</p>
+          <div class="contact-card-icon">03 / Адреса</div>
+          <h3>Знайдіть нас</h3>
+          <p class="contact-card-value">просп. Злуки, 8</p>
+          <p class="contact-card-description">м. Тернопіль, 46010<br>Тернопільська область</p>
         </div>
 
-        <!-- Working Hours Card -->
         <div class="contact-card">
-          <div class="contact-card-icon">🕒</div>
+          <div class="contact-card-icon">04 / Графік</div>
           <h3>Години роботи</h3>
-          <p class="contact-card-value">Понеділок - П'ятниця</p>
-          <p class="contact-card-description">9:00 - 19:00 (без перерв)<br>Субота: 9:00 - 15:00</p>
+          <p class="contact-card-value">Пн – Пт<br>09:00 – 20:00</p>
+          <p class="contact-card-description">Субота: 10:00 – 15:00<br>Неділя: вихідний</p>
         </div>
       </div>
     </div>
@@ -100,15 +112,15 @@
     <div class="map-container">
       <h2>Де нас знайти</h2>
       <div class="map-wrapper">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.9876543210123!2d25.593934!3d49.553722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473036f55e5e5e5e%3A0x5e5e5e5e5e5e5e5e!2z0L_RgNC-0YHQvy4g0JfQu9GD0LrQuCA4LCDQotC10YDQvdC-0L_RltC70YwsINCi0LXRgNC90L7Qv9GW0LvRjNGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA0NjAwMA!5e0!3m2!1suk!2sua!4v1729882800000!5m2!1suk!2sua" 
-          width="100%" 
-          height="500" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy" 
+        <iframe
+          src="https://www.google.com/maps?q=просп.+Злуки+8,+Тернопіль&output=embed"
+          width="100%"
+          height="500"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          title="Sladent - просп. Злуки 8, Тернопіль">
+          title="Sladent — просп. Злуки 8, Тернопіль">
         </iframe>
       </div>
     </div>
@@ -120,9 +132,8 @@
       <h2>Як до нас дістатися</h2>
       
       <div class="directions-grid">
-        <!-- By Car -->
         <div class="direction-card">
-          <div class="direction-icon">🚗</div>
+          <div class="direction-icon">01 / Авто</div>
           <h3>На автомобілі</h3>
           <ul class="direction-list">
             <li><strong>З центру міста:</strong> рухайтесь просп. Злуки на схід ~2 км, клініка з правого боку</li>
@@ -131,9 +142,8 @@
           </ul>
         </div>
 
-        <!-- Parking -->
         <div class="direction-card">
-          <div class="direction-icon">🅿️</div>
+          <div class="direction-icon">02 / Паркінг</div>
           <h3>Паркування</h3>
           <ul class="direction-list">
             <li><strong>Безкоштовний паркінг</strong> біля клініки (15 місць)</li>
@@ -143,9 +153,8 @@
           </ul>
         </div>
 
-        <!-- Public Transport -->
         <div class="direction-card">
-          <div class="direction-icon">🚌</div>
+          <div class="direction-icon">03 / Транспорт</div>
           <h3>Громадський транспорт</h3>
           <ul class="direction-list">
             <li><strong>Тролейбуси:</strong> №1, №5, №8 — зупинка "Просп. Злуки"</li>
@@ -154,9 +163,8 @@
           </ul>
         </div>
 
-        <!-- Walking -->
         <div class="direction-card">
-          <div class="direction-icon">🚶</div>
+          <div class="direction-icon">04 / Пішки</div>
           <h3>Пішки</h3>
           <ul class="direction-list">
             <li><strong>Від Театральної площі:</strong> ~15 хвилин (1.2 км) просп. Злуки</li>
@@ -166,9 +174,8 @@
         </div>
       </div>
 
-      <!-- Accessibility Note -->
       <div class="accessibility-note">
-        <div class="accessibility-icon">♿</div>
+        <div class="accessibility-icon">Доступність</div>
         <div class="accessibility-content">
           <h4>Доступність для всіх</h4>
           <p>
@@ -201,19 +208,16 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer role="contentinfo">
     <div class="footer-container">
-      <!-- Footer Brand -->
       <div class="footer-brand">
-        <img src="images/logo-removebg-preview.png" alt="Sladent Логотип" class="footer-logo"/>
-        <p class="footer-tagline">Sladent — Стоматологія Родини Придатко</p>
+        <p class="footer-tagline">Sladent · 2008</p>
+        <h2 class="footer-wordmark">Стоматологія<br>Родини <em>Придатко</em></h2>
         <p class="footer-description">
-          Ваша посмішка — наша місія. Сучасна стоматологія з турботою та професіоналізмом.
+          Ваша посмішка — наша місія. Сучасна стоматологія з турботою та професіоналізмом, у самому серці Тернополя.
         </p>
       </div>
 
-      <!-- Footer Links -->
       <div class="footer-links">
         <div class="footer-column">
           <h4>Навігація</h4>
@@ -222,32 +226,34 @@
             <li><a href="about.html">Про нас</a></li>
             <li><a href="services.html">Послуги</a></li>
             <li><a href="team.html">Команда</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-column">
-          <h4>Інформація</h4>
-          <ul>
             <li><a href="reviews.html">Відгуки</a></li>
             <li><a href="contact.html">Контакти</a></li>
-            <li><a href="#" onclick="openBookingWidget(); return false;">Записатися на прийом</a></li>
           </ul>
         </div>
 
         <div class="footer-column">
           <h4>Контакти</h4>
           <ul>
-            <li>📍 просп. Злуки 8, м. Тернопіль</li>
-            <li>📞 <a href="tel:+380979351535">+380 (97) 935 1535</a></li>
-            <li>📧 <a href="mailto:info@sladent.com.ua">info@sladent.com.ua</a></li>
-            <li>🕒 Пн-Пт: 9:00-19:00, Сб: 9:00-15:00</li>
+            <li><a href="tel:+380979351535">+380 (97) 935 1535</a></li>
+            <li><a href="mailto:info@sladent.com.ua">info@sladent.com.ua</a></li>
+            <li>просп. Злуки, 8<br>м. Тернопіль, 46010</li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Графік</h4>
+          <ul>
+            <li>Пн – Пт &nbsp; 09:00 – 20:00</li>
+            <li>Субота &nbsp;&nbsp;&nbsp; 10:00 – 15:00</li>
+            <li>Неділя &nbsp;&nbsp;&nbsp; Вихідний</li>
           </ul>
         </div>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2025 Sladent — Стоматологія Родини Придатко. Всі права захищені.</p>
+      <p>© 2026 Sladent — Стоматологія Родини Придатко</p>
+      <p>Тернопіль · est. 2008</p>
     </div>
   </footer>
 
@@ -287,6 +293,23 @@
       }
     });
   </script>
+
+  <!-- Sticky mobile action bar -->
+  <nav class="sticky-cta" aria-label="Швидкі дії">
+    <a href="tel:+380979351535" aria-label="Зателефонувати: +380 (97) 935 1535">
+      <svg class="sticky-cta__icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Подзвонити
+    </a>
+    <a href="contact.html#booking-form" class="is-primary" aria-label="Записатися на прийом онлайн">
+      <svg class="sticky-cta__icon" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="4" width="18" height="18" rx="2"/>
+        <path d="M16 2v4M8 2v4M3 10h18"/>
+      </svg>
+      Записатися
+    </a>
+  </nav>
 
   <script src="script.js"></script>
 </body>

@@ -18,11 +18,11 @@ const CONFIG = {
     observerMargin: '0px 0px -100px 0px'
   },
   typewriter: {
-    typeSpeed: 100,
-    deleteSpeed: 50,
-    pauseAtEnd: 2500,
-    pauseBeforeNext: 500,
-    startDelay: 2000
+    typeSpeed: 70,
+    deleteSpeed: 35,
+    pauseAtEnd: 2200,
+    pauseBeforeNext: 350,
+    startDelay: 800
   }
 };
 
@@ -122,7 +122,7 @@ const NavigationModule = (() => {
     if (window.innerWidth <= 768) {
       navLinks.setAttribute('aria-hidden', 'false');
     }
-    document.body.classList.add('nav-open');
+    document.body.classList.add('menu-open');
 
     if (document.activeElement === hamburger) {
       const firstLink = navLinks.querySelector('a');
@@ -143,7 +143,7 @@ const NavigationModule = (() => {
     } else {
       navLinks.removeAttribute('aria-hidden');
     }
-    document.body.classList.remove('nav-open');
+    document.body.classList.remove('menu-open');
 
     if (restoreFocus) {
       hamburger.focus();
@@ -215,7 +215,7 @@ const NavigationModule = (() => {
       hamburger.classList.remove('active');
       hamburger.setAttribute('aria-expanded', 'false');
       hamburger.setAttribute('aria-label', 'Відкрити меню');
-      document.body.classList.remove('nav-open');
+      document.body.classList.remove('menu-open');
     } else if (!navLinks.classList.contains('show')) {
       navLinks.setAttribute('aria-hidden', 'true');
       hamburger.setAttribute('aria-label', 'Відкрити меню');
@@ -463,19 +463,20 @@ const ScrollEffectsModule = (() => {
     const header = document.querySelector('header');
     if (!header) return;
 
-    let lastScroll = 0;
-
+    let ticking = false;
+    const update = () => {
+      const y = window.pageYOffset;
+      header.classList.toggle('scrolled', y > 80);
+      document.body.classList.toggle('scrolled', y > 320);
+      ticking = false;
+    };
     window.addEventListener('scroll', () => {
-      const currentScroll = window.pageYOffset;
-
-      if (currentScroll > 100) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
       }
-
-      lastScroll = currentScroll;
     }, { passive: true });
+    update();
   };
 
   return { init };
@@ -488,25 +489,40 @@ const TestimonialSliderModule = (() => {
   let currentSlide = 0;
   let slides;
   let slider;
+  let autoplay;
 
   const init = () => {
-    slider = document.querySelector('.testimonial-slider');
+    slider = document.querySelector('.testimonials-slider, .testimonial-slider');
     if (!slider) return;
 
-    slides = slider.querySelectorAll('.testimonial-item');
+    slides = slider.querySelectorAll('.testimonial-card, .testimonial-item');
     if (slides.length === 0) return;
 
     showSlide(currentSlide);
+    startAutoplay();
+    slider.addEventListener('mouseenter', stopAutoplay);
+    slider.addEventListener('mouseleave', startAutoplay);
   };
 
   const showSlide = (n) => {
+    if (!slides || slides.length === 0) return;
     slides.forEach(slide => slide.classList.remove('active'));
     currentSlide = (n + slides.length) % slides.length;
     slides[currentSlide].classList.add('active');
   };
 
+  const startAutoplay = () => {
+    stopAutoplay();
+    autoplay = setInterval(() => showSlide(currentSlide + 1), 7000);
+  };
+
+  const stopAutoplay = () => {
+    if (autoplay) clearInterval(autoplay);
+  };
+
   window.moveTestimonial = (direction) => {
     showSlide(currentSlide + direction);
+    startAutoplay();
   };
 
   return { init };
