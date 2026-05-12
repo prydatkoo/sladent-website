@@ -10,8 +10,8 @@
 // =========================================================================
 const CONFIG = {
   carousel: {
-    interval: 5000,
-    transitionSpeed: 1200
+    interval: 4000,
+    transitionSpeed: 900
   },
   animations: {
     observerThreshold: 0.1,
