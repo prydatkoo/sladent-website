@@ -773,12 +773,12 @@ header.scrolled .navbar { padding-top: 0.85rem; padding-bottom: 0.85rem; }
   .hero-section {
     min-height: 100vh;
     min-height: 100dvh;
-    align-items: end;
-    padding: 6rem 0 calc(4.5rem + env(safe-area-inset-bottom));
+    align-items: center;
+    padding: 6rem 0 7rem;
   }
   /* Keep the scroll cue but make it smaller + tighter to the bottom */
   .hero-scroll {
-    bottom: calc(0.85rem + env(safe-area-inset-bottom));
+    bottom: calc(1.1rem + env(safe-area-inset-bottom));
     gap: 0.45rem;
     font-size: 0.5625rem;
     letter-spacing: 0.24em;
