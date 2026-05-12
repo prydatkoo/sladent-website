@@ -118,7 +118,7 @@ const NavigationModule = (() => {
     navLinks.classList.add('show');
     hamburger.classList.add('active');
     hamburger.setAttribute('aria-expanded', 'true');
-    hamburger.setAttribute('aria-label', 'Закрити меню');
+    hamburger.setAttribute('aria-label', 'Close menu');
     if (window.innerWidth <= 768) {
       navLinks.setAttribute('aria-hidden', 'false');
     }
@@ -136,7 +136,7 @@ const NavigationModule = (() => {
     navLinks.classList.remove('show');
     hamburger.classList.remove('active');
     hamburger.setAttribute('aria-expanded', 'false');
-    hamburger.setAttribute('aria-label', 'Відкрити меню');
+    hamburger.setAttribute('aria-label', 'Open menu');
 
     if (window.innerWidth <= 768) {
       navLinks.setAttribute('aria-hidden', 'true');
@@ -214,11 +214,11 @@ const NavigationModule = (() => {
       navLinks.removeAttribute('aria-hidden');
       hamburger.classList.remove('active');
       hamburger.setAttribute('aria-expanded', 'false');
-      hamburger.setAttribute('aria-label', 'Відкрити меню');
+      hamburger.setAttribute('aria-label', 'Open menu');
       document.body.classList.remove('menu-open');
     } else if (!navLinks.classList.contains('show')) {
       navLinks.setAttribute('aria-hidden', 'true');
-      hamburger.setAttribute('aria-label', 'Відкрити меню');
+      hamburger.setAttribute('aria-label', 'Open menu');
     }
   };
 
@@ -320,9 +320,9 @@ const TypewriterModule = (() => {
     if (!element) return;
 
     const texts = [
-      'використовує новітні технології',
-      'використовує 3D діагностику',
-      'поєднує професіоналізм із сердечністю'
+      'uses the latest technology',
+      'uses 3D diagnostics',
+      'combines professionalism with warmth'
     ];
     
     let textIndex = 0;
