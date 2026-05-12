@@ -3240,9 +3240,7 @@ footer[role="contentinfo"] {
   .map-wrapper { aspect-ratio: 1/1; border: 0; }
   .map-section h2 { padding: 0 var(--gutter); font-size: 1.75rem; }
 
-  /* Stats */
-  .stats-container { grid-template-columns: repeat(2, 1fr); padding: 1.5rem var(--gutter); }
-  .stat-item { padding: 1.5rem 0.75rem; }
+  /* Stats — kept in dedicated patch at end of file (search "Reviews stats") */
 }
 
 /* Tiny phones */
