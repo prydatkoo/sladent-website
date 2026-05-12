@@ -2487,15 +2487,33 @@ footer[role="contentinfo"] {
 .doctor-profile-image {
   position: relative;
   overflow: hidden;
+  isolation: isolate;
+  background: var(--ink);
 }
 .doctor-profile-image img {
   width: 100%;
   aspect-ratio: 4/5;
   object-fit: cover;
-  filter: saturate(0.85) contrast(1.02);
+  object-position: center 25%;
+  filter: saturate(0.82) contrast(1.04) brightness(0.96);
   transition: transform var(--tx-glide);
 }
 .doctor-profile:hover .doctor-profile-image img { transform: scale(1.04); }
+
+/* Soft vignette draws the eye to the doctor, de-emphasises the clinic
+   equipment behind. Subtle — barely visible at the centre. */
+.doctor-profile-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 75% 70% at 50% 35%,
+                    transparent 0%,
+                    rgba(15, 24, 37, 0.0) 55%,
+                    rgba(15, 24, 37, 0.35) 100%);
+  z-index: 1;
+}
 .doctor-badge {
   position: absolute;
   top: 1.25rem;
