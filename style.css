@@ -2576,7 +2576,7 @@ footer[role="contentinfo"] {
   .doctor-profile:nth-child(even) { grid-template-columns: 1fr; }
   .doctor-profile:nth-child(even) .doctor-profile-image,
   .doctor-profile:nth-child(even) .doctor-profile-content { order: initial; }
-  .doctor-profile-image img { aspect-ratio: 4/3; }
+  .doctor-profile-image img { aspect-ratio: 4/5; }
 }
 
 .team-philosophy-section { background: var(--ivory); }
@@ -3009,6 +3009,15 @@ footer[role="contentinfo"] {
   /* Hard cap: ensure body never exceeds viewport width */
   html { overflow-x: hidden; }
   body { width: 100vw; max-width: 100vw; overflow-x: hidden; }
+
+  /* Allow long buttons to wrap on mobile (default is white-space: nowrap) */
+  .btn {
+    white-space: normal;
+    max-width: 100%;
+    text-align: center;
+    line-height: 1.25;
+    word-break: keep-all;
+  }
 
   /* Reviews section — entire section constrained */
   .reviews-stats-section,
