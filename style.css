@@ -772,7 +772,9 @@ header.scrolled .navbar { padding-top: 0.85rem; padding-bottom: 0.85rem; }
     min-height: 100vh;
     min-height: 100dvh;
     align-items: center;
-    padding: 6rem 0 7rem;
+    /* asymmetric padding shifts content below the optical centre,
+       leaving room above the image to breathe */
+    padding: 12rem 0 5rem;
   }
   /* Keep the scroll cue but make it smaller + tighter to the bottom */
   .hero-scroll {
