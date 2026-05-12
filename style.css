@@ -265,10 +265,62 @@ header[role="banner"] {
   z-index: 100;
   background: #FFFFFF;
   border-bottom: 1px solid var(--rule-soft);
-  transition: border-color var(--tx-base), padding var(--tx-base), box-shadow var(--tx-base);
+  transition: background 320ms ease, border-color 320ms ease, box-shadow 320ms ease, padding var(--tx-base);
 }
 header.scrolled {
   box-shadow: 0 1px 12px rgba(15, 24, 37, 0.06);
+}
+
+/* Homepage only: navbar starts transparent over the dark hero, then
+   becomes solid white once the user scrolls past it. */
+body:has(.hero-section) header[role="banner"]:not(.scrolled) {
+  background: transparent;
+  border-bottom-color: transparent;
+  box-shadow: none;
+}
+
+/* Light navbar contents while transparent over the dark hero */
+body:has(.hero-section) header[role="banner"]:not(.scrolled) .logo-link,
+body:has(.hero-section) header[role="banner"]:not(.scrolled) .logo-link span {
+  color: var(--ivory);
+}
+body:has(.hero-section) header[role="banner"]:not(.scrolled) .sladent-logo {
+  filter: brightness(0) invert(1) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
+}
+body:not(.menu-open):has(.hero-section) header[role="banner"]:not(.scrolled) .hamburger span {
+  background: var(--ivory);
+}
+body:has(.hero-section) header[role="banner"]:not(.scrolled) .cta-btn {
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--ink);
+  border-color: rgba(255, 255, 255, 0.95);
+}
+body:has(.hero-section) header[role="banner"]:not(.scrolled) .cta-btn:hover {
+  background: var(--brass);
+  border-color: var(--brass);
+  color: var(--ivory);
+}
+
+@media (min-width: 961px) {
+  body:has(.hero-section) header[role="banner"]:not(.scrolled) .nav-links > li > a {
+    color: rgba(242, 244, 248, 0.88);
+  }
+  body:has(.hero-section) header[role="banner"]:not(.scrolled) .nav-links > li > a::after {
+    background: var(--brass-soft);
+  }
+  body:has(.hero-section) header[role="banner"]:not(.scrolled) .nav-links > li > a.active {
+    color: var(--ivory);
+  }
+}
+
+/* When the mobile menu opens (ivory overlay), force dark logo + icons
+   even though the navbar is still "not scrolled" technically. */
+body.menu-open header[role="banner"] .logo-link,
+body.menu-open header[role="banner"] .logo-link span {
+  color: var(--ink);
+}
+body.menu-open header[role="banner"] .sladent-logo {
+  filter: none;
 }
 
 .navbar {
@@ -770,10 +822,19 @@ header.scrolled .navbar { padding-top: 0.85rem; padding-bottom: 0.85rem; }
     linear-gradient(95deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0) 55%);
 }
 
-/* The hero starts BELOW the solid white navbar — no top vignette needed. */
+/* Subtle top sheen so the WHITE logo/menu icons over the transparent navbar
+   always have contrast against any carousel slide. Fades out on scroll
+   together with the transparent navbar state. */
 .hero-section::before {
   content: '';
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .hero-content {
