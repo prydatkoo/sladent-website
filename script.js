@@ -10,8 +10,8 @@
 // =========================================================================
 const CONFIG = {
   carousel: {
-    interval: 7000,           // matches CSS transition timing for smoothest cross-fade
-    transitionSpeed: 1600
+    interval: 5000,
+    transitionSpeed: 1200
   },
   animations: {
     observerThreshold: 0.1,
