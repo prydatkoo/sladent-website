@@ -261,15 +261,55 @@ header[role="banner"] {
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(242, 244, 248, 0.85);
-  backdrop-filter: blur(14px) saturate(140%);
-  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border-bottom: 1px solid transparent;
-  transition: border-color var(--tx-base), background var(--tx-base), padding var(--tx-base);
+  transition: background 320ms ease, backdrop-filter 320ms ease, border-color var(--tx-base), padding var(--tx-base);
 }
 header.scrolled {
-  background: rgba(242, 244, 248, 0.96);
+  background: rgba(242, 244, 248, 0.92);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
   border-bottom-color: var(--rule-soft);
+}
+
+/* Pages without a dark hero: keep navbar light by default */
+body:not(:has(.hero-section)) header[role="banner"] {
+  background: rgba(242, 244, 248, 0.78);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+}
+
+/* Light navbar contents while hovering over the dark hero */
+body:has(.hero-section) header[role="banner"]:not(.scrolled) .logo-link,
+body:has(.hero-section) header[role="banner"]:not(.scrolled) .logo-link span {
+  color: var(--ivory);
+}
+body:has(.hero-section) header[role="banner"]:not(.scrolled) .sladent-logo {
+  filter: brightness(0) invert(1) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
+}
+body:has(.hero-section) header[role="banner"]:not(.scrolled) .hamburger span {
+  background: var(--ivory);
+}
+body:has(.hero-section) header[role="banner"]:not(.scrolled) .nav-links > li > a {
+  color: rgba(242, 244, 248, 0.88);
+}
+body:has(.hero-section) header[role="banner"]:not(.scrolled) .nav-links > li > a::after {
+  background: var(--brass-soft);
+}
+body:has(.hero-section) header[role="banner"]:not(.scrolled) .nav-links > li > a.active {
+  color: var(--ivory);
+}
+body:has(.hero-section) header[role="banner"]:not(.scrolled) .cta-btn {
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--ink);
+  border-color: rgba(255, 255, 255, 0.95);
+}
+body:has(.hero-section) header[role="banner"]:not(.scrolled) .cta-btn:hover {
+  background: var(--brass);
+  border-color: var(--brass);
+  color: var(--ivory);
 }
 
 .navbar {
@@ -709,8 +749,11 @@ header.scrolled .navbar { padding-top: 0.85rem; padding-bottom: 0.85rem; }
   .hero-section {
     min-height: 100vh;
     min-height: 100dvh;
-    padding: 7rem 0 6rem;
+    align-items: end;
+    padding: 6rem 0 calc(3rem + env(safe-area-inset-bottom));
   }
+  /* Sticker cue tucks above sticky-cta when it's hidden, fades when scrolled */
+  .hero-scroll { display: none; }
 }
 
 .carousel-container {
@@ -853,10 +896,27 @@ header.scrolled .navbar { padding-top: 0.85rem; padding-bottom: 0.85rem; }
   color: rgba(242, 244, 248, 0.55);
 }
 
+.hero-stats__group {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  white-space: nowrap;
+}
+
 @media (max-width: 720px) {
   .hero-cta-group { width: 100%; }
   .hero-cta-group .btn { width: 100%; justify-content: center; }
-  .hero-stats { font-size: 0.8125rem; gap: 0.35rem 0.6rem; }
+  .hero-content h1 { margin-bottom: 1.5rem; }
+  .hero-content .eyebrow,
+  .eyebrow--hero { margin-bottom: 1.25rem; }
+  .hero-cta-group { margin-bottom: 1.5rem; }
+  .hero-stats {
+    font-size: 0.8125rem;
+    gap: 0.35rem 0.55rem;
+    line-height: 1.4;
+  }
+  .hero-stats__addr,
+  .hero-stats__sep--addr { display: none; }
 }
 
 /* -------------------------------------------------------------------------
@@ -2924,50 +2984,22 @@ footer[role="contentinfo"] {
     --gutter: 1.25rem;
   }
 
-  /* Hero — generous breathing room on mobile */
-  .hero-section {
-    min-height: 100vh;
-    min-height: 100dvh;
-    padding: 7.5rem 0 5rem;
-    align-items: center;
-  }
-  .hero-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  .hero-content .eyebrow,
-  .eyebrow--hero {
-    margin-bottom: 2rem;
-    align-items: flex-start;
+  /* Mobile hero — only typography overrides; layout is owned by the rule above */
+  .hero-content { grid-template-columns: 1fr; gap: 0; }
+  .hero-content h1 {
+    font-size: clamp(2.25rem, 9vw, 3.25rem);
+    line-height: 1.02;
+    margin-bottom: 1.5rem;
   }
   .hero-cta-group {
-    margin-bottom: 1.75rem;
-    gap: 0.75rem;
-  }
-  .hero-stats {
-    padding-top: 0.5rem;
-  }
-  .hero-content h1 {
-    font-size: clamp(2.5rem, 9.5vw, 3.5rem);
-    line-height: 1.02;
-  }
-  .hero-content .hero-subtitle {
-    font-size: 1rem;
-    line-height: 1.55;
-  }
-  .hero-tagline {
-    font-size: 1rem;
-  }
-  .hero-cta-group { flex-direction: column; align-items: stretch; gap: 0.75rem; width: 100%; max-width: 22rem; }
-  .hero-cta-group .btn { justify-content: center; width: 100%; }
-  .hero-meta {
-    align-items: flex-start;
-    text-align: left;
-    gap: 1rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
     width: 100%;
+    max-width: 100%;
+    margin-bottom: 1.25rem;
   }
+  .hero-cta-group .btn { justify-content: center; width: 100%; }
 
   /* Nav padding */
   .navbar { padding: 0.875rem var(--gutter); }
