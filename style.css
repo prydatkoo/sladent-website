@@ -807,16 +807,16 @@ header.scrolled .navbar { padding-top: 0.85rem; padding-bottom: 0.85rem; }
   object-position: center;
   filter: saturate(0.85) contrast(1.02);
   /* Continuous ken-burns on every image at all times — never starts or
-     stops based on .active, so nothing can snap. Each image slowly
-     zooms in/out independently, so when a slide fades in the image is
-     already mid-drift. */
-  animation: ken-burns 16s ease-in-out infinite alternate;
+     stops based on .active, so nothing can snap. Linear easing means
+     constant velocity (no slow-down at extremes, which previously made
+     the reverse feel "step by step"). */
+  animation: ken-burns 20s linear infinite alternate;
   transform: translateZ(0);
   backface-visibility: hidden;
 }
 @keyframes ken-burns {
-  0%   { transform: translateZ(0) scale(1.02); }
-  100% { transform: translateZ(0) scale(1.12); }
+  from { transform: translate3d(0, 0, 0) scale(1.02); }
+  to   { transform: translate3d(0, 0, 0) scale(1.10); }
 }
 
 .hero-overlay {
