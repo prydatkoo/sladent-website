@@ -562,8 +562,6 @@ header.scrolled .navbar { padding-top: 0.85rem; padding-bottom: 0.85rem; }
     left: 0;
     right: 0;
     z-index: 90;
-    /* Hard 50/50 gradient — bar background paints both halves and extends
-       into the iOS home-indicator safe-area via padding-bottom. */
     background: linear-gradient(90deg, var(--ink) 0 50%, var(--blue) 50% 100%);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: env(safe-area-inset-bottom, 0px);
