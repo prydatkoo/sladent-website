@@ -95,6 +95,8 @@ html {
 
 body {
   margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;     /* iOS 26 — ensure body extends into safe-area */
   font-family: var(--sans);
   font-size: var(--t-body);
   line-height: 1.6;
@@ -261,74 +263,12 @@ header[role="banner"] {
   left: 0;
   right: 0;
   z-index: 100;
-  background: transparent;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  border-bottom: 1px solid transparent;
-  transition: background 320ms ease, backdrop-filter 320ms ease, border-color var(--tx-base), padding var(--tx-base);
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--rule-soft);
+  transition: border-color var(--tx-base), padding var(--tx-base), box-shadow var(--tx-base);
 }
 header.scrolled {
-  background: rgba(242, 244, 248, 0.92);
-  backdrop-filter: blur(16px) saturate(140%);
-  -webkit-backdrop-filter: blur(16px) saturate(140%);
-  border-bottom-color: var(--rule-soft);
-}
-
-/* Pages without a dark hero: navbar is transparent at the top (the page
-   hero already provides the ivory backdrop) and becomes blurred once
-   the user scrolls into content. */
-body:not(:has(.hero-section)) header[role="banner"]:not(.scrolled) {
-  background: transparent;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-}
-
-/* Light navbar contents while hovering over the dark hero — but ONLY
-   while the menu is closed. When the mobile menu opens it becomes a
-   light overlay, so the link colour must flip back to dark ink there. */
-body:has(.hero-section) header[role="banner"]:not(.scrolled) .logo-link,
-body:has(.hero-section) header[role="banner"]:not(.scrolled) .logo-link span {
-  color: var(--ivory);
-}
-body:has(.hero-section) header[role="banner"]:not(.scrolled) .sladent-logo {
-  filter: brightness(0) invert(1) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
-}
-body:not(.menu-open):has(.hero-section) header[role="banner"]:not(.scrolled) .hamburger span {
-  background: var(--ivory);
-}
-body:has(.hero-section) header[role="banner"]:not(.scrolled) .cta-btn {
-  background: rgba(255, 255, 255, 0.95);
-  color: var(--ink);
-  border-color: rgba(255, 255, 255, 0.95);
-}
-body:has(.hero-section) header[role="banner"]:not(.scrolled) .cta-btn:hover {
-  background: var(--brass);
-  border-color: var(--brass);
-  color: var(--ivory);
-}
-
-/* Desktop only: light nav links over the dark hero. On mobile the nav
-   becomes a full-screen ivory overlay, so dark text is correct there. */
-@media (min-width: 961px) {
-  body:has(.hero-section) header[role="banner"]:not(.scrolled) .nav-links > li > a {
-    color: rgba(242, 244, 248, 0.88);
-  }
-  body:has(.hero-section) header[role="banner"]:not(.scrolled) .nav-links > li > a::after {
-    background: var(--brass-soft);
-  }
-  body:has(.hero-section) header[role="banner"]:not(.scrolled) .nav-links > li > a.active {
-    color: var(--ivory);
-  }
-}
-
-/* When the mobile menu is open over the dark hero, keep the X icon dark
-   (it sits on top of the ivory overlay) and the logo also dark. */
-body.menu-open header[role="banner"] .logo-link,
-body.menu-open header[role="banner"] .logo-link span {
-  color: var(--ink);
-}
-body.menu-open header[role="banner"] .sladent-logo {
-  filter: none;
+  box-shadow: 0 1px 12px rgba(15, 24, 37, 0.06);
 }
 
 .navbar {
@@ -830,18 +770,10 @@ header.scrolled .navbar { padding-top: 0.85rem; padding-bottom: 0.85rem; }
     linear-gradient(95deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0) 55%);
 }
 
-/* Subtle top sheen so the transparent navbar always reads against any
-   carousel slide. Neutral black, no blue cast. */
+/* The hero starts BELOW the solid white navbar — no top vignette needed. */
 .hero-section::before {
   content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 120px;
-  z-index: 1;
-  pointer-events: none;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0) 100%);
+  display: none;
 }
 
 .hero-content {
