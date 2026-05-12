@@ -791,19 +791,27 @@ header.scrolled .navbar { padding-top: 0.85rem; padding-bottom: 0.85rem; }
   position: absolute;
   inset: 0;
   opacity: 0;
-  transform: scale(1.04);
-  /* Drive both opacity AND scale via transition (not animation), so when
-     a slide deactivates the scale eases back instead of snapping. */
+  transform: scale(1.02);
+  /* Opacity always transitions. Transform transitions only when the
+     animation is NOT running — i.e. on deactivation, the scale eases
+     back to base instead of snapping. */
   transition: opacity 1200ms cubic-bezier(0.4, 0, 0.2, 1),
-              transform 6500ms cubic-bezier(0.22, 0.61, 0.36, 1);
+              transform 2400ms cubic-bezier(0.22, 0.61, 0.36, 1);
   will-change: opacity, transform;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 .carousel-slide.active {
   opacity: 1;
-  transform: scale(1.10);
+  /* Animation runs every time .active is applied — including on the
+     first slide which is born with the class. Plays from scale 1.02 to
+     scale 1.14 over 7s for a clearly visible ken-burns drift. */
+  animation: ken-burns 7000ms cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
   z-index: 1;
+}
+@keyframes ken-burns {
+  0%   { transform: scale(1.02); }
+  100% { transform: scale(1.14); }
 }
 .carousel-slide img {
   width: 100%;
@@ -811,7 +819,6 @@ header.scrolled .navbar { padding-top: 0.85rem; padding-bottom: 0.85rem; }
   object-fit: cover;
   object-position: center;
   filter: saturate(0.85) contrast(1.02);
-  /* Force the image onto its own compositor layer for smoother transitions */
   transform: translateZ(0);
   backface-visibility: hidden;
 }
