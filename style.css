@@ -399,6 +399,35 @@ header.scrolled .navbar { padding-top: 0.85rem; padding-bottom: 0.85rem; }
 }
 /* Hide mobile-only items on desktop */
 .nav-links__phone { display: none; }
+
+/* Language toggle */
+.nav-links__lang { margin-right: 0.25rem; }
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 32px;
+  padding: 0 0.6rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background var(--tx-base), color var(--tx-base), border-color var(--tx-base);
+}
+.lang-toggle:hover { background: var(--ink); color: var(--ivory); }
+body:has(.hero-section) header[role="banner"]:not(.scrolled) .lang-toggle {
+  color: var(--ivory);
+}
+body:has(.hero-section) header[role="banner"]:not(.scrolled) .lang-toggle:hover {
+  background: var(--ivory);
+  color: var(--ink);
+}
+
 .cta-btn::after {
   content: '→';
   margin-left: 0.6rem;
@@ -536,6 +565,20 @@ header.scrolled .navbar { padding-top: 0.85rem; padding-bottom: 0.85rem; }
     font-size: 1.5rem;
     color: var(--blue);
     font-style: italic;
+  }
+
+  /* Language toggle on mobile: full-width chip inside the overlay menu */
+  .nav-links__lang {
+    margin-right: 0;
+    margin-top: 1rem;
+    text-align: left;
+  }
+  .lang-toggle {
+    color: var(--ink);
+    border-color: var(--ink);
+    font-size: 0.85rem;
+    height: 40px;
+    min-width: 60px;
   }
 }
 

@@ -1,27 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
 
-  <title>Reviews — Sladent · Prydatko Family Dentistry · Ternopil</title>
-  <meta name="description" content="Patient reviews of Sladent — Prydatko Family Dentistry in Ternopil. Verified Google reviews, 4.8/5 rating."/>
-  <meta name="keywords" content="dentist Ternopil, Sladent, Prydatko Family Dentistry, dental clinic Ternopil, implants, orthodontics, pediatric dentist, 8 Zluky Avenue"/>
+  <title>Відгуки — Sladent · Стоматологія Родини Придатко · Тернопіль</title>
+  <meta name="description" content="Відгуки пацієнтів Sladent — Стоматології Родини Придатко в Тернополі. Перевірені відгуки з Google, рейтинг 4.8/5."/>
+  <meta name="keywords" content="стоматологія Тернопіль, Sladent, Стоматологія Родини Придатко, стоматолог Тернопіль, імплантація, ортодонтія, дитячий стоматолог, просп. Злуки 8"/>
   <meta name="author" content="Sladent"/>
   <meta name="theme-color" content="#FFFFFF"/>
   <link rel="canonical" href="https://sladent.com/reviews.html"/>
 
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="uk" href="https://sladent.com/reviews.html"/>
+  <link rel="alternate" hreflang="en" href="https://sladent.com/en/reviews.html"/>
+  <link rel="alternate" hreflang="x-default" href="https://sladent.com/reviews.html"/>
+
   <meta property="og:type" content="website"/>
-  <meta property="og:locale" content="en_US"/>
+  <meta property="og:locale" content="uk_UA"/>
   <meta property="og:site_name" content="Sladent"/>
-  <meta property="og:title" content="Reviews — Sladent · Prydatko Family Dentistry"/>
-  <meta property="og:description" content="Patient reviews of Sladent — Prydatko Family Dentistry in Ternopil. Verified Google reviews, 4.8/5 rating."/>
+  <meta property="og:title" content="Відгуки — Sladent · Стоматологія Родини Придатко"/>
+  <meta property="og:description" content="Відгуки пацієнтів Sladent — Стоматології Родини Придатко в Тернополі. Перевірені відгуки з Google, рейтинг 4.8/5."/>
   <meta property="og:image" content="https://sladent.com/images/surgery4.jpg"/>
   <meta property="og:url" content="https://sladent.com/reviews.html"/>
 
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Reviews — Sladent"/>
-  <meta name="twitter:description" content="Patient reviews of Sladent — Prydatko Family Dentistry in Ternopil. Verified Google reviews, 4.8/5 rating."/>
+  <meta name="twitter:title" content="Відгуки — Sladent"/>
+  <meta name="twitter:description" content="Відгуки пацієнтів Sladent — Стоматології Родини Придатко в Тернополі. Перевірені відгуки з Google, рейтинг 4.8/5."/>
   <meta name="twitter:image" content="https://sladent.com/images/surgery4.jpg"/>
 
   <link rel="icon" href="images/icon.ico" type="image/x-icon"/>
@@ -30,33 +35,36 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-
-
+  
+  
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <header role="banner">
-    <nav class="navbar" aria-label="Main navigation">
+    <nav class="navbar" aria-label="Головна навігація">
       <div class="logo-area">
-        <a href="index.html" class="logo-link" aria-label="Sladent — Home">
+        <a href="index.html" class="logo-link" aria-label="Sladent — на головну">
           <img src="images/logo-removebg-preview.png" alt="" class="sladent-logo"/>
           <span>Sladent</span>
         </a>
       </div>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html"><span>Home</span></a></li>
-        <li><a href="about.html"><span>About</span></a></li>
-        <li><a href="services.html"><span>Services</span></a></li>
-        <li><a href="team.html"><span>Team</span></a></li>
-        <li><a href="reviews.html" class="active" aria-current="page"><span>Reviews</span></a></li>
-        <li><a href="contact.html"><span>Contact</span></a></li>
+        <li><a href="index.html"><span>Головна</span></a></li>
+        <li><a href="about.html"><span>Про нас</span></a></li>
+        <li><a href="services.html"><span>Послуги</span></a></li>
+        <li><a href="team.html"><span>Команда</span></a></li>
+        <li><a href="reviews.html" class="active" aria-current="page"><span>Відгуки</span></a></li>
+        <li><a href="contact.html"><span>Контакти</span></a></li>
         <li class="nav-links__phone">
-          <span class="nav-links__phone-label">Call us</span>
+          <span class="nav-links__phone-label">Зателефонуйте</span>
           <a class="nav-links__phone-num" href="tel:+380979351535">+380 (97) 935 1535</a>
         </li>
+        <li class="nav-links__lang">
+          <a href="/en/reviews.html" class="lang-toggle" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+        </li>
       </ul>
-      <button class="cta-btn" onclick="openBookingWidget()" aria-label="Book an appointment">Book</button>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <button class="cta-btn" onclick="openBookingWidget()" aria-label="Записатися на прийом">Записатися</button>
+      <button class="hamburger" id="hamburger" aria-label="Відкрити меню" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </nav>
@@ -64,10 +72,10 @@
 
   <section class="reviews-hero-section fade-in" aria-labelledby="reviews-hero-heading">
     <div class="reviews-hero-content">
-      <p class="reviews-hero-badge">04 — Reviews</p>
-      <h1 id="reviews-hero-heading">What <em>our patients</em> say.</h1>
+      <p class="reviews-hero-badge">04 — Відгуки</p>
+      <h1 id="reviews-hero-heading">Що кажуть <em>наші пацієнти.</em></h1>
       <p class="hero-subtitle">
-        Real stories from real people. We are proud of the trust our patients place in us — and grateful for every review.
+        Реальні історії від реальних людей. Ми пишаємося довірою наших пацієнтів і щиро дякуємо за кожен відгук.
       </p>
     </div>
   </section>
@@ -76,24 +84,24 @@
   <section class="reviews-stats-section">
     <div class="stats-container">
       <div class="stat-item">
-        <span class="stat-icon">01 / Rating</span>
+        <span class="stat-icon">01 / Рейтинг</span>
         <div class="stat-number">4.8</div>
-        <div class="stat-label">Out of 5 stars · Google</div>
+        <div class="stat-label">З 5 зірок · Google</div>
       </div>
       <div class="stat-item">
-        <span class="stat-icon">02 / Source</span>
+        <span class="stat-icon">02 / Джерело</span>
         <div class="stat-number">Google</div>
-        <div class="stat-label">Verified reviews</div>
+        <div class="stat-label">Перевірені відгуки</div>
       </div>
       <div class="stat-item">
-        <span class="stat-icon">03 / Approach</span>
-        <div class="stat-number">Family</div>
-        <div class="stat-label">Family practice</div>
+        <span class="stat-icon">03 / Підхід</span>
+        <div class="stat-number">Сім'я</div>
+        <div class="stat-label">Родинна практика</div>
       </div>
       <div class="stat-item">
-        <span class="stat-icon">04 / Experience</span>
+        <span class="stat-icon">04 / Досвід</span>
         <div class="stat-number">15+</div>
-        <div class="stat-label">Years of practice</div>
+        <div class="stat-label">Років практики</div>
       </div>
     </div>
   </section>
@@ -101,9 +109,9 @@
   <!-- All Reviews Section (Real Google Reviews Widget) -->
   <section class="all-reviews-section">
     <div class="all-reviews-container">
-      <h2>Reviews from our patients</h2>
-      <p class="section-subtitle">Real reviews from Google</p>
-
+      <h2>Відгуки наших пацієнтів</h2>
+      <p class="section-subtitle">Реальні відгуки з Google</p>
+      
       <!-- Elfsight Google Reviews Widget -->
       <script src="https://static.elfsight.com/platform/platform.js" async></script>
       <div class="elfsight-app-948240cf-e926-4c1e-82aa-ef7c5c3e42bb" data-elfsight-app-lazy></div>
@@ -113,58 +121,58 @@
   <!-- Reviews CTA Section -->
   <section class="reviews-cta-section">
     <div class="reviews-cta-content">
-      <h2>Become part of our success story</h2>
-      <p>Book an appointment and experience a professional approach to your health</p>
-      <button class="btn btn-primary btn-large" onclick="openBookingWidget()">Book an appointment</button>
+      <h2>Станьте частиною нашої історії успіху</h2>
+      <p>Запишіться на прийом і відчуйте професійний підхід до вашого здоров'я</p>
+      <button class="btn btn-primary btn-large" onclick="openBookingWidget()">Записатися на прийом</button>
     </div>
   </section>
 
   <footer role="contentinfo">
     <div class="footer-container">
       <div class="footer-brand">
-        <p class="footer-tagline">Sladent · est. 2008</p>
-        <h2 class="footer-wordmark">Prydatko Family<br><em>Dentistry</em></h2>
+        <p class="footer-tagline">Sladent · 2008</p>
+        <h2 class="footer-wordmark">Стоматологія<br>Родини <em>Придатко</em></h2>
         <p class="footer-description">
-          Your smile is our mission. Modern dentistry with care and professionalism, in the heart of Ternopil.
+          Ваша посмішка — наша місія. Сучасна стоматологія з турботою та професіоналізмом, у самому серці Тернополя.
         </p>
       </div>
 
       <div class="footer-links">
         <div class="footer-column">
-          <h4>Navigation</h4>
+          <h4>Навігація</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="about.html">Про нас</a></li>
+            <li><a href="services.html">Послуги</a></li>
+            <li><a href="team.html">Команда</a></li>
+            <li><a href="reviews.html">Відгуки</a></li>
+            <li><a href="contact.html">Контакти</a></li>
           </ul>
         </div>
 
         <div class="footer-column">
-          <h4>Contact</h4>
+          <h4>Контакти</h4>
           <ul>
             <li><a href="tel:+380979351535">+380 (97) 935 1535</a></li>
             <li><a href="mailto:info@sladent.com.ua">info@sladent.com.ua</a></li>
-            <li>8 Zluky Avenue<br>Ternopil, 46010</li>
+            <li>просп. Злуки, 8<br>м. Тернопіль, 46010</li>
           </ul>
         </div>
 
         <div class="footer-column">
-          <h4>Hours</h4>
+          <h4>Графік</h4>
           <ul>
-            <li>Mon – Fri &nbsp; 9:00 – 20:00</li>
-            <li>Saturday &nbsp;&nbsp;&nbsp; 10:00 – 15:00</li>
-            <li>Sunday &nbsp;&nbsp;&nbsp;&nbsp; Closed</li>
+            <li>Пн – Пт &nbsp; 09:00 – 20:00</li>
+            <li>Субота &nbsp;&nbsp;&nbsp; 10:00 – 15:00</li>
+            <li>Неділя &nbsp;&nbsp;&nbsp; Вихідний</li>
           </ul>
         </div>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>© 2026 Sladent — Prydatko Family Dentistry</p>
-      <p>Ternopil · est. 2008</p>
+      <p>© 2026 Sladent — Стоматологія Родини Придатко</p>
+      <p>Тернопіль · est. 2008</p>
     </div>
   </footer>
 
@@ -173,19 +181,19 @@
   <!-- To configure: Replace 'sladent-clinic/appointment' in script.js with your actual Calendly link -->
 
   <!-- Sticky mobile action bar -->
-  <nav class="sticky-cta" aria-label="Quick actions">
-    <a href="tel:+380979351535" aria-label="Call: +380 (97) 935 1535">
+  <nav class="sticky-cta" aria-label="Швидкі дії">
+    <a href="tel:+380979351535" aria-label="Зателефонувати: +380 (97) 935 1535">
       <svg class="sticky-cta__icon" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      Call
+      Подзвонити
     </a>
-    <a href="contact.html#booking-form" class="is-primary" aria-label="Book an appointment online">
+    <a href="contact.html#booking-form" class="is-primary" aria-label="Записатися на прийом онлайн">
       <svg class="sticky-cta__icon" viewBox="0 0 24 24" aria-hidden="true">
         <rect x="3" y="4" width="18" height="18" rx="2"/>
         <path d="M16 2v4M8 2v4M3 10h18"/>
       </svg>
-      Book
+      Записатися
     </a>
   </nav>
 
