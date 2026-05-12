@@ -719,7 +719,7 @@ header.scrolled .navbar { padding-top: 0.85rem; padding-bottom: 0.85rem; }
   align-items: center;
   overflow: hidden;
   isolation: isolate;
-  background: var(--blue-deep);
+  background: #0E1217;
 }
 
 /* Scroll indicator — tells users there's more below */
@@ -826,26 +826,15 @@ header.scrolled .navbar { padding-top: 0.85rem; padding-bottom: 0.85rem; }
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  /*  Crafted three-stop gradient:
-        0-15% : soft navy vignette under the navbar (contrast for white logo/menu)
-       15-45% : image breathes, no overlay tint
-       45-75% : ramps into a deep navy "stage"
-       75-100%: solid navy band that holds the headline, CTAs, stats           */
+  /* Neutral dark tint — no blue cast. Image keeps its true colours,
+     subtle bottom-weighted gradient just enough for text contrast. */
   background:
-    linear-gradient(
-      180deg,
-      rgba(10, 26, 46, 0.55) 0%,
-      rgba(10, 26, 46, 0.18) 15%,
-      rgba(10, 26, 46, 0.05) 35%,
-      rgba(10, 26, 46, 0.55) 65%,
-      rgba(10, 26, 46, 0.92) 88%,
-      var(--blue-deep) 100%
-    ),
-    linear-gradient(95deg, rgba(10, 26, 46, 0.40) 0%, rgba(10, 26, 46, 0.05) 50%);
+    linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.50) 100%),
+    linear-gradient(95deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0) 55%);
 }
 
-/* Very subtle top-of-page sheen so the transparent navbar always reads,
-   even on lighter image regions. Sits above the overlay but below content. */
+/* Subtle top sheen so the transparent navbar always reads against any
+   carousel slide. Neutral black, no blue cast. */
 .hero-section::before {
   content: '';
   position: absolute;
@@ -855,7 +844,7 @@ header.scrolled .navbar { padding-top: 0.85rem; padding-bottom: 0.85rem; }
   height: 120px;
   z-index: 1;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(10, 26, 46, 0.45) 0%, rgba(10, 26, 46, 0) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .hero-content {
