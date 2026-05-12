@@ -562,11 +562,10 @@ header.scrolled .navbar { padding-top: 0.85rem; padding-bottom: 0.85rem; }
     left: 0;
     right: 0;
     z-index: 90;
-    background: rgba(15, 24, 37, 0.96);
-    backdrop-filter: blur(14px) saturate(140%);
-    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    /* No bg / padding on the bar itself — each button paints its own
+       background all the way through the iOS safe-area. */
+    background: transparent;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: env(safe-area-inset-bottom);
     transform: translateY(120%);
     transition: transform 400ms cubic-bezier(0.22, 0.61, 0.36, 1);
   }
@@ -576,14 +575,15 @@ header.scrolled .navbar { padding-top: 0.85rem; padding-bottom: 0.85rem; }
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 1rem 0.75rem;
+    padding: 1rem 0.75rem calc(1rem + env(safe-area-inset-bottom));
     color: var(--ivory);
     font-family: var(--sans);
     font-size: 0.8125rem;
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    min-height: 56px;
+    min-height: calc(56px + env(safe-area-inset-bottom));
+    background: var(--ink);
     -webkit-tap-highlight-color: transparent;
   }
   .sticky-cta a:first-child {
