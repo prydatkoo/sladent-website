@@ -558,17 +558,16 @@ header.scrolled .navbar { padding-top: 0.85rem; padding-bottom: 0.85rem; }
     display: grid;
     grid-template-columns: 1fr 1fr;
     position: fixed;
-    bottom: -80px;          /* push bar 80px past the viewport bottom… */
+    bottom: 0;
     left: 0;
     right: 0;
     z-index: 90;
-    /* …so its hard 50/50 gradient ALWAYS fills any iOS home-indicator
-       area or browser quirk below the visible viewport. The 80px extra
-       padding-bottom keeps the tap targets at the real viewport bottom. */
+    /* Hard 50/50 gradient — bar background paints both halves and extends
+       into the iOS home-indicator safe-area via padding-bottom. */
     background: linear-gradient(90deg, var(--ink) 0 50%, var(--blue) 50% 100%);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
-    transform: translateY(calc(120% + 80px));
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    transform: translateY(120%);
     transition: transform 400ms cubic-bezier(0.22, 0.61, 0.36, 1);
   }
   body.scrolled .sticky-cta { transform: translateY(0); }
@@ -577,14 +576,14 @@ header.scrolled .navbar { padding-top: 0.85rem; padding-bottom: 0.85rem; }
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 1rem 0.75rem;
+    padding: 1.1rem 0.75rem;
     color: var(--ivory);
     font-family: var(--sans);
     font-size: 0.8125rem;
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    min-height: 56px;
+    min-height: 60px;
     background: transparent; /* bar's gradient shows through */
     -webkit-tap-highlight-color: transparent;
   }
