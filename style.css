@@ -598,6 +598,16 @@ body:has(.hero-section) header[role="banner"]:not(.scrolled) .lang-toggle:hover 
     transition: background var(--tx-base), color var(--tx-base);
   }
   .nav-links a.lang-toggle:hover { background: var(--ink); color: var(--ivory); }
+
+  /* When the menu is OPEN, the overlay has its own light background — beat the
+     hero-page transparent-navbar rule and force the chip to be dark so it's
+     visible regardless of scroll position. */
+  body.menu-open .nav-links a.lang-toggle,
+  body.menu-open:has(.hero-section) header[role="banner"]:not(.scrolled) .nav-links a.lang-toggle {
+    color: var(--ink);
+    border-color: var(--ink);
+    background: transparent;
+  }
 }
 
 /* -------------------------------------------------------------------------
